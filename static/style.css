@@ -1,0 +1,48 @@
+@font-face {
+   font-family: "LiberationSans-Regular";
+   src: url("liberation_sans/LiberationSans-Regular.ttf");
+}
+
+@font-face {
+   font-family: "LiberationSans-Bold";
+   src: url("liberation_sans/LiberationSans-Bold.ttf");
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: auto;
+	text-align: left;
+	padding: 10px 30px 10px 10px;
+}
+
+html {  
+	font-family: 'LiberationSans-Bold';
+	font-size: 20px;
+	text-align: center;
+}
+
+body {
+	background-image: url('images/banner.png');
+}
+
+footer {
+	font-size: 18px;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+	position: absolute;
+    overflow: hidden;
+}
+
+.center-page {
+    top: 47%;
+	left: 50%;
+	position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
