@@ -33,14 +33,13 @@ footer {
 }
 
 .text {
-	display: inline-block;
 	text-align: left;
 	margin: auto;
 	background-color: white;
 	padding: 10px 10px 10px 10px;
 }
 
-.center-page {
+.center {
     top: 50%;
 	left: 50%;
 	position: absolute;
