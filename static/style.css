@@ -33,6 +33,7 @@ footer {
 }
 
 .text {
+	display: inline-block;
 	text-align: left;
 	margin: auto;
 	background-color: white;
