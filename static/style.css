@@ -2,12 +2,6 @@ a {
 	text-decoration: none;
 }
 
-p {
-	margin: auto;
-	text-align: left;
-	padding: 10px 30px 10px 10px;
-}
-
 body {
 	background-image: url('images/banner.png');
 }
@@ -36,6 +30,12 @@ footer {
 @font-face {
    font-family: "LiberationSans-Bold";
    src: url("liberation_sans/LiberationSans-Bold.ttf");
+}
+
+.text {
+	display: inline-block;
+	text-align: left;
+	margin: auto;
 }
 
 .center-page {
