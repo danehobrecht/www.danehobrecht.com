@@ -36,10 +36,12 @@ footer {
 	display: inline-block;
 	text-align: left;
 	margin: auto;
+	background-color: white;
+	padding: 10px 10px 10px 10px;
 }
 
 .center-page {
-    top: 47%;
+    top: 50%;
 	left: 50%;
 	position: absolute;
     transform: translateX(-50%) translateY(-50%);
