@@ -20,15 +20,15 @@ body {
 }
 
 .text {
-	font-family: 'pixeboy';
-	font-size: 18px;
 	top: 33%;
 	left: 35%;
+	font-size: 18px;
+	font-family: 'pixeboy';
+	text-align: left;
 	position: absolute;
+	display: inline-block;
 	transform-origin: 0 0;
 	transform: rotate(-30.5deg);
-	display: inline-block;
-	text-align: left;
 	padding: 10px 10px 10px 10px;
 }
 
