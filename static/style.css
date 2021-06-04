@@ -3,45 +3,37 @@ a {
 }
 
 body {
-	background-color: #00aae9;
-}
-	
-html {  
-	font-family: 'LiberationSans-Bold';
-	font-size: 20px;
-	text-align: center;
-}
-
-footer {
-	font-size: 18px;
-    left: 0;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-	position: absolute;
-    overflow: hidden;
+	background-color: #00ade9;
 }
 
 @font-face {
-   font-family: "LiberationSans-Regular";
-   src: url("liberation_sans/LiberationSans-Regular.ttf");
+	font-family: 'pixeboy';
+	src: url("pixeboy-font/pixeboy.ttf");
 }
 
-@font-face {
-   font-family: "LiberationSans-Bold";
-   src: url("liberation_sans/LiberationSans-Bold.ttf");
+.monitor {
+	position: fixed;
+    bottom: 0px;
+    left: 22%;
+	width: 1024px;
+	height: 1024px;
 }
 
 .text {
+	font-family: 'pixeboy';
+	font-size: 18px;
+	top: 33%;
+	left: 35%;
+	position: absolute;
+	transform-origin: 0 0;
+	transform: rotate(-30.5deg);
 	display: inline-block;
 	text-align: left;
-	margin: auto;
-	background-color: #ffffff;
 	padding: 10px 10px 10px 10px;
 }
 
 .center {
-    top: 51%;
+    top: 50%;
 	left: 50%;
 	position: absolute;
     transform: translateX(-50%) translateY(-50%);
