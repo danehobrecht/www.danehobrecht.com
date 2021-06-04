@@ -5,11 +5,6 @@ a {
 body {
 	background-image: url('images/banner.png');
 }
-
-img {
-	width: 32px;
-	height: 32px;
-}
 	
 html {  
 	font-family: 'LiberationSans-Bold';
