@@ -1,9 +1,10 @@
-a {
-	text-decoration: none;
-}
-
 html {
 	background-color: #00ade9;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
 }
 
 @font-face {
@@ -12,12 +13,26 @@ html {
 }
 
 .monitor {
-	display: block;
-	margin: auto;
+	z-index: -1;
+	width: 800px;
+	height: 800px;
+	position: fixed;
+	left: 50%;
+	bottom: 0px;
+	transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 
 .text {
+	z-index: 0;
+	display: block;
+	margin: auto;
 	font-size: 14px;
 	font-family: 'pixeboy';
 	text-align: center;
+	top: 50%;
+	transform: translateY(100%) rotate(-30.5deg);
+	-moz-transform: translateY(100%) rotate(-30.5deg);
+    -webkit-transform: translateY(100%) rotate(-30.5deg);
 }
