@@ -14,8 +14,8 @@ a {
 
 .monitor {
 	z-index: -1;
-	width: 800px;
-	height: 800px;
+	width: 900px;
+	height: 900px;
 	position: fixed;
 	left: 50%;
 	bottom: 0px;
@@ -26,13 +26,10 @@ a {
 
 .text {
 	z-index: 0;
-	display: block;
-	margin: auto;
-	font-size: 14px;
+	font-size: 16px;
 	font-family: 'pixeboy';
-	text-align: center;
-	top: 50%;
-	transform: translateY(100%) rotate(-30.5deg);
-	-moz-transform: translateY(100%) rotate(-30.5deg);
-    -webkit-transform: translateY(100%) rotate(-30.5deg);
+	text-align: left;
+	transform: translate(35%, -55%) rotate(-30.5deg);
+	-moz-transform: translate(35%, -55%) rotate(-30.5deg);
+    -webkit-transform: translate(35%, -55%) rotate(-30.5deg);
 }
