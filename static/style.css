@@ -12,25 +12,12 @@ html {
 }
 
 .monitor {
-	width: 840px;
-	height: 840px;
-	left: 50%;
-	bottom: -0px;
-	position: absolute;
-	transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
+	display: block;
+	margin: auto;
 }
 
 .text {
 	font-size: 14px;
 	font-family: 'pixeboy';
-	text-align: left;
-	display: inline-block;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%) translateY(-50%) rotate(-30.5deg);
-	-moz-transform: translateX(-50%) translateY(-50%) rotate(-30.5deg);
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-30.5deg);
+	text-align: center;
 }
