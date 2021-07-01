@@ -3,7 +3,9 @@
    src: url("liberation_sans/LiberationSans-Bold.ttf");
 }
 
-.center-page {
+.text {
+	background-color: #ffffff;
+	padding: 10px;
 	position: absolute;
 	top: 45%;
 	left: 50%;
