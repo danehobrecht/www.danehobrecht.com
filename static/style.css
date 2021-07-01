@@ -1,35 +1,31 @@
-html {
-	background-color: #00ade9;
-	overflow: hidden;
+@font-face {
+   font-family: "LiberationSans-Bold";
+   src: url("liberation_sans/LiberationSans-Bold.ttf");
+}
+
+.center-page {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 a {
 	text-decoration: none;
 }
 
-@font-face {
-	font-family: 'pixeboy';
-	src: url("pixeboy-font/pixeboy.ttf");
+html {
+	background-color: #00ade9;
+	font-family: "LiberationSans-Bold";
 }
 
-.monitor {
-	z-index: -1;
-	width: 900px;
-	height: 900px;
+footer {
 	position: fixed;
-	left: 50%;
-	bottom: 0px;
-	transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-}
-
-.text {
-	z-index: 0;
-	font-size: 16px;
-	font-family: 'pixeboy';
-	text-align: left;
-	transform: translate(35%, -55%) rotate(-30.5deg);
-	-moz-transform: translate(35%, -55%) rotate(-30.5deg);
-    -webkit-transform: translate(35%, -55%) rotate(-30.5deg);
+  	left: 50%;
+  	bottom: 20px;
+  	transform: translate(-50%, -50%);
+  	-moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
