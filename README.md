@@ -1,1 +1,1 @@
-Support page for the tmuq YouTube channel.
+General support page for the tmuq YouTube channel.
