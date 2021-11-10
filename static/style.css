@@ -3,10 +3,6 @@
     src: url("liberation_sans/LiberationSans-Bold.ttf");
 }
 
-a {
-    text-decoration: none;
-}
-
 html {
 	font-family: "LiberationSans-Bold";
 }
