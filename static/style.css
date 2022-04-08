@@ -11,6 +11,8 @@ a {
 img {
 	max-width: 450px;
 	height: auto;
+	/* High-res image previews in Chromium-based browsers. */
+	image-rendering: -webkit-optimize-contrast;
 }
 
 h1 {
