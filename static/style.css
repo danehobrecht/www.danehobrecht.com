@@ -8,13 +8,6 @@ a {
 	font-family: "LiberationSans-Bold";
 }
 
-img {
-	max-width: 450px;
-	height: auto;
-	/* High resolution image previews in Chromium-based browsers. */
-	image-rendering: -webkit-optimize-contrast;
-}
-
 h1 {
 	font-size: 32pt;
 }
@@ -24,8 +17,16 @@ html {
 	font-family: "LiberationSans-Regular";
 }
 
-social {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.social img {
+	width: 64px;
+	height: 64px;
+	padding: 10px;
+}
+
+.headshot {
+	border: 5px solid #000000;
+	max-width: 450px;
+	height: auto;
+	/* High resolution image previews in Chromium-based browsers. */
+	image-rendering: -webkit-optimize-contrast;
 }
