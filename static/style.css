@@ -27,6 +27,6 @@ html {
 	border: 5px solid #000000;
 	max-width: 450px;
 	height: auto;
-	/* High resolution image previews in Chromium-based browsers. */
+	/* High-resolution image previews in Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
 }
