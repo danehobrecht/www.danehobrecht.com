@@ -37,7 +37,7 @@ footer {
 	border: 5px solid #000000;
 	height: auto;
 	width: 480px;
-	max-width: 90%;
+	max-width: 50%;
 	/* High-resolution image previews in Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
 	/* Center images for mobile browsers. */
