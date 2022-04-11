@@ -34,7 +34,7 @@ footer {
 
 .headshot {
 	border: 5px solid #000000;
-	max-width: 450px;
+	max-width: 25%;
 	height: auto;
 	/* High-resolution image previews in Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
