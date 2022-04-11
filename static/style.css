@@ -17,10 +17,19 @@ html {
 	font-family: "LiberationSans-Regular";
 }
 
+footer {
+	left: 0;
+	bottom: 0;
+	height: 15%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
 .social img {
-	width: 64px;
-	height: 64px;
-	padding: 10px;
+	width: 48px;
+	height: 48px;
+	padding: 8px;
 }
 
 .headshot {
@@ -29,7 +38,9 @@ html {
 	height: auto;
 	/* High-resolution image previews in Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
-	/* Center headshot horizontally. */
+	/* Center images for mobile browsers. */
+	margin-left: auto;
+	margin-left: auto;
 	transform: translateX(0%);
 	-moz-transform: translateX(0%);
 	-webkit-transform: translateX(0%);
