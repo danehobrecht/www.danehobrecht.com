@@ -20,7 +20,7 @@ html {
 footer {
 	left: 0;
 	bottom: 0;
-	height: 15%;
+	height: 100px;
 	width: 100%;
 	position: absolute;
 	overflow: hidden;
