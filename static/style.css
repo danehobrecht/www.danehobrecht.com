@@ -33,15 +33,14 @@ footer {
 }
 
 .headshot {
-	border: 5px solid #000000;
 	max-width: 450px;
 	height: auto;
+	border: 5px solid #000000;
 	/* High-resolution image previews in Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
 	/* Center images for mobile browsers. */
+	float: none;
+	display: block;
 	margin-left: auto;
 	margin-left: auto;
-	transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-webkit-transform: translateX(0%);
 }
