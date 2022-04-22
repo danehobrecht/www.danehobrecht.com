@@ -1,11 +1,30 @@
+/* Liberation Sans */
+
+@font-face {
+	font-family: "LiberationSans-Regular";
+	src: url("fonts/liberation_sans/LiberationSans-Regular.ttf");
+}
+
 @font-face {
 	font-family: "LiberationSans-Bold";
-	src: url("liberation_sans/LiberationSans-Bold.ttf");
+	src: url("fonts/liberation_sans/LiberationSans-Bold.ttf");
+}
+
+/* Liberation Serif */
+
+@font-face {
+	font-family: "LiberationSerif-Regular";
+	src: url("fonts/liberation_serif/LiberationSerif-Regular.ttf");
+}
+
+@font-face {
+	font-family: "LiberationSerif-Bold";
+	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
 a {
+	color: white;
 	text-decoration: none;
-	font-family: "LiberationSans-Bold";
 }
 
 h1 {
@@ -14,7 +33,7 @@ h1 {
 
 html {
 	text-align: center;
-	font-family: "LiberationSans-Regular";
+	font-family: "LiberationSerif-Bold";
 }
 
 footer {
@@ -24,7 +43,9 @@ footer {
 	width: 100%;
 	position: absolute;
 	overflow: hidden;
-	padding-bottom: 8px;
+	padding-top: 8px;
+	background-color: #000000;
+	font-family: "LiberationSans-Bold";
 }
 
 .social img {
