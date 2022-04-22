@@ -18,14 +18,14 @@
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
-a {	
+a {
 	color: #ffffff;
 	text-decoration: none;
 	font-family: "LiberationSans-Bold";
 }
 
 h1 {
-	font-size: 32pt;
+	font-size: 30pt;
 }
 
 html {
@@ -64,7 +64,7 @@ footer {
 .headshot {
 	border: 5px solid #000000;
 	height: auto;
-	width: 450px;
+	width: 400px;
 	max-width: 55%;
 	/* High-resolution image previews for Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
