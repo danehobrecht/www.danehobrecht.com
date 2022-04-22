@@ -1,4 +1,4 @@
-/* Liberation Sans */
+/* Fonts */
 
 @font-face {
 	font-family: "LiberationSans-Regular";
@@ -10,8 +10,6 @@
 	src: url("fonts/liberation_sans/LiberationSans-Bold.ttf");
 }
 
-/* Liberation Serif */
-
 @font-face {
 	font-family: "LiberationSerif-Regular";
 	src: url("fonts/liberation_serif/LiberationSerif-Regular.ttf");
@@ -22,9 +20,12 @@
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
+/* Elements */
+
 a {
 	color: white;
 	text-decoration: none;
+	font-family: "LiberationSans-Bold";
 }
 
 h1 {
@@ -45,8 +46,9 @@ footer {
 	overflow: hidden;
 	padding-top: 8px;
 	background-color: #000000;
-	font-family: "LiberationSans-Bold";
 }
+
+/* Classes */
 
 .social img {
 	width: 48px;
