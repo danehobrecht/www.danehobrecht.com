@@ -59,6 +59,10 @@ html {
 	font-family: "LiberationSerif-Bold";
 }
 
+body {
+	overflow: hidden;
+}
+
 footer {
 	left: 0;
 	bottom: 0;
