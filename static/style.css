@@ -18,6 +18,36 @@
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
+.title a {
+	color: #000000;
+	font-size: 28pt;
+	font-family: "LiberationSerif-Bold";
+}
+
+.sections a {
+	color: #000000;
+	font-size: 16pt;
+	padding-left: 4px;
+	padding-right: 4px;
+	font-family: "LiberationSerif-Regular";
+}
+
+.home img {
+	max-width: 25%;
+	padding: 8px;
+	image-rendering: -webkit-optimize-contrast;
+} 
+
+.social img {
+	width: 48px;
+	height: 48px;
+	padding: 8px;
+}
+
+a:hover {
+	color: #8f8f8f;
+}
+
 a {
 	color: #ffffff;
 	text-decoration: none;
@@ -38,34 +68,4 @@ footer {
 	overflow: hidden;
 	padding-top: 8px;
 	background-color: #000000;
-}
-
-.column {
-	float: left;
-	width: 33.33%;
-	padding: 5px;
-	box-sizing: border-box;
-}
-
-.row {
-	content: "";
-	clear: both;
-	display: table;
-	width: 75%;
-	/* High-resolution image previews for Chromium-based browsers. */
-	image-rendering: -webkit-optimize-contrast;
-	/* Centered images for mobile browsers. */
-	margin: auto;
-}
-
-.social img {
-	width: 48px;
-	height: 48px;
-	padding: 8px;
-}
-
-.sections a {
-	color: #000000;
-	font-size: 14pt;
-	font-family: "LiberationSerif-Bold";
 }
