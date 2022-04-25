@@ -37,6 +37,9 @@ header {
 	padding-bottom: 10px;
 }
 
+body {
+}
+
 footer {
 	left: 0;
 	bottom: 0;
@@ -48,9 +51,27 @@ footer {
 	background-color: #000000;
 }
 
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.row {
+	content: "";
+	clear: both;
+	display: table;
+	width: 75%;
+	/* High-resolution image previews for Chromium-based browsers. */
+	image-rendering: -webkit-optimize-contrast;
+	/* Centered images for mobile browsers. */
+	margin: auto;
+}
+
 .social img {
-	width: 48px;
-	height: 48px;
+	width: 64px;
+	height: 64px;
 	padding: 8px;
 }
 
@@ -61,12 +82,5 @@ footer {
 }
 
 .headshot {
-	height: auto;
-	max-width: 70%;
-	/* High-resolution image previews for Chromium-based browsers. */
-	image-rendering: -webkit-optimize-contrast;
-	/* Centered images for mobile browsers. */
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+
 }
