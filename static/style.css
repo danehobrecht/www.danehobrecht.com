@@ -25,7 +25,7 @@ a {
 }
 
 h1 {
-	font-size: 32pt;
+	font-size: 28pt;
 }
 
 html {
@@ -58,14 +58,11 @@ footer {
 	color: #000000;
 	font-size: 14pt;
 	font-family: "LiberationSerif-Bold";
-	text-decoration: underline;
 }
 
 .headshot {
-	border: 5px solid #000000;
 	height: auto;
-	width: 450px;
-	max-width: 55%;
+	max-width: 70%;
 	/* High-resolution image previews for Chromium-based browsers. */
 	image-rendering: -webkit-optimize-contrast;
 	/* Centered images for mobile browsers. */
