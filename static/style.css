@@ -51,6 +51,8 @@ a:hover {
 a {
 	color: #ffffff;
 	text-decoration: none;
+	transition: color 0.2s;
+	-webkit-transition: color 0.2s;
 	font-family: "LiberationSans-Bold";
 }
 
