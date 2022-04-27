@@ -27,11 +27,10 @@
 .sections a {
 	color: #000000;
 	font-size: 16pt;
+	transition: color 0.2s;
 	padding-left: 4px;
 	padding-right: 4px;
-	transition: color 0.2s;
 	-webkit-transition: color 0.2s;
-	font-family: "LiberationSerif-Regular";
 }
 
 .sections a:hover {
@@ -66,7 +65,7 @@ img {
 html {
 	overflow: auto;
 	text-align: center;
-	font-family: "LiberationSerif-Bold";
+	font-family: "LiberationSerif-Regular";
 }
 
 header {
@@ -89,9 +88,9 @@ footer {
 	bottom: 0;
 	height: 100px;
 	width: 100%;
+	position: fixed;
 	overflow: hidden;
 	padding-top: 8px;
-	position: fixed;
 	background-color: #000000;
 	font-family: "LiberationSans-Bold";
 }
