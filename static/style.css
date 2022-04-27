@@ -39,9 +39,14 @@
 }
 
 .home img {
-	max-width: 25%;
-	padding: 8px;
-} 
+	max-width: 24%;
+	padding: 4px;
+}
+
+.portraits img {
+	max-width: 20%;
+	padding: 4px;
+}
 
 .social img {
 	width: 48px;
@@ -59,9 +64,24 @@ img {
 }
 
 html {
-	overflow: hidden;
+	overflow: auto;
 	text-align: center;
 	font-family: "LiberationSerif-Bold";
+}
+
+header {
+	left: 0;
+	top: 0;
+	height: 120px;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	background-color: #ffffff;
+}
+
+body {
+	padding-top: 120px;
+	padding-bottom: 100px;
 }
 
 footer {
@@ -71,7 +91,7 @@ footer {
 	width: 100%;
 	overflow: hidden;
 	padding-top: 8px;
-	position: absolute;
+	position: fixed;
 	background-color: #000000;
 	font-family: "LiberationSans-Bold";
 }
