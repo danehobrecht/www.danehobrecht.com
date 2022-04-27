@@ -29,7 +29,13 @@
 	font-size: 16pt;
 	padding-left: 4px;
 	padding-right: 4px;
+	transition: color 0.2s;
+	-webkit-transition: color 0.2s;
 	font-family: "LiberationSerif-Regular";
+}
+
+.sections a:hover {
+	color: #8f8f8f;
 }
 
 .home img {
@@ -44,16 +50,9 @@
 	padding: 8px;
 }
 
-a:hover {
-	color: #8f8f8f;
-}
-
 a {
 	color: #ffffff;
 	text-decoration: none;
-	transition: color 0.2s;
-	-webkit-transition: color 0.2s;
-	font-family: "LiberationSans-Bold";
 }
 
 html {
@@ -71,4 +70,5 @@ footer {
 	overflow: hidden;
 	padding-top: 8px;
 	background-color: #000000;
+	font-family: "LiberationSans-Bold";
 }
