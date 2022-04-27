@@ -41,7 +41,6 @@
 .home img {
 	max-width: 25%;
 	padding: 8px;
-	image-rendering: -webkit-optimize-contrast;
 } 
 
 .social img {
@@ -55,6 +54,10 @@ a {
 	text-decoration: none;
 }
 
+img {
+	image-rendering: -webkit-optimize-contrast;
+}
+
 html {
 	overflow: hidden;
 	text-align: center;
@@ -66,9 +69,9 @@ footer {
 	bottom: 0;
 	height: 100px;
 	width: 100%;
-	position: absolute;
 	overflow: hidden;
 	padding-top: 8px;
+	position: absolute;
 	background-color: #000000;
 	font-family: "LiberationSans-Bold";
 }
