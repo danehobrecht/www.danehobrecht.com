@@ -18,55 +18,50 @@
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
-.title a {
+.title {
+	margin: 15px;
 	font-size: 28pt;
 	font-family: "LiberationSerif-Bold";
 }
 
-.header-sections a {
+.header a {
 	color: #525252;
 	font-size: 16pt;
-	transition: color 0.2s;
-	padding-left: 4px;
-	padding-right: 4px;
-	-webkit-transition: color 0.2s;
 }
 
-.header-sections a:hover {
+.header a:hover {
 	color: #000000;
 }
 
-.footer-sections a {
+.footer a {
 	color: #d5d4d0;
 	font-size: 12pt;
-	transition: color 0.2s;
-	padding-left: 4px;
-	padding-right: 4px;
-	-webkit-transition: color 0.2s;
 }
 
-.footer-sections a:hover {
+.footer a:hover {
 	color: #ffffff;
 }
 
 .sections a {
-	font-size: 12pt;
+	margin: 0px 4px 0px 4px;
+	transition: color 0.2s;
+	-webkit-transition: color 0.2s;
 }
 
 .home img {
 	max-width: 24%;
-	padding: 4px;
+	margin: 0px 4px 0px 4px;
 }
 
-.portraits img {
+.headshots img {
 	max-width: 20%;
-	padding: 4px;
+	margin: 0px 4px 0px 4px;
 }
 
 .social img {
 	width: 48px;
 	height: 48px;
-	padding: 8px;
+	margin: 20px 4px 12px 4px;
 }
 
 html {
@@ -76,28 +71,24 @@ html {
 }
 
 header {
-	left: 0;
 	top: 0;
+	left: 0;
 	width: 100%;
 	height: 120px;
 	position: fixed;
-	overflow: hidden;
-	background-color: #ffffff;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 10%);
 }
 
 body {
-	padding-top: 120px;
-	padding-bottom: 120px;
+	margin: 120px 0px 120px 0px;
 }
 
 footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 100px;
+	height: 120px;
 	position: fixed;
-	overflow: hidden;
-	padding-top: 8px;
 	background-color: #000000;
 	font-family: "LiberationSans-Bold";
 }
