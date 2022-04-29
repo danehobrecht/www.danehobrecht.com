@@ -37,13 +37,13 @@
 }
 
 .home img {
-	max-width: 23%;
 	margin: 4px;
+	max-width: 450px;
 }
 
 .headshots img {
-	max-width: 20%;
 	margin: 4px;
+	max-width: 450px;
 }
 
 .floater {
