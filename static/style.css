@@ -37,13 +37,13 @@
 }
 
 .home img {
-	max-width: 440px;
-	padding: 0px 4px 0px 4px;
+	max-width: 420px;
+	padding: 12px;
 }
 
 .headshots img {
-	padding: 4px;
-	max-width: 420px;
+	padding: 6px;
+	max-width: 400px;
 }
 
 .social img {
