@@ -47,7 +47,7 @@
 }
 
 .reel {
-	margin: auto 6px auto 6px;
+	margin: auto;
 }
 
 .social img {
@@ -65,7 +65,7 @@
 html {
 	overflow-y: auto;
 	text-align: center;
-	font-family: "LiberationSerif-Reglar";
+	font-family: "LiberationSerif-Regular";
 }
 
 header {
