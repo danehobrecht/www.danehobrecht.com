@@ -43,8 +43,11 @@
 
 .headshots img {
 	padding: 6px;
-	text-align: center;
 	max-width: 400px;
+}
+
+.reel {
+	margin: auto;
 }
 
 .social img {
@@ -94,8 +97,7 @@ a {
 }
 
 img {
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	image-rendering: -webkit-optimize-contrast;
 }
 
