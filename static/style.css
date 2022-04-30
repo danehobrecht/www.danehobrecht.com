@@ -37,12 +37,13 @@
 }
 
 .home img {
-	max-width: 420px;
 	padding: 12px;
+	max-width: 420px;
 }
 
 .headshots img {
 	padding: 6px;
+	text-align: center;
 	max-width: 400px;
 }
 
@@ -93,6 +94,8 @@ a {
 }
 
 img {
+	margin-left: auto;
+	margin-right: auto;
 	image-rendering: -webkit-optimize-contrast;
 }
 
