@@ -37,31 +37,23 @@
 }
 
 .home img {
-	margin: 4px;
-	max-width: 450px;
+	max-width: 440px;
+	padding: 0px 4px 0px 4px;
 }
 
 .headshots img {
-	margin: 4px;
-	max-width: 450px;
-}
-
-.floater {
-	width: 250px;
-	padding: 8px;
-	margin: 20px auto;
-	border-radius: 25px;
-	background-color: #ffffff;
+	padding: 4px;
+	max-width: 420px;
 }
 
 .social img {
-	margin: 8px;
+	padding: 32px 8px 8px 8px;
 	width: 48px;
 	height: 48px;
 }
 
 .links a {
-	margin: 4px;
+	padding: 8px;
 	color: #525252;
 	font-size: 12pt;
 }
@@ -82,15 +74,17 @@ header {
 }
 
 body {
-	margin: 140px 0px 120px 0px;
+	padding: 140px 0px 140px 0px;
 }
 
 footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	height: 140px;
 	position: fixed;
 	font-family: "LiberationSans-Bold";
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 5%);
 }
 
 a {
