@@ -31,14 +31,15 @@ html {
 header {
 	top: 0;
 	left: 0;
+	z-index: 1;
 	width: 100%;
 	height: 140px;
 	position: fixed;
+	background-color: white;
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
 }
 
 body {
-	margin: 0 auto;
 	display: block;
 	padding: 140px 0px 140px 0px;
 }
@@ -66,14 +67,6 @@ span {
 	color: #000000;
 }
 
-iframe {
-	width: 560px;
-	height: 315px;
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-}
-
 /* <header> */
 
 .title {
@@ -99,6 +92,22 @@ iframe {
 .media img {
 	padding: 8px;
 	max-width: 420px;
+}
+
+.reel {
+	height: 0;
+	width: 100%;
+	position: relative;
+	padding-bottom: 56.25%;
+}
+
+.reel iframe{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 10%;
+	position: absolute;
 }
 
 /* <footer> */
