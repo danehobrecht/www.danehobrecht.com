@@ -18,6 +18,50 @@
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
+html {
+	overflow-y: auto;
+	text-align: center;
+	font-family: "LiberationSerif-Regular";
+}
+
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 140px;
+	position: fixed;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
+}
+
+body {
+	margin: auto;
+	display: block;
+	padding: 140px 0px 140px 0px;
+}
+
+footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 140px;
+	position: fixed;
+	font-family: "LiberationSans-Bold";
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+img {
+	image-rendering: -webkit-optimize-contrast;
+}
+
+span {
+	color: #000000;
+}
+
 .title {
 	font-size: 32pt;
 	margin: 24px 0px 20px 0px;
@@ -46,11 +90,6 @@
 	max-width: 400px;
 }
 
-.reel iframe {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .social img {
 	padding: 32px 8px 8px 8px;
 	width: 48px;
@@ -61,46 +100,4 @@
 	padding: 0px 4px 0px 4px;
 	color: #525252;
 	font-size: 12pt;
-}
-
-html {
-	overflow-y: auto;
-	text-align: center;
-	font-family: "LiberationSerif-Regular";
-}
-
-header {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 140px;
-	position: fixed;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
-}
-
-body {
-	padding: 140px 0px 140px 0px;
-}
-
-footer {
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 140px;
-	position: fixed;
-	font-family: "LiberationSans-Bold";
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
-}
-
-a {
-	color: #000000;
-	text-decoration: none;
-}
-
-img {
-	image-rendering: -webkit-optimize-contrast;
-}
-
-span {
-	color: #000000;
 }
