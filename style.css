@@ -2,24 +2,24 @@
 
 @font-face {
 	font-family: "LiberationSans-Regular";
-	src: url("fonts/liberation_sans/LiberationSans-Regular.ttf");
+	src: url("public/fonts/liberation_sans/LiberationSans-Regular.ttf");
 }
 
 @font-face {
 	font-family: "LiberationSans-Bold";
-	src: url("fonts/liberation_sans/LiberationSans-Bold.ttf");
+	src: url("public/fonts/liberation_sans/LiberationSans-Bold.ttf");
 }
 
 /* Liberation Serif */
 
 @font-face {
 	font-family: "LiberationSerif-Regular";
-	src: url("fonts/liberation_serif/LiberationSerif-Regular.ttf");
+	src: url("public/fonts/liberation_serif/LiberationSerif-Regular.ttf");
 }
 
 @font-face {
 	font-family: "LiberationSerif-Bold";
-	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
+	src: url("public/fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
 html {
