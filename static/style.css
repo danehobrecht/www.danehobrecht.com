@@ -4,6 +4,7 @@
 	font-family: "LiberationSans-Regular";
 	src: url("fonts/liberation_sans/LiberationSans-Regular.ttf");
 }
+
 @font-face {
 	font-family: "LiberationSans-Bold";
 	src: url("fonts/liberation_sans/LiberationSans-Bold.ttf");
@@ -15,6 +16,7 @@
 	font-family: "LiberationSerif-Regular";
 	src: url("fonts/liberation_serif/LiberationSerif-Regular.ttf");
 }
+
 @font-face {
 	font-family: "LiberationSerif-Bold";
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
@@ -38,7 +40,7 @@ header {
 
 body {
 	z-index: 0;
-	padding: 140px 0px 140px 0px;
+	margin: 140px 0px 140px 0px;
 }
 
 footer {
@@ -70,12 +72,14 @@ span {
 	.title {
 		font-size: 28pt;
 	}
+
 	.reel {
 		height: 0;
 		width: 100%;
 		position: relative;
 		padding-bottom: 56.25%;
 	}
+
 	.reel iframe{
 		top: 0;
 		left: 0;
@@ -113,7 +117,7 @@ span {
 }
 
 .media img {
-	padding: 8px;
+	padding: 12px;
 	max-width: 420px;
 }
 
