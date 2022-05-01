@@ -87,6 +87,11 @@ span {
 		height: 100%;
 		position: absolute;
 	}
+
+	.media img {
+		padding: 12px 24px 12px 24px;
+		max-width: 420px;
+	}
 }
 
 /* Desktop */
@@ -94,6 +99,11 @@ span {
 @media screen and (min-width: 601px) {
 	.title {
 		font-size: 32pt;
+	}
+
+	.media img {
+		padding: 12px;
+		max-width: 420px;
 	}
 }
 
@@ -114,11 +124,6 @@ span {
 
 .sections a:hover {
 	color: #000000;
-}
-
-.media img {
-	padding: 12px;
-	max-width: 420px;
 }
 
 .social img {
