@@ -47,7 +47,8 @@
 }
 
 .reel {
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .social img {
