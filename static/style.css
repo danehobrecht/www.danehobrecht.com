@@ -4,7 +4,6 @@
 	font-family: "LiberationSans-Regular";
 	src: url("fonts/liberation_sans/LiberationSans-Regular.ttf");
 }
-
 @font-face {
 	font-family: "LiberationSans-Bold";
 	src: url("fonts/liberation_sans/LiberationSans-Bold.ttf");
@@ -16,7 +15,6 @@
 	font-family: "LiberationSerif-Regular";
 	src: url("fonts/liberation_serif/LiberationSerif-Regular.ttf");
 }
-
 @font-face {
 	font-family: "LiberationSerif-Bold";
 	src: url("fonts/liberation_serif/LiberationSerif-Bold.ttf");
@@ -64,7 +62,7 @@ span {
 	color: #000000;
 }
 
-/* <header> */
+/* Mobile */
 
 @media screen and (max-width: 600px) {
 	.title {
@@ -85,11 +83,15 @@ span {
 	}
 }
 
+/* Desktop */
+
 @media screen and (min-width: 601px) {
 	.title {
 		font-size: 32pt;
 	}
 }
+
+/* Global */
 
 .title {
 	margin: 24px 0px 20px 0px;
@@ -108,14 +110,10 @@ span {
 	color: #000000;
 }
 
-/* <body> */
-
 .media img {
 	padding: 8px;
 	max-width: 420px;
 }
-
-/* <footer> */
 
 .social img {
 	padding: 32px 8px 8px 8px;
