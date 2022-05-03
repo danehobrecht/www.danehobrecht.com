@@ -90,7 +90,7 @@ span {
 
 	.media img {
 		padding: 12px 24px 12px 24px;
-		max-width: 420px;
+		max-width: 430px;
 	}
 }
 
@@ -103,7 +103,7 @@ span {
 
 	.media img {
 		padding: 12px;
-		max-width: 420px;
+		max-width: 430px;
 	}
 }
 
@@ -128,8 +128,8 @@ span {
 
 .social img {
 	padding: 32px 8px 8px 8px;
-	width: 54px;
-	height: 54px;
+	width: 48px;
+	height: 48px;
 }
 
 .links a {
