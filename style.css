@@ -31,7 +31,6 @@ html {
 header {
 	top: 0;
 	left: 0;
-	z-index: 1;
 	width: 100%;
 	height: 140px;
 	position: fixed;
@@ -39,8 +38,9 @@ header {
 }
 
 body {
-	z-index: 0;
-	margin: 140px 0px 140px 0px;
+	width: 100%;
+	height: 100%;
+	padding: 140px 0px 140px 0px;
 }
 
 footer {
@@ -68,9 +68,15 @@ span {
 
 /* Global */
 
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
 .title {
 	font-size: 32pt;
-	margin: 24px 0px 20px 0px;
+	padding: 24px 0px 20px 0px;
 	font-family: "LiberationSerif-Bold";
 }
 
@@ -78,7 +84,7 @@ span {
 	color: #525252;
 	font-size: 16pt;
 	transition: color 0.2s;
-	margin: 0px 4px 0px 4px;
+	padding: 0px 4px 0px 4px;
 	-webkit-transition: color 0.2s;
 }
 
@@ -87,18 +93,20 @@ span {
 }
 
 .media img {
-	padding: 4px;
-	max-width: 420px;
+	margin: -2px;
+	padding: 6px;
+	max-width: 430px;
 }
 
 .social img {
-	padding: 32px 8px 8px 8px;
 	width: 48px;
 	height: 48px;
+	padding: 6px;
+	padding-top: 32px;
 }
 
 .links a {
-	padding: 0px 4px 0px 4px;
+	padding: 4px;
 	color: #525252;
 	font-size: 12pt;
 }
@@ -130,8 +138,16 @@ span {
 	}
 
 	.media img {
-		padding: 4px;
 		max-width: 240px;
+	}
+	
+	.social img {
+		width: 40px;
+		height: 40px;
+	}
+	
+	.links a {
+		font-size: 10pt;
 	}
 }
 
@@ -160,7 +176,6 @@ span {
 	}
 
 	.media img {
-		padding: 4px;
 		max-width: 320px;
 	}
 }
