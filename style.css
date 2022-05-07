@@ -35,14 +35,14 @@ header {
 	width: 100%;
 	height: 140px;
 	position: fixed;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
+	background-color: #ffffff;
 }
 
 body {
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	padding: 140px 0px 140px 0px;
+	padding: 140px 0px 134px 0px;
 }
 
 footer {
@@ -52,7 +52,7 @@ footer {
 	height: 140px;
 	position: fixed;
 	font-family: "LiberationSans-Bold";
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 8%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
 a {
@@ -95,9 +95,8 @@ span {
 }
 
 .media img {
-	margin: -2px;
-	padding: 6px;
-	max-width: 430px;
+	margin: 0px 3px 6px 3px;
+	max-width: 440px;
 }
 
 .reel {
