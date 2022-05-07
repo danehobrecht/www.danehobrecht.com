@@ -77,8 +77,8 @@ span {
 }
 
 .title {
-	font-size: 32pt;
-	padding: 24px 0px 20px 0px;
+	font-size: 36pt;
+	padding: 24px 0px 12px 0px;
 	font-family: "LiberationSerif-Bold";
 }
 
@@ -119,8 +119,16 @@ span {
 /* Mobile */
 
 @media screen and (max-width: 320px) {
+	header {
+		height: 110px;
+	}
+
+	body {
+		padding-top: 110px;
+	}
+
 	.title {
-		font-size: 20pt;
+		font-size: 22pt;
 	}
 
 	.sections a {
@@ -157,6 +165,14 @@ span {
 }
 
 @media screen and (min-width: 321px) and (max-width: 600px) {
+	header {
+		height: 120px;
+	}
+
+	body {
+		padding-top: 120px;
+	}
+
 	.title {
 		font-size: 28pt;
 	}
