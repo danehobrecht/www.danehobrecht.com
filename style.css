@@ -76,7 +76,7 @@ span {
 section {
 	padding: 10px;
 	text-align: left;
-	max-width: 500px;
+	max-width: 450px;
 	background-color: #f1f1f1;
 	margin: 0px auto 20px auto;
 }
@@ -108,13 +108,13 @@ section {
 }
 
 .media img {
-	max-width: 440px;
+	max-width: 450px;
 	margin: 0px 3px 6px 3px;
 }
 
 .section img {
 	width: 100%;
-	max-width: 500px;
+	max-width: 450px;
 	vertical-align: middle;
 }
 
