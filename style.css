@@ -76,7 +76,8 @@ span {
 section {
 	padding: 10px;
 	text-align: left;
-	max-width: 450px;
+	white-space: nowrap;
+	max-width: 1000px;
 	background-color: #f1f1f1;
 	margin: 0px auto 20px auto;
 }
@@ -211,7 +212,7 @@ section {
 	}
 }
 
-@media screen and (min-width: 321px) and (max-width: 628px) {
+@media screen and (min-width: 321px) and (max-width: 768px) {
 	header {
 		height: 120px;
 	}
