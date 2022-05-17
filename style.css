@@ -153,7 +153,7 @@ span {
 
 .description {
 	font-size: 14pt;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .reel {
@@ -222,6 +222,11 @@ span {
 		font-size: 12pt;
 	}
 
+	.description {
+		font-size: 12pt;
+		max-height: 160px;
+	}
+
 	.social img {
 		max-width: 40px;
 	}
@@ -231,7 +236,7 @@ span {
 	}
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 767px) {
 	header {
 		height: 120px;
 	}
