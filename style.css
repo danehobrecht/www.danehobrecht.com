@@ -130,30 +130,30 @@ span {
 }
 
 .section {
-	overflow: hidden;
+	padding: 12px;
+	overflow: auto;
 	text-align: left;
-	padding: 0px 12px 0px 12px;
 	max-width: 1000px;
 	background-color: #f1f1f1;
 	margin: 0px auto 20px auto;
+}
+
+.section h1 {
+	display: inline;
+	font-style: italic;
+	vertical-align: middle;
 }
 
 .section img {
 	float: left;
 	width: 100%;
 	max-width: 450px;
-	padding: 12px 12px 12px 0px;
+	padding: 0px 12px 12px 0px;
 }
 
 .description {
-	padding: 12px;
 	font-size: 14pt;
-}
-
-.description h1 {
-	display: inline;
-	font-style: italic;
-	vertical-align: middle;
+	overflow-y: scroll;
 }
 
 .reel {
@@ -256,6 +256,7 @@ span {
 
 	.description {
 		font-size: 12pt;
+		max-height: 160px;
 	}
 
 	.reel {
