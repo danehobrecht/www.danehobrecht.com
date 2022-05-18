@@ -67,7 +67,7 @@ span {
 }
 
 figure {
-	padding: 6px;
+	padding: 4px;
 	font-size: 14pt;
 	display: inline-block;
 }
@@ -126,7 +126,7 @@ figure {
 
 .media img {
 	max-width: 400px;
-	margin: 0px 4px 8px 4px;
+	margin: 0px 3px 6px 3px;
 }
 
 .section {
@@ -135,7 +135,7 @@ figure {
 	text-align: left;
 	max-width: 1000px;
 	background-color: #f1f1f1;
-	margin: 0px auto 16px auto;
+	margin: 0px auto 12px auto;
 }
 
 .section h1 {
