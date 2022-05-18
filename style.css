@@ -53,8 +53,8 @@ a {
 }
 
 svg {
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
 	vertical-align: middle;
 }
 
@@ -130,12 +130,12 @@ figure {
 }
 
 .section {
+	padding: 12px;
 	overflow: auto;
 	text-align: left;
 	max-width: 1000px;
 	background-color: #f1f1f1;
 	margin: 0px auto 12px auto;
-	padding: 12px 12px 0px 12px;
 }
 
 .section h1 {
@@ -148,7 +148,7 @@ figure {
 	float: left;
 	width: 100%;
 	max-width: 450px;
-	padding: 0px 12px 12px 0px;
+	padding-right: 12px;
 }
 
 .description {
@@ -212,15 +212,11 @@ figure {
 	}
 
 	.sections h1 {
-		font-size: 16pt;
+		font-size: 20pt;
 	}
 
-	.sections p {
-		font-size: 12pt;
-	}
-
-	.sections a {
-		font-size: 12pt;
+	.section img {
+		padding-bottom: 6px;
 	}
 
 	.description {
@@ -254,10 +250,9 @@ figure {
 		font-size: 16pt;
 	}
 
-	.sections img {
-		margin: auto;
-		display: block;
+	.section img {
 		max-width: 540px;
+		padding-bottom: 6px;
 	}
 
 	.description {
