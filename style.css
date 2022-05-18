@@ -31,7 +31,7 @@ header {
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	height: 140px;
+	height: 128px;
 	position: fixed;
 	background-color: #ffffff;
 }
@@ -40,11 +40,7 @@ body {
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	padding-top: 140px;
-}
-
-footer {
-	font-family: "LiberationSans-Bold";
+	padding-top: 128px;
 }
 
 a {
@@ -79,36 +75,9 @@ figure {
 	padding: 0;
 }
 
-.button {
-	border: none;
-	color: #ffffff;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition: 0.3s;
-	border-radius: 4px;
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	font-family: "LiberationSans-Bold";
-}
-
-.enabled {
-	background-color: #000000;
-}
-
-.disabled {
-	cursor: not-allowed;
-	background-color: #c0c0c0;
-}
-
-.enabled:hover {
-	color: #ffffff;
-	background-color: #525252;
-}
-
 .title {
 	font-size: 36pt;
-	padding: 24px 0px 12px 0px;
+	padding: 16px 0px 16px 0px;
 	font-family: "LiberationSerif-Bold";
 }
 
@@ -134,8 +103,9 @@ figure {
 	overflow: auto;
 	text-align: left;
 	max-width: 1000px;
+	border-radius: 4px;
 	background-color: #f1f1f1;
-	margin: 0px auto 12px auto;
+	margin: 0px 12px 12px 12px;
 }
 
 .section h1 {
@@ -156,63 +126,55 @@ figure {
 	overflow-y: auto;
 }
 
-.reel {
-	padding: 4px;
+.button {
+	color: #ffffff;
+	font-size: 16px;
+	transition: 0.3s;
+	border-radius: 4px;
+	padding: 10px 20px;
+	font-family: "LiberationSans-Bold";
 }
 
-.social img {
-	padding: 8px;
+.enabled {
+	background-color: #000000;
+}
+
+.enabled:hover {
+	color: #ffffff;
+	background-color: #525252;
+}
+
+.disabled {
+	cursor: not-allowed;
+	background-color: #c0c0c0;
+}
+
+.reel iframe {
+	width: 95vw;
+	max-width: 768px;
+	max-height: 433px;
+	height: calc(100vw / 1.88);
+}
+
+.links img, .links a {
+	padding: 4px;
 	max-width: 48px;
-	padding-top: 12px;
-}
-
-.links a {
-	padding: 4px;
-	color: #525252;
-	font-size: 12pt;
-	padding-bottom: 16px;
+	margin-top: 12px;
+	font-family: "LiberationSans-Bold";
 }
 
 /* Resolutions */
-@media screen and (max-width: 320px) {
-	header {
-		height: 110px;
-	}
-
-	body {
-		padding-top: 110px;
-	}
-
+@media screen and (max-width: 330px) {
 	.title {
 		font-size: 22pt;
 	}
 
 	.tabs a {
-		font-size: 12pt;
-		padding: 0px 2px 0px 2px;
-	}
-
-	.reel {
-		height: 0;
-		width: 100%;
-		position: relative;
-		padding-bottom: 56.25%;
-	}
-
-	.reel iframe {
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
+		font-size: 14pt;
 	}
 
 	.media img {
 		max-width: 240px;
-	}
-
-	.sections h1 {
-		font-size: 20pt;
 	}
 
 	.section img {
@@ -220,34 +182,23 @@ figure {
 	}
 
 	.description {
-		font-size: 12pt;
 		max-height: 160px;
 	}
 
-	.social img {
+	.links img, .links a {
 		max-width: 40px;
-	}
-
-	.links a {
 		font-size: 10pt;
 	}
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
-	header {
-		height: 120px;
-	}
-
-	body {
-		padding-top: 120px;
-	}
-
+@media screen and (min-width: 331px) and (max-width: 767px) {
 	.title {
 		font-size: 28pt;
+		padding: 20px 0px 20px 0px;
 	}
 
 	.tabs a {
-		font-size: 16pt;
+		font-size: 14pt;
 	}
 
 	.section img {
@@ -256,23 +207,7 @@ figure {
 	}
 
 	.description {
-		font-size: 12pt;
 		max-height: 160px;
-	}
-
-	.reel {
-		height: 0;
-		width: 100%;
-		position: relative;
-		padding-bottom: 56.25%;
-	}
-
-	.reel iframe {
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
 	}
 
 	.media img {
@@ -280,8 +215,14 @@ figure {
 	}
 }
 
-@media screen and (min-width: 769px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
 	.media img {
 		max-width: 368px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.section {
+		margin: 0px auto 12px auto;
 	}
 }
