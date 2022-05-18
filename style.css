@@ -76,16 +76,16 @@ figure {
 }
 
 .title {
+	padding: 16px;
 	font-size: 36pt;
-	padding: 16px 0px 16px 0px;
 	font-family: "LiberationSerif-Bold";
 }
 
 .tabs a {
+	padding: 4px;
 	color: #525252;
 	font-size: 16pt;
 	transition: color 0.2s;
-	padding: 0px 4px 0px 4px;
 	-webkit-transition: color 0.2s;
 }
 
