@@ -130,12 +130,12 @@ figure {
 }
 
 .section {
-	padding: 12px;
 	overflow: auto;
 	text-align: left;
 	max-width: 1000px;
 	background-color: #f1f1f1;
 	margin: 0px auto 12px auto;
+	padding: 12px 12px 0px 12px;
 }
 
 .section h1 {
