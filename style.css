@@ -159,6 +159,7 @@ figure {
 .links img, .links a {
 	padding: 4px;
 	max-width: 48px;
+	color: #525252;
 	margin: 12px 0px 6px 0px;
 	font-family: "LiberationSans-Bold";
 }
