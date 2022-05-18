@@ -155,11 +155,14 @@ figure {
 	height: calc(100vw / 1.88);
 }
 
+.links {
+	margin: 12px 0px 24px 0px;
+}
+
 .links img, .links a {
 	padding: 4px;
-	max-width: 48px;
 	color: #525252;
-	margin: 12px 0px 6px 0px;
+	max-width: 48px;
 	font-family: "LiberationSans-Bold";
 }
 
