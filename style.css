@@ -21,7 +21,6 @@
 
 /* Elements */
 html {
-	overflow-y: auto;
 	text-align: center;
 	font-family: "LiberationSerif-Regular";
 }
@@ -94,8 +93,9 @@ figure {
 }
 
 .media img {
-	max-width: 400px;
-	margin: 0px 3px 6px 3px;
+	width: 95%;
+	max-width: 450px;
+	padding: 0px 3px 6px 3px;
 }
 
 .section {
@@ -144,7 +144,7 @@ figure {
 }
 
 .disabled {
-	cursor: not-allowed;
+	pointer-events: none;
 	background-color: #c0c0c0;
 }
 
@@ -152,6 +152,7 @@ figure {
 	width: 95vw;
 	max-width: 768px;
 	max-height: 433px;
+	padding-bottom: 6px;
 	height: calc(100vw / 1.88);
 }
 
@@ -211,10 +212,6 @@ figure {
 
 	.description {
 		max-height: 160px;
-	}
-
-	.media img {
-		max-width: 320px;
 	}
 }
 
