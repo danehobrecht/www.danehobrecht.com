@@ -62,9 +62,10 @@ span {
 }
 
 figure {
-	padding: 4px;
 	font-size: 14pt;
+	max-width: 600px;
 	display: inline-block;
+	padding: 0px 3px 10px 3px;
 }
 
 /* Classes */
