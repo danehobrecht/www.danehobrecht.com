@@ -61,13 +61,6 @@ span {
 	color: #000000;
 }
 
-figure {
-	font-size: 14pt;
-	max-width: 600px;
-	display: inline-block;
-	padding: 0px 3px 10px 3px;
-}
-
 /* Classes */
 * {
 	border: 0;
@@ -170,12 +163,20 @@ figure {
 
 /* Resolutions */
 @media screen and (max-width: 330px) {
+	header {
+		height: 96px;
+	}
+
+	body {
+		padding-top: 96px;
+	}
+
 	.title {
-		font-size: 22pt;
+		font-size: 20pt;
 	}
 
 	.tabs a {
-		font-size: 14pt;
+		font-size: 12pt;
 	}
 
 	.media img {
