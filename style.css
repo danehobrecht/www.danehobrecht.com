@@ -144,8 +144,8 @@ span {
 
 .reel p {
 	margin: auto;
-	padding: 6px;
 	max-width: 750px;
+	padding: 12px 6px 12px 6px;
 }
 
 .reel iframe {
@@ -230,7 +230,6 @@ span {
 @media screen and (min-width: 768px) {
 	.reel p {
 		font-size: 14pt;
-		padding: 12px 6px 12px 6px;
 	}
 }
 
