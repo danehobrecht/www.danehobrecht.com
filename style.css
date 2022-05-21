@@ -142,12 +142,18 @@ span {
 	background-color: #c0c0c0;
 }
 
+.reel p {
+	margin: auto;
+	padding: 12px;
+	max-width: 750px;
+}
+
 .reel iframe {
 	width: 95vw;
 	max-width: 768px;
 	max-height: 433px;
-	padding-bottom: 6px;
-	height: calc(100vw / 1.88);
+	vertical-align: bottom;
+	height: calc(95vw / 1.88);
 }
 
 .links {
@@ -191,6 +197,10 @@ span {
 		max-height: 160px;
 	}
 
+	.reel p {
+		font-size: 10pt;
+	}
+
 	.links img, .links a {
 		max-width: 40px;
 		font-size: 10pt;
@@ -214,6 +224,12 @@ span {
 
 	.description {
 		max-height: 160px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.reel p {
+		font-size: 14pt;
 	}
 }
 
