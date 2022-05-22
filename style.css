@@ -148,9 +148,9 @@ img {
 
 .reel p {
 	margin: auto;
+	padding: 12px;
 	font-size: 14pt;
 	max-width: 768px;
-	padding: 16px 12px 16px 12px;
 }
 
 .reel iframe {
