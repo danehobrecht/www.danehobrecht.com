@@ -77,9 +77,14 @@ img {
 	color: #000000;
 }
 
+.media {
+	margin: 0px 12px 0px 12px;
+}
+
 .media img {
+	width: 100%;
 	max-width: 460px;
-	padding: 0px 3px 3px 3px;
+	padding: 0px 12px 10px 0px;
 }
 
 .section {
@@ -88,7 +93,7 @@ img {
 	max-width: 1000px;
 	background-color: #f1f1f1;
 	margin: 0px 12px 12px 12px;
-	padding: 12px 12px 6px 12px;
+	padding: 12px 12px 10px 12px;
 }
 
 .section h1 {
@@ -155,7 +160,7 @@ img {
 }
 
 .links {
-	margin: 12px 0px 24px 0px;
+	margin-bottom: 24px;
 }
 
 .links img, .links a {
@@ -216,7 +221,7 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
 	.media img {
-		max-width: 368px;
+		max-width: 320px;
 	}
 }
 
