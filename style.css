@@ -1,4 +1,4 @@
-/* Fonts */
+/* Global */
 @font-face {
 	font-family: "LiberationSans-Regular";
 	src: url("public/fonts/liberation_sans/LiberationSans-Regular.ttf");
@@ -19,7 +19,6 @@
 	src: url("public/fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
-/* Elements */
 html {
 	text-align: center;
 	font-family: "LiberationSerif-Regular";
@@ -47,18 +46,8 @@ a {
 	text-decoration: none;
 }
 
-svg {
-	width: 24px;
-	height: 24px;
-	vertical-align: middle;
-}
-
 img {
 	image-rendering: -webkit-optimize-contrast;
-}
-
-span {
-	color: #000000;
 }
 
 /* Classes */
@@ -83,6 +72,10 @@ span {
 }
 
 .tabs a:hover {
+	color: #000000;
+}
+
+.tabs span {
 	color: #000000;
 }
 
@@ -112,6 +105,12 @@ span {
 	width: 100%;
 	max-width: 450px;
 	padding-right: 12px;
+}
+
+.section svg {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
 }
 
 .description {
