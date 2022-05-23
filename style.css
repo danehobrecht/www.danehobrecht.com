@@ -55,7 +55,7 @@ img {
 	color: #525252;
 	font-size: 16pt;
 	transition: color 0.2s;
-	padding: 0px 2px 0px 2px;
+	padding: 0px 4px 0px 4px;
 	-webkit-transition: color 0.2s;
 }
 
@@ -214,10 +214,6 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-	.tabs a {
-		padding: 0px 4px 0px 4px;
-	}
-
 	.headshots img:hover {
 		transform: scale(1.025);
 		-webkit-transform: scale(1.025);
