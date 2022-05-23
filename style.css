@@ -164,7 +164,7 @@ img {
 /* Resolutions */
 @media screen and (max-width: 330px) {
 	header {
-		height: 96px;
+		height: 64px;
 	}
 
 	.title {
