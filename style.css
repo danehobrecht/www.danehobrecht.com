@@ -26,10 +26,11 @@ html {
 }
 
 header {
-	height: 144px;
+	height: 112px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	margin: 16px 0px 16px 0px;
+	justify-content: space-around;
 }
 
 a {
@@ -190,10 +191,6 @@ img {
 }
 
 @media screen and (min-width: 331px) and (max-width: 767px) {
-	header {
-		height: 128px;
-	}
-
 	.title {
 		font-size: 28pt;
 	}
