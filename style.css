@@ -82,6 +82,11 @@ img {
 	-webkit-transform: transform 0.5s ease;
 }
 
+.media img:hover {
+	transform: scale(1.025);
+	-webkit-transform: scale(1.025);
+}
+
 .section {
 	overflow-y: auto;
 	text-align: left;
@@ -212,11 +217,6 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-	.headshots img:hover {
-		transform: scale(1.025);
-		-webkit-transform: scale(1.025);
-	}
-
 	.section {
 		margin: 0px auto 16px auto;
 	}
