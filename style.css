@@ -28,9 +28,8 @@ html {
 header {
 	height: 144px;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
-
+	justify-content: center;
 }
 
 a {
