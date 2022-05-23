@@ -154,11 +154,11 @@ img {
 }
 
 .reel iframe {
-	width: 95vw;
+	width: 92vw;
 	max-width: 768px;
 	max-height: 433px;
 	vertical-align: bottom;
-	height: calc(95vw / 1.88);
+	height: calc(92vw / 1.88);
 }
 
 .links {
