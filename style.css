@@ -25,7 +25,7 @@ html {
 	font-family: "LiberationSerif-Regular";
 }
 
-header {
+header, footer {
 	height: 112px;
 	display: flex;
 	flex-direction: column;
@@ -157,7 +157,6 @@ img {
 .links img, .links a {
 	color: #525252;
 	max-width: 48px;
-	padding: 8px 4px 8px 4px;
 	font-family: "LiberationSans-Bold";
 }
 
