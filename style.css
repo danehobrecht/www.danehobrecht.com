@@ -159,10 +159,14 @@ img {
 	height: calc(92vw / 1.88);
 }
 
-.links img, .links a {
-	color: #525252;
+.links img {
 	max-width: 48px;
-	padding: 8px 4px 8px 4px;
+	padding: 12px 4px 4px 4px;
+}
+
+.links a {
+	color: #525252;
+	padding: 4px 4px 12px 4px;
 	font-family: "LiberationSans-Bold";
 }
 
@@ -189,8 +193,11 @@ img {
 		font-size: 10pt;
 	}
 
-	.links img, .links a {
+	.links img {
 		max-width: 40px;
+	}
+
+	.links a {
 		font-size: 10pt;
 	}
 }
@@ -207,6 +214,10 @@ img {
 	.description {
 		display: inherit;
 		max-height: 184px;
+	}
+
+	.links img {
+		padding-top: 0px;
 	}
 }
 
