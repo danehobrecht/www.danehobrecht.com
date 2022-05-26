@@ -77,8 +77,8 @@ img {
 
 .media img {
 	width: 92vw;
-	padding: 8px;
 	max-width: 440px;
+	padding: 0px 8px 16px 8px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
@@ -89,12 +89,13 @@ img {
 }
 
 .section {
+	width: 85vw;
+	padding: 12px;
 	overflow-y: auto;
 	text-align: left;
 	max-width: 1000px;
 	background-color: #f1f1f1;
-	margin: 0px 16px 16px 16px;
-	padding: 12px 12px 12px 12px;
+	margin: 0px auto 16px auto;
 }
 
 .section h1 {
@@ -160,9 +161,9 @@ img {
 	height: calc(92vw / 1.885);
 }
 
-.links img {
-	padding: 4px;
-	max-width: 48px;
+.socials img {
+	max-width: 52px;
+	padding: 0px 8px 0px 8px;
 }
 
 .links a {
@@ -172,9 +173,9 @@ img {
 }
 
 /* Resolutions */
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 320px) {
 	header, footer {
-		height: 64px;
+		height: 84px;
 	}
 
 	.title {
@@ -194,7 +195,7 @@ img {
 		font-size: 10pt;
 	}
 
-	.links img {
+	.socials img {
 		max-width: 40px;
 	}
 
@@ -203,7 +204,7 @@ img {
 	}
 }
 
-@media screen and (min-width: 331px) and (max-width: 767px) {
+@media screen and (min-width: 321px) and (max-width: 767px) {
 	.title {
 		font-size: 28pt;
 	}
@@ -216,10 +217,6 @@ img {
 		display: inherit;
 		max-height: 184px;
 	}
-
-	.links img {
-		padding-top: 0px;
-	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -229,10 +226,6 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-	.section {
-		margin: 0px auto 16px auto;
-	}
-
 	.section img {
 		margin-bottom: 0px;
 	}
