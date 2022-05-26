@@ -73,13 +73,12 @@ img {
 
 .media {
 	font-size: 0;
-	margin: -8px;
 }
 
 .media img {
-	margin: 8px;
-	width: 88.5%;
-	max-width: 450px;
+	width: 92vw;
+	padding: 8px;
+	max-width: 440px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
@@ -158,7 +157,7 @@ img {
 	max-width: 768px;
 	max-height: 433px;
 	vertical-align: bottom;
-	height: calc(92vw / 1.88);
+	height: calc(92vw / 1.885);
 }
 
 .links img {
@@ -174,7 +173,7 @@ img {
 
 /* Resolutions */
 @media screen and (max-width: 330px) {
-	header {
+	header, footer {
 		height: 64px;
 	}
 
