@@ -27,7 +27,6 @@ html {
 }
 
 header, footer {
-	outline: 1px solid red;
 	height: 112px;
 	display: flex;
 	flex-direction: column;
@@ -95,8 +94,8 @@ img {
 	padding: 16px;
 	overflow-y: auto;
 	text-align: left;
-	max-width: 1000px;
 	margin: 16px auto;
+	max-width: 1000px;
 	background-color: #f1f1f1;
 }
 
@@ -146,13 +145,6 @@ img {
 .disabled {
 	pointer-events: none;
 	background-color: #c0c0c0;
-}
-
-.reel p {
-	margin: auto;
-	padding: 4px;
-	font-size: 14pt;
-	max-width: 768px;
 }
 
 .reel iframe {
