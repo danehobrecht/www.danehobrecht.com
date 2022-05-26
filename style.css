@@ -27,6 +27,7 @@ html {
 }
 
 header, footer {
+	outline: 1px solid red;
 	height: 112px;
 	display: flex;
 	flex-direction: column;
@@ -73,12 +74,13 @@ img {
 
 .media {
 	font-size: 0;
+	margin: -16px 0px -16px 0px;
 }
 
 .media img {
 	width: 92vw;
-	padding: 8px;
-	max-width: 440px;
+	padding: 16px;
+	max-width: 450px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
@@ -94,7 +96,7 @@ img {
 	overflow-y: auto;
 	text-align: left;
 	max-width: 1000px;
-	margin: 24px auto;
+	margin: 16px auto;
 	background-color: #f1f1f1;
 }
 
@@ -155,7 +157,6 @@ img {
 
 .reel iframe {
 	width: 92vw;
-	padding: 8px;
 	max-width: 768px;
 	max-height: 433px;
 	vertical-align: bottom;
