@@ -20,12 +20,21 @@
 }
 
 html {
+	cursor: default;
 	overflow-x: hidden;
 	text-align: center;
 	font-family: "LiberationSerif-Regular";
 }
 
 header {
+	height: 112px;
+	display: flex;
+	flex-direction: column;
+	margin: 16px 0px 16px 0px;
+	justify-content: space-around;
+}
+
+footer {
 	height: 112px;
 	display: flex;
 	flex-direction: column;
@@ -55,10 +64,10 @@ img {
 }
 
 .tabs a {
-	padding: 4px;
 	color: #525252;
 	font-size: 16pt;
 	transition: color 0.2s;
+	padding: 0px 4px 0px 4px;
 	-webkit-transition: color 0.2s;
 }
 
@@ -71,13 +80,14 @@ img {
 }
 
 .media {
-	margin: 0px 16px 0px 16px;
+	font-size: 0;
+	margin: -8px;
 }
 
 .media img {
-	width: 100%;
-	max-width: 460px;
-	margin: 0px 12px 12px 0px;
+	margin: 8px;
+	width: 88.5%;
+	max-width: 450px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
@@ -159,18 +169,14 @@ img {
 	height: calc(92vw / 1.88);
 }
 
-.links {
-	padding: 8px 24px 24px 24px;
-}
-
 .links img {
 	padding: 4px;
 	max-width: 48px;
 }
 
 .links a {
-	padding: 4px;
 	color: #525252;
+	padding: 0px 4px 0px 4px;
 	font-family: "LiberationSans-Bold";
 }
 
