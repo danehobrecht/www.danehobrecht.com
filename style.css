@@ -159,14 +159,18 @@ img {
 	height: calc(92vw / 1.88);
 }
 
+.links {
+	padding: 8px 24px 24px 24px;
+}
+
 .links img {
+	padding: 4px;
 	max-width: 48px;
-	padding: 12px 4px 4px 4px;
 }
 
 .links a {
+	padding: 4px;
 	color: #525252;
-	padding: 4px 4px 12px 4px;
 	font-family: "LiberationSans-Bold";
 }
 
