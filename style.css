@@ -177,7 +177,7 @@ img {
 /* Resolutions */
 @media screen and (max-width: 320px) {
 	header, footer {
-		height: 84px;
+		height: 80px;
 	}
 
 	.title {
@@ -185,16 +185,16 @@ img {
 	}
 
 	.tabs a {
-		font-size: 11pt;
+		font-size: 10pt;
+	}
+
+	.media img {
+		padding: 8px 0px 8px 0px;
 	}
 
 	.description {
 		display: inherit;
 		max-height: 160px;
-	}
-
-	.reel p {
-		font-size: 10pt;
 	}
 
 	.socials img {
@@ -212,7 +212,7 @@ img {
 	}
 
 	.tabs a {
-		font-size: 16pt;
+		font-size: 14pt;
 	}
 
 	.description {
