@@ -63,7 +63,15 @@ img {
 	font-family: "LiberationSerif-Bold";
 }
 
-.tabs a {
+.navigation {
+	list-style-type: none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation a {
 	color: #525252;
 	font-size: 16pt;
 	transition: color 0.2s;
@@ -71,11 +79,11 @@ img {
 	-webkit-transition: color 0.2s;
 }
 
-.tabs a:hover {
+.navigation a:hover {
 	color: #000000;
 }
 
-.tabs span {
+.navigation span {
 	color: #000000;
 }
 
