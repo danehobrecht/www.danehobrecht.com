@@ -67,10 +67,6 @@ img {
 	list-style-type: none;
 }
 
-.navigation li {
-	display: inline;
-}
-
 .navigation a {
 	color: #525252;
 	font-size: 16pt;
@@ -81,6 +77,10 @@ img {
 
 .navigation a:hover {
 	color: #000000;
+}
+
+.navigation li {
+	display: inline;
 }
 
 .navigation span {
@@ -176,10 +176,18 @@ img {
 	padding: 0px 8px 0px 8px;
 }
 
+.links {
+	list-style-type: none;
+}
+
 .links a {
 	color: #525252;
 	padding: 0px 4px 0px 4px;
 	font-family: "LiberationSans-Bold";
+}
+
+.links li {
+	display: inline;
 }
 
 /* Resolutions */
