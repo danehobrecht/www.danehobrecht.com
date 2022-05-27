@@ -59,7 +59,7 @@ img {
 }
 
 .title {
-	font-size: 40pt;
+	font-size: 3.5em;
 	font-family: "LiberationSerif-Bold";
 }
 
@@ -69,7 +69,7 @@ img {
 
 .navigation a {
 	color: #525252;
-	font-size: 16pt;
+	font-size: 1.4em;
 	transition: color 0.2s;
 	padding: 0px 4px 0px 4px;
 	-webkit-transition: color 0.2s;
@@ -88,7 +88,7 @@ img {
 }
 
 .media {
-	font-size: 0;
+	font-size: 0em;
 	margin: -16px 0px -16px 0px;
 }
 
@@ -136,13 +136,13 @@ img {
 
 .description {
 	display: inline;
-	font-size: 14pt;
+	font-size: 1.2em;
 	overflow-y: scroll;
 }
 
 .button {
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 1em;
 	transition: 0.3s;
 	border-radius: 4px;
 	padding: 10px 20px;
@@ -197,15 +197,21 @@ img {
 	}
 
 	.title {
-		font-size: 22pt;
+		font-size: 1.8em;
 	}
 
-	.tabs a {
-		font-size: 10pt;
+	.navigation a {
+		font-size: 1em;
+		padding: 0px 2px 0px 2px;
 	}
 
 	.media img {
 		padding: 8px 0px 8px 0px;
+	}
+
+	.section {
+		width: 80.5vw;
+		margin: -8px auto 16px auto;
 	}
 
 	.description {
@@ -218,17 +224,17 @@ img {
 	}
 
 	.links a {
-		font-size: 10pt;
+		font-size: 0.9em;
 	}
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	.title {
-		font-size: 28pt;
+		font-size: 2.4em;
 	}
 
-	.tabs a {
-		font-size: 14pt;
+	.navigation a {
+		font-size: 1.2em;
 	}
 
 	.description {
