@@ -142,7 +142,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .reel iframe {
-	width: 92vw;
+	width: 90vw;
 	max-width: 768px;
 	max-height: 433px;
 	padding-bottom: 16px;
@@ -156,7 +156,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .headshots img {
-	width: 92vw;
+	width: 90vw;
 	padding: 16px;
 	max-width: 400px;
 	transition: transform 0.5s ease;
