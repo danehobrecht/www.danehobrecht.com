@@ -117,10 +117,8 @@ img {
 	width: 85vw;
 	margin: auto;
 	height: 128vw;
-	padding: 16px;
 	max-width: 1080px;
 	max-height: 675px;
-	background-color: #f5f5f5;
 }
 
 .slideshow img {
