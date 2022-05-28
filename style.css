@@ -75,14 +75,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 .navigation li { display: inline; }
 .navigation span { color: #000000; }
 
-@keyframes fade {
-	0% { opacity: 0; }
-	11.11% { opacity: 1; }
-	33.33% { opacity: 1; }
-	44.44% { opacity: 0; }
-	100% { opacity: 0; }
-}
-
 .section {
 	width: 81vw;
 	padding: 16px;
@@ -226,6 +218,14 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 @media screen and (max-width: 1279px) {
+	@keyframes fade {
+		0% { opacity: 0; }
+		11.11% { opacity: 1; }
+		33.33% { opacity: 1; }
+		44.44% { opacity: 0; }
+		100% { opacity: 0; }
+	}
+
 	.preview {
 		width: 90vw;
 		margin: auto;
