@@ -114,10 +114,9 @@ img {
 }
 
 .slideshow {
-	width: 85vw;
+	width: 90vw;
 	margin: auto;
-	height: 128vw;
-	max-width: 1080px;
+	height: 135vw;
 	max-height: 675px;
 }
 
@@ -125,7 +124,7 @@ img {
 	left: 0;
 	right: 0;
 	opacity: 0;
-	width: 85vw;
+	width: 90vw;
 	margin: auto;
 	max-width: 450px;
 	position: absolute;
@@ -139,7 +138,7 @@ img {
 .slideshow img:nth-child(3) { animation-delay: 16s; }
 
 .section {
-	width: 85vw;
+	width: 81vw;
 	padding: 16px;
 	overflow-y: auto;
 	text-align: left;
@@ -244,11 +243,11 @@ img {
 	}
 
 	.section {
-		width: 80.5vw;
+		width: 78.5vw;
 	}
 
 	.slideshow {
-		width: 80.5vw;
+		width: 80vw;
 	}
 
 	.description {
