@@ -69,7 +69,7 @@ img {
 
 .navigation a {
 	color: #525252;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	transition: color 0.2s;
 	padding: 0px 4px 0px 4px;
 	-webkit-transition: color 0.2s;
@@ -120,7 +120,7 @@ img {
 	padding: 16px;
 	max-width: 1080px;
 	max-height: 675px;
-	background-color: #eeeeee;
+	background-color: #f5f5f5;
 }
 
 .slideshow img {
@@ -147,7 +147,7 @@ img {
 	text-align: left;
 	margin: 16px auto;
 	max-width: 1080px;
-	background-color: #eeeeee;
+	background-color: #f5f5f5;
 }
 
 .section h1 {
@@ -237,7 +237,7 @@ img {
 	}
 
 	.navigation a {
-		font-size: 1em;
+		font-size: 1.05em;
 		padding: 0px 2px 0px 2px;
 	}
 
@@ -273,7 +273,7 @@ img {
 	}
 
 	.navigation a {
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 
 	.description {
