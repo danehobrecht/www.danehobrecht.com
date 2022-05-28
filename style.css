@@ -47,9 +47,7 @@ a {
 	text-decoration: none;
 }
 
-img {
-	image-rendering: -webkit-optimize-contrast;
-}
+img { image-rendering: -webkit-optimize-contrast; }
 
 /* Classes */
 * {
@@ -63,9 +61,7 @@ img {
 	font-family: "LiberationSerif-Bold";
 }
 
-.navigation {
-	list-style-type: none;
-}
+.navigation { list-style-type: none; }
 
 .navigation a {
 	color: #525252;
@@ -75,35 +71,11 @@ img {
 	-webkit-transition: color 0.2s;
 }
 
-.navigation a:hover {
-	color: #000000;
-}
+.navigation a:hover { color: #000000; }
 
-.navigation li {
-	display: inline;
-}
+.navigation li { display: inline; }
 
-.navigation span {
-	color: #000000;
-}
-
-.media {
-	font-size: 0em;
-	margin: -16px 0px -16px 0px;
-}
-
-.media img {
-	width: 92vw;
-	padding: 16px;
-	max-width: 450px;
-	transition: transform 0.5s ease;
-	-webkit-transform: transform 0.5s ease;
-}
-
-.media img:hover {
-	transform: scale(1.025);
-	-webkit-transform: scale(1.025);
-}
+.navigation span { color: #000000; }
 
 @keyframes fade {
 	0% { opacity: 0; }
@@ -113,37 +85,13 @@ img {
 	100% { opacity: 0; }
 }
 
-.slideshow {
-	width: 90vw;
-	margin: auto;
-	height: 135vw;
-	max-height: 675px;
-}
-
-.slideshow img {
-	left: 0;
-	right: 0;
-	opacity: 0;
-	width: 90vw;
-	margin: auto;
-	max-width: 450px;
-	position: absolute;
-	animation-name: fade;
-	animation-duration: 24s;
-	animation-iteration-count: infinite;
-}
-
-.slideshow img:nth-child(1) { animation-delay: 0s; }
-.slideshow img:nth-child(2) { animation-delay: 8s; }
-.slideshow img:nth-child(3) { animation-delay: 16s; }
-
 .section {
 	width: 81vw;
 	padding: 16px;
 	overflow-y: auto;
 	text-align: left;
 	margin: 16px auto;
-	max-width: 1080px;
+	max-width: 1200px;
 	background-color: #f5f5f5;
 }
 
@@ -181,9 +129,7 @@ img {
 	font-family: "LiberationSans-Bold";
 }
 
-.enabled {
-	background-color: #000000;
-}
+.enabled { background-color: #000000; }
 
 .enabled:hover {
 	color: #ffffff;
@@ -204,14 +150,30 @@ img {
 	height: calc(92vw / 1.885);
 }
 
+.headshots {
+	font-size: 0em;
+	margin: -16px 0px -16px 0px;
+}
+
+.headshots img {
+	width: 92vw;
+	padding: 16px;
+	max-width: 400px;
+	transition: transform 0.5s ease;
+	-webkit-transform: transform 0.5s ease;
+}
+
+.headshots img:hover {
+	transform: scale(1.025);
+	-webkit-transform: scale(1.025);
+}
+
 .socials img {
 	max-width: 48px;
 	padding: 0px 8px 0px 8px;
 }
 
-.links {
-	list-style-type: none;
-}
+.links { list-style-type: none; }
 
 .links a {
 	color: #525252;
@@ -219,59 +181,41 @@ img {
 	font-family: "LiberationSans-Bold";
 }
 
-.links li {
-	display: inline;
-}
+.links li { display: inline; }
 
 /* Resolutions */
 @media screen and (max-width: 320px) {
-	header, footer {
-		height: 80px;
-	}
+	header, footer { height: 80px; }
 
-	.title {
-		font-size: 1.8em;
-	}
+	.title { font-size: 1.8em; }
 
 	.navigation a {
 		font-size: 1.05em;
 		padding: 0px 2px 0px 2px;
 	}
 
-	.media img {
-		padding: 8px 0px 8px 0px;
-	}
+	.preview { width: 80vw; }
 
-	.section {
-		width: 78.5vw;
-	}
-
-	.slideshow {
-		width: 80vw;
-	}
+	.section { width: 78.5vw; }
 
 	.description {
 		display: inherit;
 		max-height: 160px;
 	}
 
-	.socials img {
-		max-width: 40px;
-	}
+	.headshots img { padding: 8px 0px 8px 0px; }
 
-	.links a {
-		font-size: 0.9em;
-	}
+	.socials img { max-width: 40px; }
+
+	.links a { font-size: 0.9em; }
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
-	.title {
-		font-size: 2.4em;
-	}
+	.title { font-size: 2.4em; }
 
-	.navigation a {
-		font-size: 1.3em;
-	}
+	.navigation a { font-size: 1.3em; }
+
+	.section { width: 82vw; }
 
 	.description {
 		display: inherit;
@@ -280,13 +224,48 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-	.media img {
-		max-width: 368px;
+	.headshots img { max-width: 368px; }
+}
+
+@media screen and (max-width: 1279px) {
+	.preview {
+		width: 90vw;
+		margin: auto;
+		height: 135vw;
+		max-height: 675px;
 	}
+
+	.preview img {
+		left: 0;
+		right: 0;
+		opacity: 0;
+		width: 90vw;
+		margin: auto;
+		max-width: 450px;
+		position: absolute;
+		animation-name: fade;
+		animation-duration: 24s;
+		animation-iteration-count: infinite;
+	}
+
+	.preview img:nth-child(1) { animation-delay: 0s; }
+	.preview img:nth-child(2) { animation-delay: 8s; }
+	.preview img:nth-child(3) { animation-delay: 16s; }
 }
 
 @media screen and (min-width: 1280px) {
-	.section img {
-		margin-bottom: 0px;
+	.section img { margin-bottom: 0px; }
+
+	.preview {
+		font-size: 0em;
+		margin: -8px 0px -8px 0px;
+	}
+
+	.preview img {
+		width: 92vw;
+		padding: 8px;
+		max-width: 400px;
+		transition: transform 0.5s ease;
+		-webkit-transform: transform 0.5s ease;
 	}
 }
