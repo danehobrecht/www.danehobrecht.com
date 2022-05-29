@@ -175,6 +175,14 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 /* Resolutions */
 @media screen and (max-width: 1279px) {
+	@keyframes fade {
+		0% { opacity: 0; }
+		11.11% { opacity: 1; }
+		33.33% { opacity: 1; }
+		44.44% { opacity: 0; }
+		100% { opacity: 0; }
+	}
+
 	.preview {
 		width: 90vw;
 		margin: auto;
@@ -232,14 +240,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 	.title { font-size: 2.4em; }
 
 	.navigation a { font-size: 1.3em; }
-
-	@keyframes fade {
-		0% { opacity: 0; }
-		11.11% { opacity: 1; }
-		33.33% { opacity: 1; }
-		44.44% { opacity: 0; }
-		100% { opacity: 0; }
-	}
 
 	.headshots img { max-width: 368px; }
 
