@@ -158,6 +158,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	-webkit-transform: scale(1.025);
 }
 
+.socials a { font-size: 0em; }
+
 .socials img {
 	max-width: 48px;
 	padding: 0px 8px 0px 8px;
@@ -190,6 +192,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 		max-height: 675px;
 	}
 
+	.preview a { pointer-events: none; }
+
 	.preview img {
 		left: 0;
 		right: 0;
@@ -203,9 +207,9 @@ img { image-rendering: -webkit-optimize-contrast; }
 		animation-iteration-count: infinite;
 	}
 
-	.preview img:nth-child(1) { animation-delay: 0s; }
-	.preview img:nth-child(2) { animation-delay: 8s; }
-	.preview img:nth-child(3) { animation-delay: 16s; }
+	.preview a:nth-child(1) img { animation-delay: 0s; }
+	.preview a:nth-child(2) img { animation-delay: 8s; }
+	.preview a:nth-child(3) img { animation-delay: 16s; }
 }
 
 @media screen and (max-width: 320px) {
@@ -264,6 +268,12 @@ img { image-rendering: -webkit-optimize-contrast; }
 		transition: transform 0.5s ease;
 		-webkit-transform: transform 0.5s ease;
 	}
+
+	.preview img:hover {
+		transform: scale(1.025);
+		-webkit-transform: scale(1.025);
+	}
+
 
 	.section img { margin-bottom: 0px; }
 }
