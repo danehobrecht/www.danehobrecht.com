@@ -30,7 +30,7 @@ header {
 	height: 112px;
 	display: flex;
 	flex-direction: column;
-	margin: 16px 0px 16px 0px;
+	margin: 16px auto 16px auto;
 	justify-content: space-around;
 }
 
@@ -38,7 +38,7 @@ footer {
 	height: 96px;
 	display: flex;
 	flex-direction: column;
-	margin: 24px 0px 24px 0px;
+	margin: 24px auto 24px auto;
 	justify-content: space-around;
 }
 
@@ -143,7 +143,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 .gallery {
 	font-size: 0em;
 	max-width: 1280px;
-	margin: -8px auto 16px auto;
+	margin: -8px auto 8px auto;
 }
 
 .gallery img {
@@ -233,7 +233,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 		max-height: 160px;
 	}
 
-	.gallery { margin: -16px 0px -16px 0px; }
+	.gallery { margin: -8px auto 8px auto; }
 
 	.icons img { max-width: 40px; }
 
@@ -258,7 +258,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 @media screen and (min-width: 768px) {
 	.preview {
 		font-size: 0em;
-		margin: -8px 0px -8px 0px;
+		margin: -8px auto -8px auto;
 	}
 
 	.preview img {
@@ -273,7 +273,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 		transform: scale(1.025);
 		-webkit-transform: scale(1.025);
 	}
-
 
 	.section img { margin-bottom: 0px; }
 }
