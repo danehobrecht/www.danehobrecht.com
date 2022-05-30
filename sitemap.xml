@@ -19,12 +19,7 @@
 		<priority>0.64</priority>
 	</url>
 	<url>
-		<loc>https://danehobrecht.com/headshots</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>https://danehobrecht.com/performances</loc>
+		<loc>https://danehobrecht.com/gallery</loc>
 		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
 	</url>
