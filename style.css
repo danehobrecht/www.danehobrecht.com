@@ -34,6 +34,11 @@ header {
 	justify-content: space-around;
 }
 
+main {
+	width: 90vw;
+	margin: auto;
+}
+
 footer {
 	height: 96px;
 	display: flex;
@@ -76,12 +81,11 @@ img { image-rendering: -webkit-optimize-contrast; }
 .navigation span { color: #000000; }
 
 .section {
-	width: 81vw;
 	padding: 16px;
 	overflow-y: auto;
 	text-align: left;
-	margin: 16px auto;
 	max-width: 1105px;
+	margin: 16px auto;
 	background-color: #f5f5f5;
 }
 
@@ -132,24 +136,25 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .reels iframe {
-	width: 89.5vw;
-	max-width: 768px;
-	max-height: 433px;
+	width: 90vw;
+	max-width: 560px;
+	max-height: 315px;
 	padding-bottom: 16px;
 	vertical-align: bottom;
-	height: calc(89.5vw / 1.885);
+	height: calc(90vw / 1.885);
 }
 
 .gallery {
 	font-size: 0em;
 	max-width: 1280px;
-	margin: -8px auto 8px auto;
+	margin: auto;
+	padding: -8px;
 }
 
 .gallery img {
-	width: 89.5vw;
-	padding: 8px;
+	width: 100%;
 	max-width: 368px;
+	padding: 0px 8px 16px 8px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
@@ -187,7 +192,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 	}
 
 	.preview {
-		width: 89.5vw;
 		margin: auto;
 		height: 135vw;
 		max-height: 675px;
@@ -199,7 +203,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 		left: 0;
 		right: 0;
 		opacity: 0;
-		width: 89.5vw;
+		width: 90vw;
 		margin: auto;
 		position: absolute;
 		animation-name: fade;
@@ -222,18 +226,14 @@ img { image-rendering: -webkit-optimize-contrast; }
 		padding: 0px 2px 0px 2px;
 	}
 
-	.preview { width: 80vw; }
-
-	.reels iframe { width: 89.5vw; }
-
-	.section { width: 78vw; }
-
 	.description {
 		display: inherit;
 		max-height: 160px;
 	}
 
-	.gallery { margin: -8px auto 8px auto; }
+	.gallery img {
+		padding: 0px 0px 16px 0px;
+	}
 
 	.icons img { max-width: 40px; }
 
@@ -245,9 +245,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 	.navigation a { font-size: 1.3em; }
 
-	.gallery img { max-width: 368px; }
-
-	.section { width: 82vw; }
+	.gallery img { padding: 0px 0px 16px 0px; }
 
 	.description {
 		display: inherit;
@@ -256,15 +254,11 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 @media screen and (min-width: 768px) {
-	.preview {
-		font-size: 0em;
-		margin: -8px auto -8px auto;
-	}
+	.preview { font-size: 0em; }
 
 	.preview img {
-		width: 89.5vw;
-		padding: 8px;
 		max-width: 368px;
+		padding: 0px 8px 16px 8px;
 		transition: transform 0.5s ease;
 		-webkit-transform: transform 0.5s ease;
 	}
@@ -274,5 +268,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 		-webkit-transform: scale(1.025);
 	}
 
+	.section { margin-top: 0px; }
 	.section img { margin-bottom: 0px; }
 }
