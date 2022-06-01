@@ -1,20 +1,24 @@
 /* Global */
 @font-face {
+	font-display: swap;
 	font-family: "LiberationSans-Regular";
 	src: url("public/fonts/liberation_sans/LiberationSans-Regular.ttf");
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "LiberationSans-Bold";
 	src: url("public/fonts/liberation_sans/LiberationSans-Bold.ttf");
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "LiberationSerif-Regular";
 	src: url("public/fonts/liberation_serif/LiberationSerif-Regular.ttf");
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "LiberationSerif-Bold";
 	src: url("public/fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
