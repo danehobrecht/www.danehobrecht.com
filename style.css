@@ -133,6 +133,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .button {
 	color: #000000;
+	background-color: #ffffff;
 	font-size: 1em;
 	transition: 0.3s;
 	border-radius: 4px;
@@ -143,13 +144,12 @@ img { image-rendering: -webkit-optimize-contrast; }
 .enabled { background-color: #ffffff; }
 
 .enabled:hover {
-	color: #000000;
 	background-color: #c0c0c0;
 }
 
 .disabled {
+	opacity: 0.32;
 	pointer-events: none;
-	background-color: #c0c0c0;
 }
 
 .reels { 
