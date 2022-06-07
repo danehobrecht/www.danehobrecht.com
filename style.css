@@ -72,7 +72,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
-	background-image: url("public/images/actions/sources/DaneHobrechtAction(001).jpeg");
+	background-image: url("public/images/actions/DaneHobrechtAction(001).jpeg");
 }
 
 .title {
