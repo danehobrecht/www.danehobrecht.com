@@ -143,10 +143,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .enabled { background-color: #ffffff; }
-
-.enabled:hover {
-	background-color: #c0c0c0;
-}
+.enabled:hover { background-color: #c0c0c0; }
 
 .disabled {
 	opacity: 0.32;
@@ -203,7 +200,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 @media screen and (max-width: 320px) {
 	header, footer { height: 80px; }
-
 	.title { font-size: 1.8em; }
 
 	.pages a {
