@@ -89,8 +89,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	-webkit-transition: color 0.2s;
 }
 
-.pages a:hover { color: #ffffff; }
 .pages span { color: #ffffff; }
+.pages a:hover { color: #ffffff; }
 
 .performances {
 	margin-top: 90vh;
@@ -134,11 +134,11 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .button {
 	color: #000000;
-	background-color: #ffffff;
 	font-size: 1em;
 	transition: 0.3s;
 	border-radius: 4px;
 	padding: 10px 20px;
+	background-color: #ffffff;
 	font-family: "LiberationSans-Bold";
 }
 
@@ -200,6 +200,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 @media screen and (max-width: 320px) {
 	header, footer { height: 80px; }
+
 	.title { font-size: 1.8em; }
 
 	.pages a {
@@ -212,9 +213,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 		max-height: 160px;
 	}
 
-	.gallery img {
-		padding: 0px 0px 16px 0px;
-	}
+	.gallery img { padding: 0px 0px 16px 0px; }
 
 	.icons img { max-width: 40px; }
 
