@@ -153,17 +153,18 @@ img { image-rendering: -webkit-optimize-contrast; }
 	pointer-events: none;
 }
 
-.reels { 
+.reels {
 	font-size: 0em;
-	margin-top: -16px;
+	max-width: 1540px;
+	margin: -8px auto 0px auto;
 }
 
 .reels iframe {
 	width: 90vw;
-	padding: 8px;
 	max-width: 560px;
 	max-height: 315px;
 	vertical-align: bottom;
+	padding: 0px 8px 16px 8px;
 	height: calc(90vw / 1.885);
 }
 
