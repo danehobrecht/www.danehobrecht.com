@@ -94,8 +94,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	overflow-y: auto;
 	text-align: left;
 	max-width: 1080px;
-	background-color: #111111;
 	margin: 16px auto 0px auto;
+	background-color: #111111;
 }
 
 .section h1 {
