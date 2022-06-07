@@ -67,10 +67,14 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .index {
+	width: 100vw;
+	height: 100vh;
 	background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	-webkit-background-size: cover;
 	background-image: url("public/images/actions/sources/DaneHobrechtAction(001).jpeg");
 }
 
