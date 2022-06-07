@@ -154,9 +154,9 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .reels {
+	margin: auto;
 	font-size: 0em;
 	max-width: 1540px;
-	margin: -8px auto 0px auto;
 }
 
 .reels iframe {
@@ -172,7 +172,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	font-size: 0em;
 	max-width: 1540px;
 	padding: 0px 16px 0px 16px;
-	margin: -8px auto -16px auto;
+	margin: 0px auto -16px auto;
 }
 
 .gallery img {
