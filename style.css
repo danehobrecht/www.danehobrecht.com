@@ -49,10 +49,7 @@ footer {
 	justify-content: space-around;
 }
 
-a {
-	color: #000000;
-	text-decoration: none;
-}
+a { text-decoration: none; }
 
 img { image-rendering: -webkit-optimize-contrast; }
 
