@@ -23,15 +23,11 @@
 	src: url("public/fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
-html, body { 
-	height: 100vh;
-	background-color: #000000;
-}
-
 html {
 	cursor: default;
 	overflow-x: hidden;
 	text-align: center;
+	background-color: #000000;
 	font-family: "LiberationSerif-Regular";
 }
 
@@ -174,13 +170,14 @@ img { image-rendering: -webkit-optimize-contrast; }
 .gallery {
 	font-size: 0em;
 	max-width: 1540px;
-	margin: -8px auto 0px auto;
+	padding: 0px 16px 0px 16px;
+	margin: -8px auto -16px auto;
 }
 
 .gallery img {
 	width: 100%;
-	padding: 8px;
 	max-width: 368px;
+	padding: 0px 8px 16px 8px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
