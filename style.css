@@ -93,7 +93,9 @@ img { image-rendering: -webkit-optimize-contrast; }
 .pages a:hover { color: #ffffff; }
 
 .performances {
-	margin-top: 90vh;
+	top: 100vh;
+	width: 100%;
+	position: absolute;
 	background-color: #000000;
 }
 
@@ -183,6 +185,15 @@ img { image-rendering: -webkit-optimize-contrast; }
 .gallery img:hover {
 	transform: scale(1.025);
 	-webkit-transform: scale(1.025);
+}
+
+.externals {
+	height: 96px;
+	display: flex;
+	flex-direction: column;
+	background-color: #000000;
+	padding: 24px 0px 24px 0px;
+	justify-content: space-around;
 }
 
 .icons a { font-size: 0em; }
