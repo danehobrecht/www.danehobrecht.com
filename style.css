@@ -23,6 +23,11 @@
 	src: url("public/fonts/liberation_serif/LiberationSerif-Bold.ttf");
 }
 
+html, body { 
+	height: 100vh;
+	background-color: #000000;
+}
+
 html {
 	cursor: default;
 	overflow-x: hidden;
@@ -37,10 +42,6 @@ header {
 	padding: 16px 0px 16px 0px;
 	justify-content: space-around;
 	background-color: rgba(0, 0, 0, 0.8);
-}
-
-body {
-	background-color: #000000;
 }
 
 footer {
