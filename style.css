@@ -95,8 +95,14 @@ img { image-rendering: -webkit-optimize-contrast; }
 	overflow-y: auto;
 	text-align: left;
 	max-width: 1080px;
-	background-color: #0b0b0b;
+	background-size: cover;
+	background-color: #1f1f1f;
+	-o-background-size: cover;
 	margin: 16px auto 0px auto;
+	background-position: center;
+	-moz-background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
 }
 
 .section h1 {
@@ -118,6 +124,11 @@ img { image-rendering: -webkit-optimize-contrast; }
 	vertical-align: middle;
 }
 
+.into-the-woods { background-image: url("public/images/sections/Section(004).jpeg"); }
+.much-ado-about-nothing { background-image: url("public/images/sections/Section(003).jpeg"); }
+.oliver { background-image: url("public/images/sections/Section(002).jpeg"); }
+.fame { background-image: url("public/images/sections/Section(001).jpeg"); }
+
 .description {
 	display: inline;
 	font-size: 1.2em;
@@ -138,7 +149,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 .enabled:hover { background-color: #c0c0c0; }
 
 .disabled {
-	opacity: 0.32;
+	opacity: 0.4;
 	pointer-events: none;
 }
 
