@@ -216,6 +216,13 @@ img { image-rendering: -webkit-optimize-contrast; }
 	-webkit-transform: translate(-50%, -50%);
 }
 
+.error h1 {
+	font-size: 3em;
+	padding-bottom: 4px;
+}
+
+.error h2 { padding-bottom: 16px; }
+
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
 
