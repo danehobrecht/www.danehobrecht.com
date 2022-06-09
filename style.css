@@ -94,9 +94,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	padding: 16px;
 	overflow-y: auto;
 	text-align: left;
-	max-width: 1080px;
+	max-width: 1280px;
 	background-size: cover;
-	background-color: #1f1f1f;
 	-o-background-size: cover;
 	margin: 16px auto 0px auto;
 	background-position: center;
@@ -193,7 +192,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	display: flex;
 	flex-direction: column;
 	background-color: #000000;
-	padding: 24px 0px 24px 0px;
+	padding: 32px 0px 32px 0px;
 	justify-content: space-around;
 }
 
