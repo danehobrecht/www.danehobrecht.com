@@ -57,8 +57,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	height: 100vh;
 	background-size: cover;
 	-o-background-size: cover;
-	-moz-background-size: cover;
 	background-position: center;
+	-moz-background-size: cover;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	background-image: url("public/images/actions/DaneHobrechtAction(001).jpeg");
@@ -80,6 +80,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .pages span { color: #ffffff; }
 .pages a:hover { color: #ffffff; }
+
 .performances {
 	top: 100vh;
 	width: 100%;
@@ -126,8 +127,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	color: #000000;
 	font-size: 1em;
 	transition: 0.3s;
-	border-radius: 4px;
 	padding: 10px 20px;
+	border-radius: 4px;
 	background-color: #ffffff;
 	font-family: "LiberationSans-Bold";
 }
