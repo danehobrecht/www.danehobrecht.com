@@ -63,7 +63,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	background-image: url("public/images/actions/DaneHobrechtAction(001).jpeg");
 }
 
-.title {
+.title a {
 	color: #ffffff;
 	font-size: 3.3em;
 	font-family: "LiberationSerif-Bold";
@@ -198,10 +198,20 @@ img { image-rendering: -webkit-optimize-contrast; }
 	font-family: "LiberationSans-Bold";
 }
 
+.error {
+	top: 50%;
+	left: 50%;
+	width: 90vw;
+	color: #ffffff;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
 
-	.title { font-size: 1.8em; }
+	.title a { font-size: 1.8em; }
 
 	.pages a {
 		font-size: 1.2em;
@@ -223,7 +233,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
 
-	.title { font-size: 2.25em; }
+	.title a { font-size: 2.25em; }
 
 	.pages a { font-size: 1.3em; }
 
