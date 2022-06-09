@@ -124,10 +124,10 @@ img { image-rendering: -webkit-optimize-contrast; }
 	vertical-align: middle;
 }
 
-.into-the-woods { background-image: url("public/images/sections/Section(004).jpeg"); }
-.much-ado-about-nothing { background-image: url("public/images/sections/Section(003).jpeg"); }
-.oliver { background-image: url("public/images/sections/Section(002).jpeg"); }
-.fame { background-image: url("public/images/sections/Section(001).jpeg"); }
+.into-the-woods { background-image: url("public/images/backgrounds/Background(004).jpeg"); }
+.much-ado-about-nothing { background-image: url("public/images/backgrounds/Background(003).jpeg"); }
+.oliver { background-image: url("public/images/backgrounds/Background(002).jpeg"); }
+.fame { background-image: url("public/images/backgrounds/Background(001).jpeg"); }
 
 .description {
 	display: inline;
