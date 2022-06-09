@@ -24,6 +24,7 @@
 }
 
 html {
+	color: #ffffff;
 	cursor: default;
 	overflow-x: hidden;
 	text-align: center;
@@ -79,7 +80,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .pages span { color: #ffffff; }
 .pages a:hover { color: #ffffff; }
-
 .performances {
 	top: 100vh;
 	width: 100%;
@@ -90,7 +90,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .section {
 	padding: 16px;
-	color: #ffffff;
 	overflow-y: auto;
 	text-align: left;
 	max-width: 1080px;
@@ -201,8 +200,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 .error {
 	top: 50%;
 	left: 50%;
-	width: 90vw;
-	color: #ffffff;
+	width: 90%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
