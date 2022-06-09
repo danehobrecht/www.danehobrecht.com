@@ -83,11 +83,13 @@ img { image-rendering: -webkit-optimize-contrast; }
 .pages a:hover { color: #ffffff; }
 
 .performances {
+	left: 0;
+	right: 0;
 	top: 100vh;
-	width: 100%;
-	margin-top: -16px;
+	width: 90vw;
 	position: absolute;
 	background-color: #000000;
+	margin: -16px auto 0px auto;
 }
 
 .section {
@@ -170,12 +172,11 @@ img { image-rendering: -webkit-optimize-contrast; }
 .gallery {
 	font-size: 0em;
 	max-width: 1540px;
-	padding: 0px 16px 0px 16px;
 	margin: 0px auto -16px auto;
 }
 
 .gallery img {
-	width: 100%;
+	width: 90vw;
 	max-width: 368px;
 	padding: 0px 8px 16px 8px;
 	transition: transform 0.5s ease;
