@@ -188,7 +188,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 .icons a { font-size: 0em; }
 
 .icons img {
-	max-width: 48px;
+	max-width: 40px;
 	padding: 0px 8px 0px 8px;
 }
 
