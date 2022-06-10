@@ -189,7 +189,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .externals {
-	height: 72px;
+	height: 84px;
 	display: flex;
 	flex-direction: column;
 	background-color: #000000;
@@ -198,7 +198,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .icons img {
-	max-width: 36px;
+	max-width: 40px;
 	padding: 0px 8px 0px 8px;
 	transition: opacity 0.2s;
 	-webkit-transform: opacity 0.2s;
@@ -209,7 +209,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .links a {
 	color: #c0c0c0;
-	font-size: 0.85em;
 	transition: color 0.2s;
 	padding: 0px 4px 0px 4px;
 	-webkit-transform: color 0.2s;
