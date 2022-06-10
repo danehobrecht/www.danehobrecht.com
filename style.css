@@ -115,14 +115,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 	-webkit-background-size: cover;
 }
 
-.section h1 {
-	display: inline;
-	font-style: italic;
-	vertical-align: middle;
-}
-
-.section p { font-size: 1.2em; }
-
 .section img {
 	float: left;
 	width: 100%;
@@ -130,11 +122,13 @@ img { image-rendering: -webkit-optimize-contrast; }
 	margin: 0px 12px 8px 0px;
 }
 
-.section svg {
-	width: 24px;
-	height: 24px;
+.section h1 {
+	display: inline;
+	font-style: italic;
 	vertical-align: middle;
 }
+
+.section p { font-size: 1.2em; }
 
 .description {
 	display: inline;
