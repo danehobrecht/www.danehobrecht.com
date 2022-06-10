@@ -1,4 +1,4 @@
-/* Global */
+/* Globals */
 @font-face {
 	font-display: swap;
 	font-family: "LiberationSans-Regular";
@@ -84,7 +84,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 	font-size: 1.4em;
 	transition: color 0.2s;
 	padding: 0px 4px 0px 4px;
-	transition: color 0.2s;
 	-webkit-transition: color 0.2s;
 }
 
@@ -232,6 +231,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	padding-bottom: 16px;
 }
 
+/* Resolutions */
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
 
