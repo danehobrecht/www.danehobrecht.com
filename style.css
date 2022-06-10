@@ -228,7 +228,10 @@ img { image-rendering: -webkit-optimize-contrast; }
 	padding-bottom: 4px;
 }
 
-.error h2 { padding-bottom: 16px; }
+.error p {
+	font-size: 1.6em;
+	padding-bottom: 16px;
+}
 
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
