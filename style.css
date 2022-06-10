@@ -121,6 +121,8 @@ img { image-rendering: -webkit-optimize-contrast; }
 	vertical-align: middle;
 }
 
+.section p { font-size: 1.2em; }
+
 .section img {
 	float: left;
 	width: 100%;
@@ -136,7 +138,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .description {
 	display: inline;
-	font-size: 1.2em;
 	overflow-y: scroll;
 }
 
