@@ -61,7 +61,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	-moz-background-size: cover;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
-	background-image: url("public/images/actions/DaneHobrechtAction(001).jpeg");
+	background-image: url("public/images/backgrounds/Background(001).jpeg");
 }
 
 .title a {
@@ -86,7 +86,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	left: 0;
 	right: 0;
 	top: 100vh;
-	width: 90vw;
+	width: 92vw;
 	position: absolute;
 	background-color: #000000;
 	margin: -16px auto 0px auto;
@@ -98,6 +98,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	text-align: left;
 	max-width: 1280px;
 	background-size: cover;
+	background-color: #111111;
 	-o-background-size: cover;
 	margin: 16px auto 0px auto;
 	background-position: center;
@@ -124,11 +125,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 	height: 24px;
 	vertical-align: middle;
 }
-
-.into-the-woods { background-image: url("public/images/backgrounds/Background(004).jpeg"); }
-.much-ado-about-nothing { background-image: url("public/images/backgrounds/Background(003).jpeg"); }
-.oliver { background-image: url("public/images/backgrounds/Background(002).jpeg"); }
-.fame { background-image: url("public/images/backgrounds/Background(001).jpeg"); }
 
 .description {
 	display: inline;
@@ -161,29 +157,29 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .reels iframe {
-	width: 90vw;
+	width: 92vw;
 	max-width: 560px;
 	max-height: 315px;
 	vertical-align: bottom;
 	padding: 0px 8px 16px 8px;
-	height: calc(90vw / 1.885);
+	height: calc(92vw / 1.885);
 }
 
-.gallery {
+.photos {
 	font-size: 0em;
 	max-width: 1540px;
 	margin: 0px auto -16px auto;
 }
 
-.gallery img {
-	width: 90vw;
+.photos img {
+	width: 92vw;
 	max-width: 368px;
 	padding: 0px 8px 16px 8px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
 
-.gallery img:hover {
+.photos img:hover {
 	transform: scale(1.025);
 	-webkit-transform: scale(1.025);
 }
@@ -198,7 +194,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .icons img {
-	max-width: 40px;
+	max-width: 42px;
 	padding: 0px 8px 0px 8px;
 	transition: opacity 0.2s;
 	-webkit-transform: opacity 0.2s;
@@ -209,6 +205,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .links a {
 	color: #c0c0c0;
+	font-size: 0.9em;
 	transition: color 0.2s;
 	padding: 0px 4px 0px 4px;
 	-webkit-transform: color 0.2s;
@@ -248,7 +245,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 		max-height: 160px;
 	}
 
-	.gallery img { padding: 0px 0px 16px 0px; }
+	.photos img { padding: 0px 0px 16px 0px; }
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
@@ -260,7 +257,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 	.section img { max-width: 500px; }
 
-	.gallery img { padding: 0px 0px 16px 0px; }
+	.photos img { padding: 0px 0px 16px 0px; }
 
 	.description {
 		display: inherit;
