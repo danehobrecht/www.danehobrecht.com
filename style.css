@@ -90,7 +90,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 .pages span { color: #ffffff; }
 .pages a:hover { color: #ffffff; }
 
-.performances {
+.sections {
 	left: 0;
 	right: 0;
 	top: 100vh;
