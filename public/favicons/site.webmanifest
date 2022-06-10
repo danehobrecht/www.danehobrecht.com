@@ -1,5 +1,5 @@
 {
-	"display": "standalone"
+	"display": "standalone",
 	"name": "Dane Hobrecht",
 	"theme_color": "#000000",
 	"short_name": "Dane Hobrecht",
@@ -17,5 +17,5 @@
 			"purpose": "any maskable"
 			"src": "/android-chrome-512x512.png",
 		}
-	],
+	]
 }
