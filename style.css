@@ -116,7 +116,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 .section img {
 	float: left;
 	width: 100%;
-	max-width: 368px;
+	max-width: 384px;
 	margin: 0px 12px 8px 0px;
 }
 
@@ -173,7 +173,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .photos img {
 	width: 92vw;
-	max-width: 368px;
+	max-width: 384px;
 	padding: 0px 8px 16px 8px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
@@ -207,7 +207,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 	color: #c0c0c0;
 	font-size: 0.9em;
 	transition: color 0.2s;
-	padding: 0px 4px 0px 4px;
+	padding: 0px 2px 0px 2px;
 	-webkit-transform: color 0.2s;
 	font-family: "LiberationSans-Bold";
 }
