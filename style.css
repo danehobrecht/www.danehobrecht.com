@@ -41,6 +41,15 @@ header {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
+footer {
+	height: 84px;
+	display: flex;
+	flex-direction: column;
+	background-color: #000000;
+	padding: 32px 0px 32px 0px;
+	justify-content: space-around;
+}
+
 a { text-decoration: none; }
 
 img { image-rendering: -webkit-optimize-contrast; }
@@ -181,15 +190,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 .photos img:hover {
 	transform: scale(1.025);
 	-webkit-transform: scale(1.025);
-}
-
-.externals {
-	height: 84px;
-	display: flex;
-	flex-direction: column;
-	background-color: #000000;
-	padding: 32px 0px 32px 0px;
-	justify-content: space-around;
 }
 
 .icons img {
