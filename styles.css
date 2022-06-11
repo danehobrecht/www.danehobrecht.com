@@ -109,6 +109,8 @@ button:disabled { opacity: 0.4; }
 	right: 0;
 	top: 100vh;
 	width: 92vw;
+	height: 545px;
+	max-width: 1080px;
 	position: absolute;
 	background-color: #000000;
 	margin: -16px auto 0px auto;
