@@ -162,13 +162,13 @@ button:disabled { opacity: 0.4; }
 
 .photos {
 	font-size: 0em;
-	margin: -8px auto -16px auto;
+	margin: 0px auto -16px auto;
 }
 
 .photos img {
 	width: 92vw;
-	padding: 8px;
 	max-width: 384px;
+	padding: 0px 8px 8px 8px;
 	transition: transform 0.5s ease;
 	-webkit-transform: transform 0.5s ease;
 }
