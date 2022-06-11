@@ -140,7 +140,7 @@ button:disabled { opacity: 0.4; }
 	font-style: italic;
 }
 
-.description { overflow-y: scroll; }
+.description { overflow-y: auto; }
 
 .enabled { background-color: #ffffff; }
 .enabled:hover { background-color: #c0c0c0; }
