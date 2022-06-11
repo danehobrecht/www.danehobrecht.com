@@ -54,6 +54,19 @@ a { text-decoration: none; }
 
 img { image-rendering: -webkit-optimize-contrast; }
 
+button {
+	color: #000000;
+	transition: 0.3s;
+	font-size: 0.85em;
+	padding: 10px 20px;
+	border-radius: 4px;
+	background-color: #ffffff;
+	margin: 12px 0px 12px 0px;
+	font-family: "LiberationSans-Bold";
+}
+
+button:disabled { opacity: 0.4; }
+
 /* Classes */
 * {
 	border: 0;
@@ -101,6 +114,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 }
 
 .section {
+	font-size: 1.2em;
 	padding: 16px;
 	overflow-y: auto;
 	text-align: left;
@@ -118,39 +132,19 @@ img { image-rendering: -webkit-optimize-contrast; }
 	float: left;
 	width: 100%;
 	max-width: 384px;
-	margin: 0px 12px 8px 0px;
+	margin: 0px 12px 12px 0px;
 }
 
 .section h1 {
-	display: inline;
+	font-size: 1.65em;
 	font-style: italic;
-	vertical-align: middle;
+	margin-bottom: 4px;
 }
 
-.section p { font-size: 1.2em; }
-
-.description {
-	display: inline;
-	overflow-y: scroll;
-}
-
-.button {
-	color: #000000;
-	font-size: 1em;
-	transition: 0.3s;
-	padding: 10px 20px;
-	border-radius: 4px;
-	background-color: #ffffff;
-	font-family: "LiberationSans-Bold";
-}
+.description { overflow-y: scroll; }
 
 .enabled { background-color: #ffffff; }
 .enabled:hover { background-color: #c0c0c0; }
-
-.disabled {
-	opacity: 0.4;
-	pointer-events: none;
-}
 
 .reels {
 	margin: auto;
