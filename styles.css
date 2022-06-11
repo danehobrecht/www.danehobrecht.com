@@ -115,12 +115,13 @@ button:disabled { opacity: 0.4; }
 }
 
 .section {
-	font-size: 1.2em;
 	padding: 16px;
+	font-size: 1.2em;
 	overflow-y: auto;
 	text-align: left;
 	max-width: 1080px;
 	background-size: cover;
+	background-color: #111111;
 	-o-background-size: cover;
 	margin: 16px auto 0px auto;
 	background-position: center;
