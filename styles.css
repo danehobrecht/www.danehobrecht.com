@@ -106,7 +106,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 	text-align: left;
 	max-width: 1080px;
 	background-size: cover;
-	background-color: #111111;
 	-o-background-size: cover;
 	margin: 16px auto 0px auto;
 	background-position: center;
