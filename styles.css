@@ -116,6 +116,7 @@ button:enabled:hover {
 	right: 0;
 	top: 100vh;
 	margin: auto;
+	width: 92.8vw;
 	max-width: 1080px;
 	position: absolute;
 }
@@ -142,7 +143,7 @@ button:enabled:hover {
 }
 
 .content h1 {
-	font-size: 1.8em;
+	font-size: 1.65em;
 	font-style: italic;
 }
 
@@ -227,7 +228,11 @@ button:enabled:hover {
 }
 
 /* Resolutions */
-@media screen and (min-width: 768px) { .section img { margin-bottom: 0px; } }
+@media screen and (min-width: 768px) {
+	.section img { margin-bottom: 0px; }
+
+	.content h1 { font-size: 1.8em; }
+}
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
