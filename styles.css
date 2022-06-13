@@ -208,7 +208,7 @@ button:enabled:hover {
 
 .links a:hover { color: #ffffff; }
 
-.error {
+.redirect {
 	top: 50%;
 	left: 50%;
 	width: 90%;
@@ -217,13 +217,13 @@ button:enabled:hover {
 	-webkit-transform: translate(-50%, -50%);
 }
 
-.error h1 {
+.redirect h1 {
 	font-size: 3em;
 	padding-bottom: 4px;
 }
 
-.error p {
-	font-size: 1.6em;
+.redirect p {
+	font-size: 1.4em;
 	padding-bottom: 16px;
 }
 
