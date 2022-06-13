@@ -68,6 +68,11 @@ button {
 
 button:disabled { opacity: 0.4; }
 
+button:enabled:hover {
+	cursor: pointer;
+	background-color: #c0c0c0;
+}
+
 /* Classes */
 * {
 	border: 0;
@@ -145,9 +150,6 @@ button:disabled { opacity: 0.4; }
 }
 
 .description { overflow-y: auto; display: inline;}
-
-.enabled { background-color: #ffffff; }
-.enabled:hover { background-color: #c0c0c0; }
 
 .reels {
 	margin: auto;
