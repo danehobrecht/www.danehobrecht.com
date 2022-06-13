@@ -111,7 +111,7 @@ button:enabled:hover {
 .pages span { color: #ffffff; }
 .pages a:hover { color: #ffffff; }
 
-.sections {
+.performances {
 	left: 0;
 	right: 0;
 	top: 100vh;
@@ -121,7 +121,7 @@ button:enabled:hover {
 	position: absolute;
 }
 
-.section {
+.module {
 	font-size: 1.2em;
 	overflow-y: auto;
 	text-align: left;
@@ -135,7 +135,7 @@ button:enabled:hover {
 	-webkit-background-size: cover;
 }
 
-.section img {
+.module img {
 	float: left;
 	width: 100%;
 	max-width: 384px;
@@ -229,7 +229,7 @@ button:enabled:hover {
 
 /* Resolutions */
 @media screen and (min-width: 768px) {
-	.section img { margin-bottom: 0px; }
+	.module img { margin-bottom: 0px; }
 
 	.content h1 { font-size: 1.8em; }
 }
@@ -241,7 +241,7 @@ button:enabled:hover {
 
 	.pages a { font-size: 1.3em; }
 
-	.section img { max-width: 500px; }
+	.module img { max-width: 500px; }
 
 	.photos img { padding: 0px 0px 16px 0px; }
 
