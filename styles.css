@@ -147,7 +147,7 @@ button:enabled:hover {
 }
 
 .content h1 {
-	font-size: 1.65em;
+	font-size: 1.8em;
 	font-style: italic;
 }
 
@@ -233,11 +233,7 @@ button:enabled:hover {
 }
 
 /* Resolutions */
-@media screen and (min-width: 768px) {
-	.module img { margin-bottom: 0px; }
-
-	.content h1 { font-size: 1.8em; }
-}
+@media screen and (min-width: 768px) { .module img { margin-bottom: 0px; } }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
