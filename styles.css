@@ -24,7 +24,6 @@
 }
 
 html {
-	color: #ffffff;
 	cursor: default;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -142,14 +141,20 @@ button:enabled:hover {
 	margin: 0px 12px 12px 0px;
 }
 
+.content {
+	margin: 12px;
+	color: #ffffff;
+}
+
 .content h1 {
 	font-size: 1.65em;
 	font-style: italic;
 }
 
-.content { margin: 12px; }
+.role { font-size: 1.15em; }
 
 .description {
+	color: #e2e2e2;
 	display: inline;
 	overflow-y: auto;
 }
