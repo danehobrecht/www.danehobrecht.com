@@ -155,9 +155,9 @@ button:enabled:hover {
 .pulse img, .pulse iframe { animation: pulse 2s ease-in-out infinite; }
 
 @keyframes pulse {
-	00.00% { background-color: #181818ff; }
-	50.00% { background-color: #181818a3; }
-	100.0% { background-color: #181818ff; }
+	00.00% { background-color: #131313ff; }
+	50.00% { background-color: #131313a3; }
+	100.0% { background-color: #131313ff; }
 }
 
 .reels {
