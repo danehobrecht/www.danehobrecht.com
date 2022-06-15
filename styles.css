@@ -24,11 +24,11 @@
 }
 
 html {
-	color: #ffffff;
+	color: #ffffffff;
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
-	background-color: #000000;
+	background-color: #000000ff;
 	font-family: "LiberationSerif-Regular";
 }
 
@@ -37,7 +37,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	padding: 16px 0px 16px 0px;
-	background-color: #000000cc;
+	background-color: #000000d6;
 	justify-content: space-around;
 }
 
@@ -46,7 +46,7 @@ footer {
 	display: flex;
 	margin-top: -24px;
 	flex-direction: column;
-	background-color: #000000;
+	background-color: #000000ff;
 	padding: 32px 0px 32px 0px;
 	justify-content: space-around;
 }
@@ -56,14 +56,14 @@ a { text-decoration: none; }
 img { image-rendering: -webkit-optimize-contrast; }
 
 button {
-	color: #000000;
+	color: #000000ff;
 	display: block;
 	transition: 0.32s;
 	font-size: 0.84em;
 	padding: 12px 16px;
 	border-radius: 4px;
 	margin: 12px 0px 12px 0px;
-	background-color: #ffffff;
+	background-color: #ffffffff;
 	font-family: "LiberationSans-Bold";
 }
 
@@ -91,20 +91,20 @@ button:enabled:hover {
 }
 
 .title a {
-	color: #ffffff;
+	color: #ffffffff;
 	font-size: 3.3em;
 	font-family: "LiberationSerif-Bold";
 }
 
 .pages a {
-	color: #c0c0c0;
+	color: #c0c0c0ff;
 	font-size: 1.4em;
 	transition: color 0.2s;
 	padding: 0px 4px 0px 4px;
 }
 
-.pages span { color: #ffffff; }
-.pages a:hover { color: #ffffff; }
+.pages span { color: #ffffffff; }
+.pages a:hover { color: #ffffffff; }
 
 .performances {
 	left: 0;
@@ -121,7 +121,7 @@ button:enabled:hover {
 	overflow-y: auto;
 	text-align: left;
 	background-size: cover;
-	background-color: #131313;
+	background-color: #131313ff;
 	margin: 16px auto 24px auto;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -136,7 +136,7 @@ button:enabled:hover {
 
 .content {
 	margin: 12px;
-	color: #ffffff;
+	color: #ffffffff;
 }
 
 .content h1 {
@@ -147,7 +147,7 @@ button:enabled:hover {
 .role { font-size: 1.12em; }
 
 .description {
-	color: #e2e2e2;
+	color: #e2e2e2ff;
 	overflow-y: auto;
 	max-height: 346px;
 }
@@ -196,17 +196,17 @@ button:enabled:hover {
 }
 
 .icons a { font-size: 0em; }
-.icons img:hover { opacity: 0.8; }
+.icons img:hover { opacity: 0.84; }
 
 .links a {
-	color: #c0c0c0;
+	color: #c0c0c0ff;
 	font-size: 0.9em;
 	transition: color 0.2s;
 	padding: 0px 3px 0px 3px;
 	font-family: "LiberationSans-Bold";
 }
 
-.links a:hover { color: #ffffff; }
+.links a:hover { color: #ffffffff; }
 
 .redirect {
 	top: 50%;
