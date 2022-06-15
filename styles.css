@@ -121,7 +121,7 @@ button:enabled:hover {
 	overflow-y: auto;
 	text-align: left;
 	background-size: cover;
-	background-color: #111111;
+	background-color: #131313;
 	margin: 16px auto 24px auto;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -152,12 +152,15 @@ button:enabled:hover {
 	max-height: 346px;
 }
 
-.pulse img, .pulse iframe { animation: pulse 2s infinite; }
+.pulse img, .pulse iframe {
+	background-color: #131313;
+	animation: pulse 2s ease-in-out infinite;
+}
 
 @keyframes pulse {
-	00.00% { background-color: #1f1f1f; }
-	50.00% { background-color: #111111; }
-	100.0% { background-color: #1f1f1f; }
+	00.00% { opacity: 1.0; }
+	50.00% { opacity: 0.6; }
+	100.0% { opacity: 1.0; }
 }
 
 .reels {
@@ -172,7 +175,6 @@ button:enabled:hover {
 	max-height: 315px;
 	vertical-align: bottom;
 	margin: 0px 8px 16px 8px;
-	background-color: #1f1f1f;
 	height: calc(93vw / 1.885);
 }
 
@@ -185,7 +187,6 @@ button:enabled:hover {
 	width: 93vw;
 	max-width: 384px;
 	margin: 0px 8px 8px 8px;
-	background-color: #1f1f1f;
 	transition: transform 0.5s ease;
 }
 
