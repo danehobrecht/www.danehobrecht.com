@@ -58,20 +58,20 @@ img { image-rendering: -webkit-optimize-contrast; }
 button {
 	color: #000000;
 	display: block;
-	transition: 0.3s;
-	font-size: 0.85em;
-	padding: 10px 20px;
+	transition: 0.32s;
+	font-size: 0.84em;
+	padding: 12px 16px;
 	border-radius: 4px;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffff;
 	font-family: "LiberationSans-Bold";
 }
 
-button:disabled { opacity: 0.4; }
+button:disabled { opacity: 0.32; }
 
 button:enabled:hover {
+	opacity: 0.64;
 	cursor: pointer;
-	background-color: #c0c0c0;
 }
 
 /* Classes */
@@ -144,7 +144,7 @@ button:enabled:hover {
 	font-style: italic;
 }
 
-.role { font-size: 1.15em; }
+.role { font-size: 1.12em; }
 
 .description {
 	color: #e2e2e2;
