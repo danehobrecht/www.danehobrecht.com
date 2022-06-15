@@ -152,7 +152,7 @@ button:enabled:hover {
 	max-height: 346px;
 }
 
-.pulse img, iframe { animation: pulse 2s infinite; }
+.pulse img, .pulse iframe { animation: pulse 2s infinite; }
 
 @keyframes pulse {
 	00.00% { background-color: #1f1f1f; }
