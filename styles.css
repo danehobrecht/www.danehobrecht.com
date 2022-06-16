@@ -190,7 +190,7 @@ button:enabled:hover {
 .photos img:hover { transform: scale(1.025); }
 
 .résumé {
-	width: 92vw;
+	width: 93vw;
 	margin: auto;
 	overflow: hidden;
 	max-width: 768px;
