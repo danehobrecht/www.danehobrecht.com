@@ -2,3 +2,6 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC, L]
+
+RewriteCond %{QUERY_STRING} ^id=\d+$
+RewriteRule ^résumé$ public/documents/Dane Hobrecht - Résumé.pdf [L]
