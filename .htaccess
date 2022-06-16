@@ -5,4 +5,4 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC, L]
 
 RewriteRule ^pdf/(.*)$ /sites/default/files/pdf/$1 [R=301,L]
-RewriteRule ^documents/(.*)$ /public/documents/$1 [R=301,L]
+RewriteRule ^documents/(.*)$ public/documents/$1 [R=301,L]
