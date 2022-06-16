@@ -4,4 +4,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC, L]
 
-RewriteRule ^résumé/(.+) public/documents/Dane Hobrecht - Résumé.pdf/$1 [L, QSA]
+RewriteRule ^/(.*)$ /public/documents/Dane Hobrecht - Résumé.pdf$1 [R=301,L]
