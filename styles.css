@@ -55,6 +55,8 @@ a { text-decoration: none; }
 
 img { image-rendering: -webkit-optimize-contrast; }
 
+img, iframe { animation: pulse 2s ease-in-out infinite; }
+
 button {
 	display: block;
 	color: #000000ff;
@@ -150,14 +152,6 @@ button:enabled:hover {
 	color: #e2e2e2ff;
 	overflow-y: auto;
 	max-height: 346px;
-}
-
-.pulse img, .pulse iframe { animation: pulse 2s ease-in-out infinite; }
-
-@keyframes pulse {
-	00.00% { background-color: #131313ff; }
-	50.00% { background-color: #131313a3; }
-	100.0% { background-color: #131313ff; }
 }
 
 .reels {
@@ -257,6 +251,13 @@ button:enabled:hover {
 .redirect p {
 	font-size: 1.4em;
 	padding-bottom: 16px;
+}
+
+/* Animations */
+@keyframes pulse {
+	00.00% { background-color: #131313ff; }
+	50.00% { background-color: #131313a3; }
+	100.0% { background-color: #131313ff; }
 }
 
 /* Resolutions */
