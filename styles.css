@@ -106,6 +106,7 @@ button:enabled:hover {
 }
 
 .pages span { color: #ffffffff; }
+
 .pages a:hover { color: #ffffffff; }
 
 .performances {
@@ -224,6 +225,7 @@ button:enabled:hover {
 }
 
 .icons a { font-size: 0em; }
+
 .icons img:hover { opacity: 0.84; }
 
 .links a {
