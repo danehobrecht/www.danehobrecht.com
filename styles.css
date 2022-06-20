@@ -219,7 +219,7 @@ button:enabled:hover {
 
 .icons img {
 	max-width: 42px;
-	padding: 0px 8px 0px 8px;
+	margin: 0px 8px 0px 8px;
 	transition: opacity 0.2s;
 }
 
