@@ -220,13 +220,14 @@ button:enabled:hover {
 
 .icons img {
 	max-width: 42px;
+	animation: none;
 	margin: 0px 8px 0px 8px;
 	transition: opacity 0.2s;
 }
 
 .icons a { font-size: 0em; }
 
-.icons img:hover { opacity: 0.84; }
+.icons img:hover { opacity: 0.72; }
 
 .links a {
 	color: #c0c0c0ff;
