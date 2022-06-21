@@ -67,7 +67,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 .index {
 	width: 100vw;
 	height: 100vh;
-	animation: fade 3s;
+	animation: reveal 3s;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -261,15 +261,15 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 }
 
 /* Animations */
+@keyframes reveal {
+	00.00% { opacity: 0; }
+	100.0% { opacity: 1; }
+}
+
 @keyframes pulse {
 	00.00% { background-color: #131313ff; }
 	50.00% { background-color: #131313a3; }
 	100.0% { background-color: #131313ff; }
-}
-
-@keyframes fade {
-	00.00% { opacity: 0; }
-	100.0% { opacity: 1; }
 }
 
 /* Resolutions */
