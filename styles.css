@@ -24,7 +24,7 @@
 }
 
 html {
-	color: #ffffffff;
+	color: #00000000;
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
@@ -57,25 +57,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 img, iframe { animation: pulse 2s ease-in-out infinite; }
 
-button {
-	display: block;
-	color: #000000ff;
-	transition: 0.32s;
-	font-size: 0.84em;
-	padding: 12px 16px;
-	border-radius: 4px;
-	margin: 12px 0px 12px 0px;
-	background-color: #ffffffff;
-	font-family: "LiberationSans-Bold";
-}
-
-button:disabled { opacity: 0.32; }
-
-button:enabled:hover {
-	opacity: 0.64;
-	cursor: pointer;
-}
-
 /* Classes */
 * {
 	border: 0;
@@ -86,6 +67,7 @@ button:enabled:hover {
 .index {
 	width: 100vw;
 	height: 100vh;
+	animation: fade 3s;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -134,6 +116,25 @@ button:enabled:hover {
 	width: 100%;
 	max-width: 384px;
 	margin: 0px 12px 12px 0px;
+}
+
+.module button {
+	display: block;
+	color: #000000ff;
+	transition: 0.32s;
+	font-size: 0.84em;
+	padding: 12px 16px;
+	border-radius: 4px;
+	margin: 12px 0px 12px 0px;
+	background-color: #ffffffff;
+	font-family: "LiberationSans-Bold";
+}
+
+.module button:disabled { opacity: 0.32; }
+
+.module button:enabled:hover {
+	opacity: 0.64;
+	cursor: pointer;
 }
 
 .content {
@@ -186,14 +187,19 @@ button:enabled:hover {
 .photos img:hover { transform: scale(1.024); }
 
 .resume {
-	font-size: 0em;
 	margin-top: -8px;
 }
 
 .resume img {
 	width: 93vw;
 	margin: 8px;
+	font-size: 0em;
 	max-width: 768px;
+}
+
+.resume button:hover {
+	opacity: 0.64;
+	cursor: pointer;
 }
 
 .responsive {
@@ -259,6 +265,11 @@ button:enabled:hover {
 	00.00% { background-color: #131313ff; }
 	50.00% { background-color: #131313a3; }
 	100.0% { background-color: #131313ff; }
+}
+
+@keyframes fade {
+	00.00% { opacity: 0; }
+	100.0% { opacity: 1; }
 }
 
 /* Resolutions */
