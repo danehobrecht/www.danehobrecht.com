@@ -253,15 +253,12 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	transform: translate(-50%, -50%);
 }
 
-.redirect h1 {
-	font-size: 3em;
-	padding-bottom: 4px;
-}
-
 .redirect p {
 	font-size: 1.4em;
-	padding-bottom: 16px;
+	padding-bottom: 8px;
 }
+
+.redirect h1 { font-size: 3em; }
 
 /* Animations */
 @keyframes reveal {
