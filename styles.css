@@ -246,9 +246,10 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	top: 50%;
 	left: 50%;
 	width: 90%;
+	opacity: 0;
 	color: #ffffffff;
 	position: absolute;
-	animation: redirect 3s 5s;
+	animation: redirect 8s;
 	transform: translate(-50%, -50%);
 }
 
@@ -270,6 +271,8 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 @keyframes redirect {
 	00.00% { opacity: 1; }
+	33.33% { opacity: 1; }
+	66.66% { opacity: 1; }
 	100.0% { opacity: 0; }
 }
 
