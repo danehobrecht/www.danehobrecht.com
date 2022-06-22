@@ -178,8 +178,8 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 .photos img {
 	width: 93vw;
 	margin: 8px;
-	height: 384px;
 	max-width: 384px;
+	max-height: 384px;
 	object-fit: cover;
 	transition: transform 0.5s ease;
 }
