@@ -24,7 +24,7 @@
 }
 
 html {
-	color: #00000000;
+	color: #ffffffff;
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
@@ -246,6 +246,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	top: 50%;
 	left: 50%;
 	width: 90%;
+	color: #ffffffff;
 	position: absolute;
 	transform: translate(-50%, -50%);
 }
