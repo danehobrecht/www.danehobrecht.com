@@ -258,7 +258,10 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	padding-bottom: 8px;
 }
 
-.redirect h1 { font-size: 3em; }
+.redirect a {
+	font-size: 3em;
+	color: #ffffffff;
+}
 
 /* Animations */
 @keyframes reveal {
