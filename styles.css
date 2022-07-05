@@ -172,7 +172,8 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 .photos {
 	font-size: 0em;
-	margin-top: -8px;
+	margin: -8px auto 0px auto;
+	max-width: 1280px;
 }
 
 .photos img {
