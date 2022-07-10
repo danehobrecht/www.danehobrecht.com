@@ -282,9 +282,18 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 }
 
 @keyframes redirect {
-	00.00% { opacity: 1; }
-	33.33% { opacity: 1; }
-	66.66% { opacity: 1; }
+	00.00% {
+		opacity: 1;
+		filter: blur(0px);
+	}
+	33.33% {
+		opacity: 1;
+		filter: blur(0px);
+	}
+	66.66% {
+		opacity: 1;
+		filter: blur(0px);
+	}
 	100.0% {
 		opacity: 0;
 		filter: blur(4px);
