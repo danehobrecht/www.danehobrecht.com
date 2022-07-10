@@ -46,7 +46,7 @@ footer {
 	display: flex;
 	margin-top: -24px;
 	flex-direction: column;
-	padding: 48px 0px 48px 0px;
+	padding: 36px 0px 36px 0px;
 	background-color: #000000ff;
 	justify-content: space-around;
 }
