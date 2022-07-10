@@ -273,7 +273,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 @keyframes reveal {
 	00.00% {
 		opacity: 0;
-		filter: blur(8px);
+		filter: blur(4px);
 	}
 	100.0% {
 		opacity: 1;
@@ -285,7 +285,10 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	00.00% { opacity: 1; }
 	33.33% { opacity: 1; }
 	66.66% { opacity: 1; }
-	100.0% { opacity: 0; }
+	100.0% {
+		opacity: 0;
+		filter: blur(4px);
+	}
 }
 
 @keyframes pulse {
