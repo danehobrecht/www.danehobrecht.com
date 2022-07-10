@@ -137,7 +137,6 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	cursor: pointer;
 }
 
-
 .content h1 {
 	font-size: 1.8em;
 	font-style: italic;
@@ -164,6 +163,23 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	vertical-align: bottom;
 	margin: 0px 8px 16px 8px;
 	height: calc(93vw / 1.885);
+}
+
+.resource button {
+	width: 156px;
+	font-size: 1em;
+	color: #000000ff;
+	transition: 0.32s;
+	border-radius: 4px;
+	margin: -8px auto 16px auto;
+	background-color: #ffffffff;
+	padding: 12px 16px 12px 16px;
+	font-family: "LiberationSans-Bold";
+}
+
+.resource button:enabled:hover {
+	opacity: 0.72;
+	cursor: pointer;
 }
 
 .photos {
