@@ -227,7 +227,8 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 .wrapper { padding-bottom: 100%; }
 
 .icons img {
-	max-width: 42px;
+	width: 42px;
+	height: 42px;
 	animation: none;
 	margin: 0px 8px 0px 8px;
 	transition: opacity 0.2s;
