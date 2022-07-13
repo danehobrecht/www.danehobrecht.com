@@ -185,6 +185,8 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	width: 24px;
 	height: 24px;
 	animation: none;
+	user-select: none;
+	pointer-events: none;
 	vertical-align: -33.33%;
 }
 
