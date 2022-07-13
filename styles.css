@@ -71,7 +71,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url("assets/images/slides/DaneHobrechtSlide(001).jpeg");
+	background-image: url("assets/slides/DaneHobrechtSlide(001).jpeg");
 }
 
 .title a {
