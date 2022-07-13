@@ -153,7 +153,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 .reels {
 	font-size: 0em;
 	max-width: 1540px;
-	margin: 24px auto 0px auto;
+	margin: 16px auto 0px auto;
 }
 
 .reels iframe {
@@ -164,6 +164,8 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	margin: 0px 8px 16px 8px;
 	height: calc(93vw / 1.885);
 }
+
+.resource { margin-top: -8px; }
 
 .resource a {
 	color: #ffffffff;
@@ -189,7 +191,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 .photos {
 	font-size: 0em;
-	margin: 16px auto 4px auto;
+	margin: 8px auto 4px auto;
 }
 
 .photos img {
@@ -203,7 +205,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 .photos img:hover { transform: scale(1.024); }
 
-.resume { margin-top: 16px; }
+.resume { margin-top: 8px; }
 
 .resume img {
 	width: 93vw;
@@ -323,14 +325,6 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 	.module img { max-width: 500px; }
 
-	.photos { margin: 24px auto 0px auto; }
-
-	.photos img { margin: 0px 0px 16px 0px; }
-
-	.resume { margin: 24px auto 0px auto; }
-
-	.resume img { margin: 0px 0px 16px 0px; }
-
 	.description {
 		display: inherit;
 		max-height: 184px;
@@ -351,12 +345,4 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 		display: inherit;
 		max-height: 160px;
 	}
-
-	.photos { margin: 24px auto 0px auto; }
-
-	.photos img { margin: 0px 0px 16px 0px; }
-
-	.resume { margin: 24px auto 0px auto; }
-
-	.resume img { margin: 0px 0px 16px 0px; }
 }
