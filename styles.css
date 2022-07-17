@@ -167,16 +167,16 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 .resource { margin-top: -8px; }
 
-.resource a {
-	color: #ffffffff;
-	font-size: 1.33em;
-	transition: 0.32s;
-	font-family: "LiberationSans-Bold";
-}
+.resource a { transition: 0.32s; }
 
-.resource a:hover {
-	opacity: 0.72;
-	cursor: pointer;
+.resource a:hover { opacity: 0.72; }
+
+.resource p {
+	display: inline;
+	color: #ffffffff;
+	margin-left: 6px;
+	font-size: 1.33em;
+	font-family: "LiberationSans-Bold";
 }
 
 .resource img {
@@ -186,7 +186,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	user-select: none;
 	filter: invert(100%);
 	pointer-events: none;
-	vertical-align: -33.33%;
+	vertical-align: -43.33%;
 }
 
 .photos {
