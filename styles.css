@@ -36,7 +36,7 @@ header {
 	height: 112px;
 	display: flex;
 	flex-direction: column;
-	padding: 16px 0px 16px 0px;
+	padding: 24px 0px 24px 0px;
 	background-color: #00000000;
 	justify-content: space-around;
 }
@@ -80,11 +80,14 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	font-family: "LiberationSerif-Bold";
 }
 
+.pages { margin: auto; }
+
 .pages a {
+	float: left;
 	color: #c0c0c0ff;
 	font-size: 1.4em;
 	transition: color 0.2s;
-	padding: 0px 4px 0px 4px;
+	margin: 0px 6px 0px 6px;
 }
 
 .pages span { color: #ffffffff; }
