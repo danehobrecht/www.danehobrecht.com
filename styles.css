@@ -153,21 +153,6 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	max-height: 346px;
 }
 
-.reels {
-	font-size: 0em;
-	max-width: 1540px;
-	margin: 16px auto 0px auto;
-}
-
-.reels iframe {
-	width: 93vw;
-	max-width: 560px;
-	max-height: 315px;
-	vertical-align: bottom;
-	margin: 0px 8px 16px 8px;
-	height: calc(93vw / 1.885);
-}
-
 .resource { margin-top: -24px; }
 
 .resource a { transition: 0.32s; }
@@ -190,6 +175,21 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	filter: invert(100%);
 	pointer-events: none;
 	vertical-align: -43.33%;
+}
+
+.reels {
+	font-size: 0em;
+	max-width: 1540px;
+	margin: -16px auto 0px auto;
+}
+
+.reels iframe {
+	width: 93vw;
+	max-width: 560px;
+	max-height: 315px;
+	vertical-align: bottom;
+	margin: 0px 8px 16px 8px;
+	height: calc(93vw / 1.885);
 }
 
 .photos {
@@ -217,24 +217,14 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	max-width: 768px;
 }
 
-.responsive {
-	height: 0;
-	overflow: auto;
-	position: relative;
-}
-
-.responsive embed {
-	top: 0;
+.about {
 	left: 0;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
+	right: 0;
+	width: 92.8vw;
+	max-width: 1024px;
 	position: absolute;
+	margin: -32px auto 0px auto;
 }
-
-.wrapper { padding-bottom: 100%; }
 
 .icons img {
 	width: 42px;
