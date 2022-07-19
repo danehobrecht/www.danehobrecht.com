@@ -44,7 +44,7 @@ header {
 footer {
 	height: 84px;
 	display: flex;
-	margin-top: -24px;
+	margin-top: -16px;
 	flex-direction: column;
 	padding: 36px 0px 36px 0px;
 	background-color: #000000ff;
@@ -248,11 +248,14 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 .icons img:hover { opacity: 0.72; }
 
+.links { margin: auto; }
+
 .links a {
+	float: left;
 	color: #c0c0c0ff;
 	font-size: 0.9em;
 	transition: color 0.2s;
-	padding: 0px 3px 0px 3px;
+	margin: 0px 6px 0px 6px;
 	font-family: "LiberationSans-Bold";
 }
 
