@@ -71,7 +71,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url("assets/slides/DaneHobrechtSlide(001).jpeg");
+	background-image: url("assets/index/DaneHobrechtIndex(001).jpeg");
 }
 
 .title a {
@@ -216,7 +216,7 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 	max-width: 768px;
 }
 
-.about {
+.beliefs {
 	left: 0;
 	right: 0;
 	width: 92.8vw;
