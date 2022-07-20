@@ -207,9 +207,9 @@ img, iframe { animation: pulse 2s ease-in-out infinite; }
 
 .photos img:hover { transform: scale(1.024); }
 
-.resume { margin-top: 8px; }
+.credits { margin-top: 8px; }
 
-.resume img {
+.credits img {
 	width: 93vw;
 	margin: 8px;
 	font-size: 0em;
