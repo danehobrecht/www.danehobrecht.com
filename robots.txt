@@ -1,0 +1,7 @@
+User-agent: Googlebot-Image
+
+Disallow: /assets/gallery/
+Allow: /assets/gallery/sources/
+
+Disallow: /assets/index/
+Allow: /assets/index/sources/
