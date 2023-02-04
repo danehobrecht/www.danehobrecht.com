@@ -202,8 +202,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #000000ff;
 	transition: 0.32s;
 	border-radius: 4px;
-	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
+	margin: 12px 0px 12px 0px;
 	padding: 16px 20px 16px 20px;
 	font-family: "LiberationSans-Bold";
 }
@@ -282,13 +282,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: inline-block;
 	vertical-align: middle;
 	font-family: "LiberationSans-Bold";
-}
-
-#faith { margin: auto; }
-
-#faith img {
-	width: 92vw;
-	max-width: 384px;
 }
 
 #socials { margin: 0px auto 16px auto; }
