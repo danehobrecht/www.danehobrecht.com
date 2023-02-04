@@ -66,6 +66,3 @@ node_modules/
 
 # Conversion.txt
 assets/resume/sources/Conversion.txt
-
-# GitHub Workflows
-.github
