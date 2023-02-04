@@ -165,6 +165,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module img {
 	float: left;
 	width: 100%;
+	height: auto;
 	transition: all 0.32s ease-out;
 }
 
@@ -223,28 +224,20 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	text-overflow: ellipsis;
 }
 
-#reel {
-	padding: 8px;
-	font-size: 0;
-}
+#reel { font-size: 0; }
 
 #reel iframe {
 	width: 92vw;
+	margin: 8px;
 	max-width: 560px;
 	max-height: 315px;
-	margin: 0px 8px 0px 8px;
 	height: calc(92vw / 1.885);
 }
 
 #resume {
 	z-index: 1;
 	font-size: 0;
-	position: relative;
-}
-
-#resume #preview {
-	width: 92vw;
-	max-width: 605px;
+	position: absolute;
 }
 
 #resume button {
