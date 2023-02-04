@@ -236,7 +236,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	height: calc(92vw / 1.885);
 }
 
-#resume { font-size: 0; }
+#resume {
+	z-index: 1;
+	font-size: 0;
+	position: relative;
+}
 
 #resume #preview {
 	width: 92vw;
@@ -244,7 +248,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #resume button {
+	top: 0;
+	left: 0;
 	opacity: 0.72;
+	margin-top: 16px;
 	transition: 0.32s;
 	position: absolute;
 	border-radius: 32px;
@@ -276,22 +283,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	vertical-align: middle;
 	font-family: "LiberationSans-Bold";
 }
-
-#gallery {
-	font-size: 0;
-	margin: -8px 0px 8px 0px;
-}
-
-#gallery img {
-	width: 92vw;
-	margin: 8px;
-	object-fit: cover;
-	max-width: 384px;
-	max-height: 384px;
-	transition: transform 0.5s ease;
-}
-
-#gallery img:hover { transform: scale(1.024); }
 
 #faith { margin: auto; }
 
