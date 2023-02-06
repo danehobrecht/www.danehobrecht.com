@@ -181,12 +181,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: all 0.32s ease-out;
 }
 .module:hover .info { opacity: 0; }
-.module:hover img { opacity: 0.32; }
+.module:hover img { opacity: 0.24; }
 .module:hover .information { opacity: 1; }
 
 .module input { display: none; }
 .module input:checked + label > .info { opacity: 0; }
-.module input:checked + label > img { opacity: 0.32; }
+.module input:checked + label > img { opacity: 0.24; }
 .module input:checked + label > .information { opacity: 1; }
 .module input:checked + label > button { visibility: hidden; }
 
