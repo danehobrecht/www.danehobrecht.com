@@ -238,8 +238,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #e2e2e2ff;
 	overflow: hidden;
 	white-space: normal;
-	display: inline-block;
+	display: -webkit-box;
 	text-overflow: ellipsis;
+	-webkit-line-clamp: 10;
+	-webkit-box-orient: vertical;
 }
 
 #reel { font-size: 0; }
