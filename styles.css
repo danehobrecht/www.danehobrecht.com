@@ -140,6 +140,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	overflow-x: scroll;
 	max-width: 1632px;
 	padding-top: 16px;
+	position: relative;
 	white-space: nowrap;
 }
 
@@ -164,7 +165,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	top: 0;
 	left: 0;
 	z-index: 1;
-	margin: 2px;
+	margin: 8px;
 	animation: none;
 	position: absolute;
 	pointer-events: none;
@@ -174,12 +175,51 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: 0.16s !important;
 }
 
+/*
+#pdf {
+	bottom: 0;
+	z-index: 1;
+	padding: 8px;
+	margin-right: 2px;
+	position: absolute;
+	background-color: #0000004b;
+	border-radius: 0px 8px 0px 0px;
+	transition: 0.32s;
+}
+
+#pdf:hover,
+#pdf:focus,
+#pdf:active {
+	opacity: 0.84;
+	cursor: pointer;
+}
+
+#pdf img {
+	width: 32px;
+	height: 32px;
+	animation: none;
+	margin-right: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#pdf p {
+	color: #000000ff;
+	font-size: 1.2em;
+	display: inline-block;
+	vertical-align: middle;
+	mix-blend-mode: difference;
+	font-family: LiberationSans-Bold;
+}
+*/
+
 .module img {
 	float: left;
 	width: 100%;
 	height: auto;
 	transition: all 0.32s ease-out;
 }
+
 .module:hover .info { opacity: 0; }
 .module:hover img { opacity: 0.24; }
 .module:hover .information { opacity: 1; }
@@ -253,30 +293,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	max-height: 315px;
 	height: calc(92vw / 1.885);
 }
-
-/*
-#resume {
-	z-index: 1;
-	position: absolute;
-	border-radius: 32px;
-	background-color: #ffffff00;
-	padding: 4px 8px 4px 8px;
-}
-
-#resume:hover,
-#resume:focus,
-#resume:active {
-	opacity: 0.84;
-	cursor: pointer;
-}
-
-#resume img {
-	width: 32px;
-	height: 32px;
-	filter: invert();
-	animation: none;
-}
-*/
 
 #socials { margin: 0px auto 16px auto; }
 
