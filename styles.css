@@ -83,7 +83,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-image: url("assets/index/DaneHobrechtCover(001).jpeg");
+	background-image: url("assets/media/DaneHobrechtCover(001).jpeg");
 }
 
 #name a {
@@ -143,6 +143,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	padding-top: 16px;
 	position: relative;
 	white-space: nowrap;
+	transform: translate3d(0,0,0);
 }
 
 .module {
@@ -158,63 +159,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-repeat: no-repeat;
 }
 
-.spacer {
-	width: 8px;
-	display: inline-block; 
-}
-
-.info {
-	top: 0;
-	left: 0;
-	z-index: 1;
-	margin: 8px;
-	animation: none;
-	position: absolute;
-	pointer-events: none;
-	width: 32px !important;
-	height: 32px !important;
-	mix-blend-mode: difference;
-	transition: 0.16s !important;
-}
-
-/*
-#pdf {
-	bottom: 0;
-	z-index: 1;
-	padding: 8px;
-	margin-right: 2px;
-	position: absolute;
-	background-color: #0000004b;
-	border-radius: 0px 8px 0px 0px;
-	transition: 0.32s;
-}
-
-#pdf:hover,
-#pdf:focus,
-#pdf:active {
-	opacity: 0.84;
-	cursor: pointer;
-}
-
-#pdf img {
-	width: 32px;
-	height: 32px;
-	animation: none;
-	margin-right: 4px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#pdf p {
-	color: #000000ff;
-	font-size: 1.2em;
-	display: inline-block;
-	vertical-align: middle;
-	mix-blend-mode: difference;
-	font-family: LiberationSans-Bold;
-}
-*/
-
 .module img {
 	float: left;
 	width: 100%;
@@ -225,19 +169,58 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module:hover .info { opacity: 0; }
 .module:hover img { opacity: 0.24; }
 .module:hover .information { opacity: 1; }
+.module:hover button { pointer-events: auto; }
 
 .module input { display: none; }
 .module input:checked + label > .info { opacity: 0; }
 .module input:checked + label > img { opacity: 0.24; }
 .module input:checked + label > .information { opacity: 1; }
-.module input:checked + label > button { visibility: hidden; }
+.module input:checked + label > .information button { pointer-events: auto; }
 
+.spacer {
+	width: 8px;
+	display: inline-block; 
+}
+
+.info {
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 12px;
+	animation: none;
+	position: absolute;
+	pointer-events: none;
+	width: 32px !important;
+	height: 32px !important;
+	mix-blend-mode: difference;
+	transition: 0.16s !important;
+}
 
 .information {
 	opacity: 0;
+	margin: 12px;
 	transition: 0.32s;
 	position: absolute;
-	margin: 4px 12px 12px 12px;
+}
+
+.information button {
+	padding: 16px;
+	display: block;
+	font-size: 1em;
+	color: #000000ff;
+	transition: 0.32s;
+	border-radius: 4px;
+	pointer-events: none;
+	background-color: #ffffffff;
+	margin: 12px 0px 12px 0px;
+	font-family: "LiberationSans-Bold";
+}
+
+.information button:disabled { opacity: 0.24; }
+
+.information button:enabled:hover {
+	opacity: 0.72;
+	cursor: pointer;
 }
 
 .title {
@@ -255,25 +238,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: inline-block;
 	border: 1px dashed #ffffffff;
 	font-family: "LiberationSans-Regular";
-}
-
-.module button {
-	padding: 16px;
-	display: block;
-	font-size: 1em;
-	color: #000000ff;
-	transition: 0.32s;
-	border-radius: 4px;
-	background-color: #ffffffff;
-	margin: 12px 0px 12px 0px;
-	font-family: "LiberationSans-Bold";
-}
-
-.module button:disabled { opacity: 0.24; }
-
-.module button:enabled:hover {
-	opacity: 0.72;
-	cursor: pointer;
 }
 
 .description {
