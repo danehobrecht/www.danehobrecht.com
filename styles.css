@@ -130,7 +130,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	overflow: hidden;
 	font-size: 1.2em;
 	white-space: nowrap;
-	text-overflow: /* “ */ '...ˮ';
+	text-overflow: /* “ */ "...ˮ";
 	vertical-align: middle;
 }
 
