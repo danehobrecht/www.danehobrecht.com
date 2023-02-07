@@ -138,7 +138,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #resume {
 	width: 92vw;
 	margin: auto;
-	overflow-x: scroll;
+	overflow-x: auto;
 	max-width: 1632px;
 	padding-top: 16px;
 	position: relative;
@@ -151,6 +151,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	max-width: 396px;
 	text-align: left;
 	position: relative;
+	border-radius: 16px;
 	display: inline-block;
 	background-size: cover;
 	background-position: center;
@@ -292,6 +293,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: 8px;
 	max-width: 560px;
 	max-height: 315px;
+	border-radius: 16px;
 	height: calc(92vw / 1.885);
 }
 
