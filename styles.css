@@ -29,7 +29,6 @@ html {
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
-	scroll-behavior: smooth;
 	background-color: #000000ff;
 	font-family: "LiberationSerif-Regular";
 }
@@ -72,6 +71,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	border: 0;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 .reveal { animation: reveal 3s; }
@@ -131,8 +131,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	overflow: hidden;
 	font-size: 1.2em;
 	white-space: nowrap;
-	text-overflow: /* “ */ "...ˮ";
-	vertical-align: middle;
+	text-overflow: "...ˮ";
 }
 
 #resume {
@@ -140,7 +139,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: auto;
 	overflow-x: auto;
 	max-width: 1632px;
-	padding-top: 16px;
 	position: relative;
 	white-space: nowrap;
 }
@@ -150,6 +148,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-size: 1.2em;
 	max-width: 396px;
 	text-align: left;
+	padding-top: 16px;
 	position: relative;
 	display: inline-block;
 }
@@ -174,16 +173,21 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input:not(:checked) + label > .information { opacity: 0; }
 .module input:not(:checked) + label > .information button { pointer-events: none; }
 
-.spacer {
+.h-spacer-8px {
 	width: 8px;
 	display: inline-block; 
+}
+
+.v-spacer-16px {
+	width: 100%;
+	height: 16px;
 }
 
 .info {
 	top: 0;
 	left: 0;
 	z-index: 1;
-	margin: 12px;
+	margin: 28px 12px 1px 12px;
 	position: absolute;
 	pointer-events: none;
 	width: 32px !important;
