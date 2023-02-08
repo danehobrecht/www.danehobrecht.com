@@ -186,12 +186,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	top: 0;
 	left: 0;
 	z-index: 1;
-	margin: 28px 12px 1px 12px;
 	position: absolute;
 	pointer-events: none;
 	width: 32px !important;
 	height: 32px !important;
 	mix-blend-mode: difference;
+	margin: 28px 12px 1px 12px;
 	transition: 0.16s !important;
 }
 
@@ -349,8 +349,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 /* Resolutions */
-
-@media screen and (min-width: 768px) { .module img { margin-bottom: 0px; } }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
