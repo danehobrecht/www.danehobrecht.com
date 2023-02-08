@@ -162,11 +162,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: all 0.32s ease-out;
 }
 
-.module:hover .info { opacity: 0; }
-.module:hover img { opacity: 0.24; }
-.module:hover .information { opacity: 1; }
-.module:hover button { pointer-events: auto; }
-
 .module input { display: none; }
 .module input:checked + label > .info { opacity: 0; }
 .module input:checked + label > img { opacity: 0.24; }
