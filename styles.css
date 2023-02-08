@@ -143,7 +143,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	padding-top: 16px;
 	position: relative;
 	white-space: nowrap;
-	transform: translate3d(0,0,0);
 }
 
 .module {
@@ -152,17 +151,14 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	max-width: 396px;
 	text-align: left;
 	position: relative;
-	border-radius: 16px;
 	display: inline-block;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
 .module img {
 	float: left;
 	width: 100%;
 	height: auto;
+	border-radius: 16px;
 	transition: all 0.32s ease-out;
 }
 
@@ -177,6 +173,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input:checked + label > .information { opacity: 1; }
 .module input:checked + label > .information button { pointer-events: auto; }
 
+.module input:not(:checked) + label > .info { opacity: 1; }
+.module input:not(:checked) + label > img { opacity: 1; }
+.module input:not(:checked) + label > .information { opacity: 0; }
+.module input:not(:checked) + label > .information button { pointer-events: none; }
+
 .spacer {
 	width: 8px;
 	display: inline-block; 
@@ -187,7 +188,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	left: 0;
 	z-index: 1;
 	margin: 12px;
-	animation: none;
 	position: absolute;
 	pointer-events: none;
 	width: 32px !important;
@@ -198,9 +198,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .information {
 	opacity: 0;
+	height: 100%;
 	margin: 12px;
 	transition: 0.32s;
 	position: absolute;
+	-webkit-mask-image: linear-gradient(180deg, #000000ff 84%, #00000000 100%);
 }
 
 .information button {
@@ -242,12 +244,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .description {
 	color: #e2e2e2ff;
-	overflow: hidden;
 	white-space: normal;
-	display: -webkit-box;
-	text-overflow: ellipsis;
-	-webkit-line-clamp: 12;
-	-webkit-box-orient: vertical;
 }
 
 #reel { font-size: 0; }
@@ -363,11 +360,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	#navigation a { font-size: 1.48em; }
 
 	.module img { max-width: 500px; }
-
-	.description {
-		display: inherit;
-		max-height: 184px;
-	}
 }
 
 @media screen and (max-width: 320px) {
@@ -376,9 +368,4 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	#name a { font-size: 2.1em; }
 
 	#navigation a { font-size: 1.2em; }
-
-	.description {
-		display: inherit;
-		max-height: 160px;
-	}
 }
