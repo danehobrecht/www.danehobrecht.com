@@ -227,6 +227,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .title {
 	font-size: 1.8em;
 	font-style: italic;
+	padding-right: 2px;
 	white-space: pre-wrap;
 }
 
