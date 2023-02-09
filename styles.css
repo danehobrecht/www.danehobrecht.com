@@ -33,10 +33,6 @@ html {
 	font-family: "LiberationSerif-Regular";
 }
 
-/*
-body {}
-*/
-
 header {
 	top: 0;
 	left: 0;
@@ -74,35 +70,20 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	scroll-behavior: smooth;
 }
 
-.reveal { animation: reveal 3s; }
-
 .h-spacer-8px {
 	width: 8px;
 	height: 100%;
 	display: inline-block;
 }
 
-.h-spacer-16px {
-	width: 16px;
-	height: 100%;
-	display: inline-block; 
-}
-
-.v-spacer-8px {
-	width: 100%;
-	height: 8px;
-}
-
-.v-spacer-16px {
-	width: 100%;
-	height: 16px;
-}
+.reveal { animation: reveal 3s; }
 
 #cover {
 	width: 100vw;
 	height: 100vh;
+	margin: auto;
 	background-size: cover;
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-image: url("assets/media/DaneHobrechtCover(001).jpeg");
 }
@@ -127,9 +108,14 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #navigation a:hover { color: #ffffffff; }
 
+.content {
+	width: 92vw;
+	margin: auto;
+	max-width: 1280px;
+}
+
 #press {
 	margin: auto;
-	max-width: 92vw;
 	position: relative;
 	padding: 36px 0px 36px 0px;
 }
@@ -156,9 +142,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #resume {
-	width: 92vw;
 	overflow-x: auto;
-	max-width: 1220px;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
@@ -171,7 +155,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module {
 	overflow: hidden;
 	font-size: 1.2em;
-	max-width: 396px;
+	max-width: 416px;
 	text-align: left;
 	position: relative;
 	display: inline-block;
@@ -266,16 +250,14 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #reel {
-	width: 92vw;
 	font-size: 0;
-	max-width: 1220px;
 	margin: 0px auto -16px auto;
 }
 
 #reel iframe {
 	width: 92vw;
-	max-width: 602px;
-	max-height: 339px;
+	max-width: 632px;
+	max-height: 356px;
 	border-radius: 16px;
 	margin-bottom: 16px;
 	height: calc(92vw / 1.885);
