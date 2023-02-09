@@ -204,8 +204,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	left: 0;
 	bottom: 0;
 	z-index: 1;
-	padding: 12px;
 	display: flex;
+	padding: 12px;
 	position: absolute;	
 	align-items: center;
 	mix-blend-mode: difference;
@@ -221,8 +221,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	animation: none;
 	margin-right: 6px;
 }
-
-#pdf:hover, #pdf:focus, #pdf:active { opacity: 0.72; }
 
 #pdf p {
 	font-size: 1em;
