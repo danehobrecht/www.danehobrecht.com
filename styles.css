@@ -140,6 +140,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	max-width: 1632px;
 	position: relative;
 	white-space: nowrap;
+	scroll-snap-type: x mandatory;
 }
 
 .module {
@@ -150,6 +151,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	padding-top: 16px;
 	position: relative;
 	display: inline-block;
+	scroll-snap-align: center;
 }
 
 .module img {
