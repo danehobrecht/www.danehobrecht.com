@@ -175,11 +175,13 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input { display: none; }
 
 .module input:checked + label > .info { opacity: 0; }
+.module input:checked + label > #pdf { opacity: 0; }
 .module input:checked + label > img { opacity: 0.24; }
 .module input:checked + label > .information { opacity: 1; }
 .module input:checked + label > .information button { pointer-events: auto; }
 
 .module input:not(:checked) + label > .info { opacity: 1; }
+.module input:not(:checked) + label > #pdf { opacity: 1; }
 .module input:not(:checked) + label > img { opacity: 1; }
 .module input:not(:checked) + label > .information { opacity: 0; }
 .module input:not(:checked) + label > .information button { pointer-events: none; }
@@ -189,12 +191,43 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	left: 0;
 	z-index: 1;
 	margin: 12px;
+	animation: none;
 	position: absolute;
 	pointer-events: none;
 	width: 32px !important;
 	height: 32px !important;
 	mix-blend-mode: difference;
 	transition: 0.16s !important;
+}
+
+#pdf {
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	padding: 12px;
+	display: flex;
+	position: absolute;	
+	align-items: center;
+	mix-blend-mode: difference;
+	transition: 0.16s !important;
+	border-radius: 0px 16px 0px 0px;
+}
+
+#pdf img {
+	left: 0;
+	bottom: 0;
+	width: 32px;
+	height: 32px;
+	animation: none;
+	margin-right: 6px;
+}
+
+#pdf:hover, #pdf:focus, #pdf:active { opacity: 0.72; }
+
+#pdf p {
+	font-size: 1em;
+	color: #4d4d4dff;
+	font-family: LiberationSans-Bold;
 }
 
 .information {
