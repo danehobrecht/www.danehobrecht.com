@@ -135,11 +135,13 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #resume {
 	width: 92vw;
-	margin: auto;
 	overflow-x: auto;
 	max-width: 1632px;
 	position: relative;
 	white-space: nowrap;
+	border-radius: 16px;
+	scroll-margin-top: 16px;
+	margin: 16px auto 0px auto;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 }
@@ -149,9 +151,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-size: 1.2em;
 	max-width: 396px;
 	text-align: left;
-	padding-top: 16px;
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
+	scroll-margin-top: 16px;
 	scroll-snap-align: center;
 }
 
@@ -189,12 +192,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	top: 0;
 	left: 0;
 	z-index: 1;
+	margin: 12px;
 	position: absolute;
 	pointer-events: none;
 	width: 32px !important;
 	height: 32px !important;
 	mix-blend-mode: difference;
-	margin: 28px 12px 1px 12px;
 	transition: 0.16s !important;
 }
 
