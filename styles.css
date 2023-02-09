@@ -76,6 +76,28 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .reveal { animation: reveal 3s; }
 
+.h-spacer-8px {
+	width: 8px;
+	height: 100%;
+	display: inline-block;
+}
+
+.h-spacer-16px {
+	width: 16px;
+	height: 100%;
+	display: inline-block; 
+}
+
+.v-spacer-8px {
+	width: 100%;
+	height: 8px;
+}
+
+.v-spacer-16px {
+	width: 100%;
+	height: 16px;
+}
+
 #cover {
 	width: 100vw;
 	height: 100vh;
@@ -136,7 +158,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #resume {
 	width: 92vw;
 	overflow-x: auto;
-	max-width: 1632px;
+	max-width: 1220px;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
@@ -177,16 +199,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input:not(:checked) + label > img { opacity: 1; }
 .module input:not(:checked) + label > .information { opacity: 0; }
 .module input:not(:checked) + label > .information button { pointer-events: none; }
-
-.h-spacer-8px {
-	width: 8px;
-	display: inline-block; 
-}
-
-.v-spacer-16px {
-	width: 100%;
-	height: 16px;
-}
 
 .info {
 	top: 0;
@@ -253,16 +265,23 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	white-space: normal;
 }
 
-#reel { font-size: 0; }
+#reel {
+	width: 92vw;
+	font-size: 0;
+	max-width: 1220px;
+	margin: 0px auto -16px auto;
+}
 
 #reel iframe {
 	width: 92vw;
-	margin: 8px;
-	max-width: 560px;
-	max-height: 315px;
+	max-width: 602px;
+	max-height: 339px;
 	border-radius: 16px;
+	margin-bottom: 16px;
 	height: calc(92vw / 1.885);
 }
+
+#reel iframe:not(:last-child) { margin-right: 16px; }
 
 #socials { margin: 0px auto 16px auto; }
 
