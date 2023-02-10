@@ -211,13 +211,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	left: 0;
 	bottom: 0;
 	z-index: 1;
+	margin: 12px;
 	display: flex;
-	padding: 12px;
 	position: absolute;	
 	align-items: center;
 	mix-blend-mode: difference;
 	transition: 0.16s !important;
-	border-radius: 0px 16px 0px 0px;
 }
 
 #pdf img {
@@ -232,8 +231,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #pdf p {
 	font-size: 1em;
 	color: #4d4d4dff;
+	transition: 0.32s;
 	font-family: LiberationSans-Bold;
 }
+
+#pdf:hover > * { opacity: 0.72; }
 
 .information {
 	opacity: 0;
