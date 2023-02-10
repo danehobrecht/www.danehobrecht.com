@@ -175,13 +175,20 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input { display: none; }
 
 .module input:checked + label > .info { opacity: 0; }
-.module input:checked + label > #pdf { opacity: 0; }
+.module input:checked + label > #pdf {
+	opacity: 0;
+	pointer-events: none;
+}
 .module input:checked + label > img { opacity: 0.24; }
 .module input:checked + label > .information { opacity: 1; }
 .module input:checked + label > .information button { pointer-events: auto; }
 
 .module input:not(:checked) + label > .info { opacity: 1; }
-.module input:not(:checked) + label > #pdf { opacity: 1; }
+.module input:not(:checked) + label > #pdf {
+	opacity: 1;
+	pointer-events: auto;
+
+}
 .module input:not(:checked) + label > img { opacity: 1; }
 .module input:not(:checked) + label > .information { opacity: 0; }
 .module input:not(:checked) + label > .information button { pointer-events: none; }
