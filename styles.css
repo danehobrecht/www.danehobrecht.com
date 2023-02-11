@@ -85,7 +85,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-image: url("assets/media/DaneHobrechtCover(001).jpeg");
+	background-image: url("assets/images/covers/DaneHobrechtCover(001).jpeg");
 }
 
 #name a {
@@ -197,7 +197,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	top: 0;
 	left: 0;
 	z-index: 1;
-	margin: 12px;
+	margin: 16px;
 	animation: none;
 	position: absolute;
 	pointer-events: none;
@@ -211,7 +211,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	left: 0;
 	bottom: 0;
 	z-index: 1;
-	margin: 12px;
+	margin: 16px;
 	display: flex;
 	position: absolute;	
 	align-items: center;
@@ -240,7 +240,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .information {
 	opacity: 0;
 	height: 100%;
-	margin: 12px;
+	margin: 16px;
 	transition: 0.32s;
 	position: absolute;
 	-webkit-mask-image: linear-gradient(180deg, #000000ff 84%, #00000000 100%);
