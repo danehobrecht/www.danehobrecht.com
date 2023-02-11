@@ -1,4 +1,4 @@
-User-agent: Googlebot-image
+User-agent: Googlebot-Image
 
 Disallow: assets/images/icons
 Disallow: assets/images/logos
