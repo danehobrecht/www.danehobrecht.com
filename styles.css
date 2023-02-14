@@ -107,8 +107,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #navigation a:hover { color: #ffffffff; }
 
 #isaiah {
-	height: 100%;
 	margin: auto;
+	max-height: 100%;
 	max-width: 1280px;
 }
 
