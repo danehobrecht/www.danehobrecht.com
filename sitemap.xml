@@ -4,7 +4,8 @@
 		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
 							http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<changefreq>daily</changefreq>
+		<lastmod>2023-02-14</lastmod>
+		<changefreq>weekly</changefreq>
 		<loc>https://www.danehobrecht.com/</loc>
 	</url>
 </urlset>
