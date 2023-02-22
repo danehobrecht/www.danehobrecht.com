@@ -307,20 +307,18 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #reel {
+	margin: -8px;
 	font-size: 0;
-	margin: 0px auto -16px auto;
 }
 
-#reel iframe {
+.row iframe {
 	width: 92vw;
+	margin: 8px;
 	max-width: 632px;
-	max-height: 356px;
+	max-height: 355px;
 	border-radius: 16px;
-	margin-bottom: 16px;
 	height: calc(92vw / 1.885);
 }
-
-#reel iframe:not(:last-child) { margin-right: 16px; }
 
 #socials { margin: 0px auto 16px auto; }
 
