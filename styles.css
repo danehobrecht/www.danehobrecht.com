@@ -68,12 +68,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	scroll-behavior: smooth;
 }
 
-.h-spacer-8px {
-	width: 8px;
-	height: 100%;
-	display: inline-block;
-}
-
 .reveal { animation: reveal 3s; }
 
 #cover {
