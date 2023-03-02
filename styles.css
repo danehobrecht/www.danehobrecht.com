@@ -153,9 +153,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	text-overflow: ellipsis;
 }
 
-#resume {
+#resume { padding-top: 16px; }
+
+#resume section {
 	overflow-x: auto;
-	padding-top: 16px;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
