@@ -39,7 +39,7 @@ header {
 	display: flex;
 	height: 112px;
 	position: absolute;
-	flex-direction: /* fixed */ column;
+	flex-direction: column;
 	padding: 24px 0px 24px 0px;
 	justify-content: space-around;
 }
@@ -81,8 +81,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: auto;
 	height: 100vh;
 	background-size: cover;
-	background-position: center center;
 	background-repeat: no-repeat;
+	background-position: center center;
 	background-image: url("assets/images/covers/dane-hobrecht-cover-001.jpeg");
 }
 
@@ -109,7 +109,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #isaiah {
 	margin: auto;
 	max-height: 100%;
-	max-width: 1280px;
+	amax-width: 1280px;
 }
 
 #isaiah a {
@@ -155,11 +155,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #resume {
 	overflow-x: auto;
+	padding-top: 16px;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
-	scroll-margin-top: 16px;
-	margin: 16px auto 0px auto;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 }
@@ -171,8 +170,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	scroll-margin-top: 16px;
 	scroll-snap-align: center;
+	transition: all 0.24s ease-out;
 }
 
 .module img {
@@ -180,7 +179,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	width: 100%;
 	height: auto;
 	border-radius: 16px;
-	transition: all 0.32s ease-out;
+	transition: all 0.24s ease-out;
 }
 
 .module input { display: none; }
@@ -289,8 +288,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: 0.32s;
 	border-radius: 4px;
 	pointer-events: none;
-	background-color: #ffffffff;
 	margin: 12px 0px 12px 0px;
+	background-color: #ffffffff;
 	font-family: "LiberationSans-Bold";
 }
 
@@ -309,15 +308,35 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #reel {
 	margin: -8px;
 	font-size: 0;
+	padding-top: 16px;
 }
 
 .row iframe {
 	width: 92vw;
 	margin: 8px;
-	max-width: 632px;
-	max-height: 355px;
+	max-width: 624px;
+	max-height: 351px;
 	border-radius: 16px;
 	height: calc(92vw / 1.885);
+}
+
+#about {
+	overflow: auto;
+	padding-top: 16px;
+	margin: 16px 0px -16px 0px;
+}
+
+#about img {
+	float: left;
+	width: 92vw;
+	max-width: 480px;
+	border-radius: 16px;
+	margin: 0px 12px 16px 0px;
+}
+
+#about p {
+	font-size: 1.2em;
+	text-align: left;
 }
 
 #socials { margin: 0px auto 16px auto; }

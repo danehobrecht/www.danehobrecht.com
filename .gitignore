@@ -66,3 +66,6 @@ node_modules/
 
 # Conversion.txt
 assets/resume/sources/Conversion.txt
+
+# about.odt
+assets/documents/sources/about.odt
