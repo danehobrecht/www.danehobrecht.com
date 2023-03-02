@@ -182,6 +182,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: all 0.24s ease-out;
 }
 
+.module:not(:last-child) { margin-right: 12px; }
+
 .module input { display: none; }
 
 .module input:checked + label > .info { opacity: 0; }
