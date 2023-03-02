@@ -68,6 +68,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	scroll-behavior: smooth;
 }
 
+.h-spacer-8px {
+	width: 8px;
+	height: 100%;
+	display: inline-block;
+}
+
 .reveal { animation: reveal 3s; }
 
 #cover {
@@ -175,8 +181,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	border-radius: 16px;
 	transition: all 0.24s ease-out;
 }
-
-.module:not(:last-child) { margin-right: 12px; }
 
 .module input { display: none; }
 
