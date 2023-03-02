@@ -320,13 +320,13 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	height: calc(92vw / 1.885);
 }
 
-#about {
+#biography {
 	overflow: auto;
 	padding-top: 16px;
 	margin: 16px 0px -16px 0px;
 }
 
-#about img {
+#biography img {
 	float: left;
 	width: 92vw;
 	max-width: 480px;
@@ -334,7 +334,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: 0px 12px 16px 0px;
 }
 
-#about p {
+#biography p {
 	font-size: 1.2em;
 	text-align: left;
 }
