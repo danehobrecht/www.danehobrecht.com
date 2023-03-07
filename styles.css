@@ -164,6 +164,24 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	-webkit-overflow-scrolling: touch;
 }
 
+#arrow {
+	top: 50%;
+	z-index: 1;
+	right: 40px;
+	position: absolute;
+	transform: rotate(90deg);
+	mix-blend-mode: difference;
+}
+
+#arrow span {
+	width: 1.2em;
+	height: 1.2em;
+	display: block;
+	animation: arrow 3.6s infinite;
+	border-right: 3px solid #4b4b4bff;
+	border-bottom: 3px solid #4b4b4bff;
+}
+
 .module {
 	font-size: 1.2em;
 	max-width: 416px;
@@ -250,7 +268,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .information {
 	opacity: 0;
 	height: 100%;
-    padding: 16px;
+	padding: 16px;
 	overflow: hidden;
 	transition: 0.32s;
 	position: absolute;
@@ -404,6 +422,18 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	100.0% {
 		opacity: 1;
 		filter: blur(0px);
+	}
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 0;
+		transform: rotate(225deg) translate(-16px, -16px);
+	}
+	50% { opacity: 1; }
+	100% {
+		opacity: 0;
+		transform: rotate(225deg) translate(16px, 16px);
 	}
 }
 
