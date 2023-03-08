@@ -169,7 +169,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module img {
 	float: left;
 	width: 100%;
-	height: auto;
+	height: 100%;
 	border-radius: 16px;
 	transition: all 0.24s ease-out;
 }
@@ -305,7 +305,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #press img {
 	width: 96px;
-	height: auto;
+	height: 100%;
 	animation: none;
 	transition: 0.32s;
 	margin-bottom: 8px;
@@ -348,6 +348,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #biography img {
 	float: left;
 	width: 92vw;
+	height: 100%;
 	max-width: 480px;
 	border-radius: 16px;
 	margin: 0px 12px 16px 0px;
@@ -364,7 +365,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #socials img {
 	width: 48px;
-	height: auto;
+	height: 100%;
 	animation: none;
 	vertical-align: middle;
 	margin: 0px 8px 0px 8px;
