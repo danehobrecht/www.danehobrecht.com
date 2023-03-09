@@ -1,34 +1,16 @@
 /* Globals */
 
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSans-Regular";
-	src: url("assets/fonts/liberation_sans/LiberationSans-Regular.ttf");
-}
+/* Liberation Sans */
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-sans.min.css");
 
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSans-Bold";
-	src: url("assets/fonts/liberation_sans/LiberationSans-Bold.ttf");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSerif-Regular";
-	src: url("assets/fonts/liberation_serif/LiberationSerif-Regular.ttf");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSerif-Bold";
-	src: url("assets/fonts/liberation_serif/LiberationSerif-Bold.ttf");
-}
+/* Liberation Serif */
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-serif.min.css");
 
 html {
 	color: #ffffffff;
 	text-align: center;
 	background-color: #000000ff;
-	font-family: "LiberationSerif-Regular";
+	font-family: 'Liberation Serif', sans-serif;
 }
 
 header {
@@ -89,7 +71,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #name a {
 	color: #ffffffff;
 	font-size: 3.3em;
-	font-family: "LiberationSerif-Bold";
+	font-weight: 700;
+	font-family: 'Liberation Serif', sans-serif;
 }
 
 #navigation { margin: auto; }
@@ -232,8 +215,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #pdf p {
 	font-size: 1em;
 	color: #4d4d4dff;
+	font-weight: 700;
 	transition: 0.32s;
-	font-family: LiberationSans-Bold;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 #pdf:hover > * { opacity: 0.72; }
@@ -266,10 +250,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-size: 1em;
 	margin-top: 8px;
 	position: relative;
-	font-weight: normal;
 	display: inline-block;
 	border: 1px dashed #ffffffff;
-	font-family: "LiberationSans-Regular";
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 .information button {
@@ -277,12 +260,13 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: block;
 	font-size: 1em;
 	color: #000000ff;
+	font-weight: 700;
 	transition: 0.32s;
 	border-radius: 4px;
 	pointer-events: none;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
-	font-family: "LiberationSans-Bold";
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 .information button:disabled { opacity: 0.24; }
@@ -379,9 +363,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #resources a {
 	color: #c0c0c0ff;
 	font-size: 0.8em;
+	font-weight: 700;
 	transition: color 0.2s;
 	margin: 0px 4px 0px 4px;
-	font-family: "LiberationSans-Bold";
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 #resources a:hover { color: #ffffffff; }
