@@ -406,18 +406,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	}
 }
 
-@keyframes arrow {
-	0% {
-		opacity: 0;
-		transform: rotate(225deg) translate(-16px, -16px);
-	}
-	50% { opacity: 1; }
-	100% {
-		opacity: 0;
-		transform: rotate(225deg) translate(16px, 16px);
-	}
-}
-
 @keyframes redirect {
 	00.00% {
 		opacity: 0;
