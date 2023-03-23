@@ -19,6 +19,12 @@
 				"value": "max-age=31536000"
 			} ]
 		}, {
+			"source": "**",
+			"headers": [ {
+				"key": "Content-Security-Policy",
+				"value": "default-src 'self'"
+			} ]
+		}, {
 			"source": "404.html",
 			"headers": [ {
 				"key": "Cache-Control",
