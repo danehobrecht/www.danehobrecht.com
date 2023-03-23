@@ -22,7 +22,7 @@
 			"source": "**",
 			"headers": [ {
 				"key": "Content-Security-Policy",
-				"value": "default-src 'self'"
+				"value": "default-src 'self'; frame-src youtube-nocookie.com https://www.youtube-nocookie.com;"
 			} ]
 		}, {
 			"source": "404.html",
