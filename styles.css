@@ -397,11 +397,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 @keyframes reveal {
 	00.00% {
-		opacity: 0;
+		opacity: 0.01;
 		filter: blur(3px);
 	}
 	100.0% {
-		opacity: 1;
+		opacity: 1.00;
 		filter: blur(0px);
 	}
 }
