@@ -1,4 +1,4 @@
-/* Globals */
+/* Fonts */
 
 @font-face {
 	font-display: swap;
@@ -11,6 +11,8 @@
 	font-family: "Liberation Sans";
 	src: url("assets/fonts/liberation-sans/LiberationSans-Regular.ttf");
 }
+
+/* Globals */
 
 html {
 	color: #ffffffff;
