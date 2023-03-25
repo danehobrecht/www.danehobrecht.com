@@ -1,5 +1,17 @@
 /* Globals */
 
+@font-face {
+	font-display: swap;
+	font-family: "Liberation Serif";
+	src: url("assets/fonts/liberation-serif/LiberationSerif-Regular.ttf");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Liberation Sans";
+	src: url("assets/fonts/liberation-sans/LiberationSans-Regular.ttf");
+}
+
 html {
 	color: #ffffffff;
 	text-align: center;
