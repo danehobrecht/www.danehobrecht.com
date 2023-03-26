@@ -2,14 +2,26 @@
 
 @font-face {
 	font-display: swap;
-	font-family: "Liberation Serif";
+	font-family: "LiberationSans-Regular";
+	src: url("assets/fonts/liberation-sans/LiberationSans-Regular.ttf");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "LiberationSans-Bold";
+	src: url("assets/fonts/liberation-sans/LiberationSans-Bold.ttf");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "LiberationSerif-Regular";
 	src: url("assets/fonts/liberation-serif/LiberationSerif-Regular.ttf");
 }
 
 @font-face {
 	font-display: swap;
-	font-family: "Liberation Sans";
-	src: url("assets/fonts/liberation-sans/LiberationSans-Regular.ttf");
+	font-family: "LiberationSerif-Bold";
+	src: url("assets/fonts/liberation-serif/LiberationSerif-Bold.ttf");
 }
 
 /* Globals */
@@ -18,7 +30,7 @@ html {
 	color: #ffffffff;
 	text-align: center;
 	background-color: #000000ff;
-	font-family: "Liberation Serif";
+	font-family: "LiberationSerif-Regular";
 }
 
 header {
@@ -79,8 +91,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #name a {
 	color: #ffffffff;
 	font-size: 3.3em;
-	font-weight: 700;
-	font-family: "Liberation Serif";
+	font-family: "LiberationSerif-Bold";
 }
 
 #navigation { margin: auto; }
@@ -223,9 +234,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #pdf p {
 	font-size: 1em;
 	color: #4d4d4dff;
-	font-weight: 700;
 	transition: 0.32s;
-	font-family: "Liberation Sans";
+	font-family: "LiberationSans-Bold";
 }
 
 #pdf:hover > * { opacity: 0.72; }
@@ -246,7 +256,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-style: italic;
 	padding-right: 2px;
 	white-space: pre-wrap;
-	font-family: "Liberation Sans";
+	font-family: "LiberationSans-Bold";
 }
 
 .information h2 {
@@ -262,7 +272,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	position: relative;
 	font-weight: normal;
 	border: 1px dashed #ffffffff;
-	font-family: "Liberation Sans";
+	font-family: "LiberationSans-Regular";
 }
 
 .information a {
@@ -276,7 +286,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: inline-block;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
-	font-family: "Liberation Sans";
+	font-family: "LiberationSans-Regular";
 }
 
 .enabled:hover {
@@ -380,7 +390,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-weight: 700;
 	transition: color 0.2s;
 	margin: 0px 4px 0px 4px;
-	font-family: "Liberation Sans";
+	font-family: "LiberationSans-Bold";
 }
 
 #resources a:hover { color: #ffffffff; }
