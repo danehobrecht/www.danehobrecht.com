@@ -14,6 +14,19 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+		<script type="application/javascript"> {
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('service-worker.js');
+			}
+
+			document.querySelector('#show').addEventListener('click', () => {
+				const iconUrl = document.querySelector('select').selectedOptions[0].value;
+				let imgElement = document.createElement('img');
+				imgElement.src = iconUrl;
+				document.querySelector('#container').appendChild(imgElement);
+			});
+		}
+		</script>
 		<script type="application/ld+json"> {
 			"@context": "https://schema.org",
 			"@type": "Person",
