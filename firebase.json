@@ -22,7 +22,7 @@
 			"source": "**",
 			"headers": [ {
 				"key": "Content-Security-Policy",
-				"value": "default-src 'self' 'sha256-A5SFaU21KEXdsuK84vsy4Vns5JvVDO3aLypM9YWguc8='; img-src 'self' https://i.ytimg.com; frame-src 'self' youtube-nocookie.com https://www.youtube-nocookie.com;"
+				"value": "default-src 'self' 'sha256-O5XZfFOKYQoFtpeAZ1m8hyeIshVjBzZA7BEKNObUDIg='; img-src 'self' https://i.ytimg.com; frame-src 'self' youtube-nocookie.com https://www.youtube-nocookie.com;"
 			} ]
 		}, {
 			"source": "404.html",
