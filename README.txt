@@ -1,0 +1,1 @@
+[Lighthouse benchmark results](assets/documents/sources/lighthouse-benchmark-results.pdf).
