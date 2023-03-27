@@ -2,7 +2,9 @@
 	"name": "Dane Hobrecht",
 	"short_name": "DH",
 	"id": "/",
+	"orientation": "portrait-primary",
 	"start_url": "https://www.danehobrecht.com",
+	"description": "Official website for Dane Hobrecht.",
 	"icons": [
 		{
 			"src": "android-chrome-192x192.png",
