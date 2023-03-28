@@ -25,6 +25,12 @@
 				"value": "default-src 'self' 'unsafe-inline' 'sha256-O5XZfFOKYQoFtpeAZ1m8hyeIshVjBzZA7BEKNObUDIg='; img-src 'self' https://i.ytimg.com; frame-src 'self' youtube-nocookie.com https://www.youtube-nocookie.com;"
 			} ]
 		}, {
+			"source": "**",
+			"headers": [ {
+				"key": "AddType",
+				"value": "image/svg+xml svg svgz"
+			} ]
+		}, {
 			"source": "404.html",
 			"headers": [ {
 				"key": "Cache-Control",
