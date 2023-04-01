@@ -57,9 +57,13 @@ footer {
 
 a { text-decoration: none; }
 
+input:focus, textarea:focus { outline: 2px solid #ffffffff; }
+
 img { image-rendering: -webkit-optimize-contrast; }
 
 img, iframe { animation: pulse 1.6s ease-in-out infinite; }
+
+
 
 /* Classes & IDs */
 
