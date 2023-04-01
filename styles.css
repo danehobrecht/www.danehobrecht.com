@@ -374,6 +374,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-family: LiberationSans-Regular;
 }
 
+#form #botcheck { display: none; }
+
 #form legend {
 	margin: auto;
 	font-size: 1.6em;
