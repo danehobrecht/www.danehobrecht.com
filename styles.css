@@ -424,6 +424,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	cursor: pointer;
 }
 
+#contact p { color: #808080ff; }
+
+#contact a { color: #ffffffff; }
+
 #socials { margin: 0px auto 16px auto; }
 
 #socials a { font-size: 0; }
