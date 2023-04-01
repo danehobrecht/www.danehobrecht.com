@@ -139,24 +139,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	-webkit-overflow-scrolling: touch;
 }
 
-#arrow {
-	top: 50%;
-	z-index: 1;
-	right: 40px;
-	position: absolute;
-	transform: rotate(90deg);
-	mix-blend-mode: difference;
-}
-
-#arrow span {
-	width: 1.2em;
-	height: 1.2em;
-	display: block;
-	animation: arrow 3.6s infinite;
-	border-right: 3px solid #4b4b4bff;
-	border-bottom: 3px solid #4b4b4bff;
-}
-
 .module {
 	font-size: 1.2em;
 	max-width: 416px;
@@ -178,6 +160,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .module input { display: none; }
 
+/* Information panel concealed */
+
 .module input:checked + label > .info { opacity: 0; }
 .module input:checked + label > #pdf {
 	opacity: 0;
@@ -186,6 +170,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input:checked + label > img { opacity: 0.24; }
 .module input:checked + label > .information { opacity: 1; }
 .module input:checked + label > .information a { pointer-events: auto; }
+
+/* Information panel revealed */
 
 .module input:not(:checked) + label > .info { opacity: 1; }
 .module input:not(:checked) + label > #pdf {
@@ -256,7 +242,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-style: italic;
 	padding-right: 2px;
 	white-space: pre-wrap;
-	font-family: "LiberationSans-Bold";
+	font-family: "LiberationSans-Regular";
 }
 
 .information h2 {
