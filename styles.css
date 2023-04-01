@@ -376,7 +376,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #form legend {
 	margin: auto;
-	font-size: 1.2em;
+	font-size: 1.6em;
 	font-weight: 700;
 	margin-bottom: 16px;
 }
@@ -384,13 +384,14 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #form label {
 	display: block;
 	text-align: left;
-	font-size: 0.8em;
+	font-size: 1em;
 	margin-bottom: 4px;
 }
 
 #form input, textarea, button {
 	width: 100%;
 	padding: 8px;
+	font-size: 1em;
 	color: #ffffffff;
 	margin-bottom: 8px;
 	border-radius: 8px;
