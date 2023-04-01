@@ -382,9 +382,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #form label {
+	font-size: 1em;
 	display: block;
 	text-align: left;
-	font-size: 1em;
 	margin-bottom: 4px;
 }
 
@@ -403,6 +403,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	resize: vertical;
 	font-size: 0.8em;
 	max-height: 184px;
+	min-height: 96px;
 	font-family: LiberationSans-Regular;
 }
 
