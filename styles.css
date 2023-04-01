@@ -367,6 +367,58 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	text-align: left;
 }
 
+#form {
+	width: 92vw;
+	max-width: 480px;
+	margin: 48px auto 0px auto;
+	font-family: LiberationSans-Regular;
+}
+
+#form legend {
+	margin: auto;
+	font-size: 1.2em;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+
+#form label {
+	display: block;
+	text-align: left;
+	font-size: 0.8em;
+	margin-bottom: 4px;
+}
+
+#form input, textarea, button {
+	width: 100%;
+	padding: 8px;
+	color: #ffffffff;
+	margin-bottom: 8px;
+	border-radius: 8px;
+	box-sizing: border-box;
+	background-color: #161616ff;
+}
+
+#form textarea {
+	resize: vertical;
+	font-size: 0.8em;
+	max-height: 184px;
+	font-family: LiberationSans-Regular;
+}
+
+#form button {
+	font-size: 1em;
+	color: #000000ff;
+	font-weight: 700;
+	transition: 0.32s;
+	margin: 12px 0px 12px 0px;
+	background-color: #ffffffff;
+}
+
+#form button:hover {
+	opacity: 0.72;
+	cursor: pointer;
+}
+
 #socials { margin: 0px auto 16px auto; }
 
 #socials a { font-size: 0; }
