@@ -375,7 +375,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: auto;
 	font-size: 1.6em;
 	font-weight: 700;
-	margin-bottom: 16px;
+	margin-bottom: 8px;
 }
 
 #contact label {
