@@ -367,30 +367,31 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	text-align: left;
 }
 
-#form {
+#contact {
 	width: 92vw;
+	margin: auto;
 	max-width: 480px;
-	margin: 48px auto 0px auto;
+	padding-top: 48px;
 	font-family: LiberationSans-Regular;
 }
 
-#form #botcheck { display: none; }
+#contact #botcheck { display: none; }
 
-#form legend {
+#contact legend {
 	margin: auto;
 	font-size: 1.6em;
 	font-weight: 700;
 	margin-bottom: 16px;
 }
 
-#form label {
+#contact label {
 	font-size: 1em;
 	display: block;
 	text-align: left;
 	margin-bottom: 4px;
 }
 
-#form input, textarea, button {
+#contact input, textarea, button {
 	width: 100%;
 	padding: 8px;
 	font-size: 1em;
@@ -401,7 +402,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-color: #161616ff;
 }
 
-#form textarea {
+#contact textarea {
 	resize: vertical;
 	font-size: 0.8em;
 	max-height: 184px;
@@ -409,7 +410,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-family: LiberationSans-Regular;
 }
 
-#form button {
+#contact button {
 	font-size: 1em;
 	color: #000000ff;
 	font-weight: 700;
@@ -418,7 +419,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-color: #ffffffff;
 }
 
-#form button:hover {
+#contact button:hover {
 	opacity: 0.72;
 	cursor: pointer;
 }
