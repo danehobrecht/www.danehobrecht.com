@@ -61,8 +61,6 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
-
-
 /* Classes & IDs */
 
 * {
@@ -70,12 +68,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-}
-
-*:focus {
-	border-radius: 8px;
-	box-sizing: border-box;
-	outline: 2px solid #ffffffff;
 }
 
 .h-spacer-8px {
@@ -396,6 +388,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-color: #161616ff;
 }
 
+#contact input:focus, textarea:focus { outline: 2px solid #ffffffff; }
+
 #contact textarea {
 	resize: vertical;
 	max-height: 184px;
@@ -416,6 +410,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	opacity: 0.72;
 	cursor: pointer;
 }
+
+#contact p, a { font-size: 0.96em }
 
 #contact p { color: #808080ff; }
 
@@ -516,18 +512,13 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
-
 	#name a { font-size: 2.48em; }
-
 	#navigation a { font-size: 1.48em; }
-
 	.module img { max-width: 500px; }
 }
 
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
-
 	#name a { font-size: 2.1em; }
-
 	#navigation a { font-size: 1.2em; }
 }
