@@ -398,7 +398,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact textarea {
 	resize: vertical;
-	font-size: 0.8em;
 	max-height: 184px;
 	min-height: 96px;
 	font-family: LiberationSans-Regular;
