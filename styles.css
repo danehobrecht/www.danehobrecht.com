@@ -400,12 +400,26 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #contact button {
+	display: flex;
 	font-size: 1em;
 	color: #000000ff;
 	font-weight: 700;
 	transition: 0.32s;
+	align-items: center;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
+}
+
+#contact button span {
+	margin: auto;
+	display: flex;
+}
+
+#contact button img {
+	width: 16px;
+	height: 16px;
+	animation: none;
+	margin: auto 0px auto 4px;
 }
 
 #contact button:hover {
