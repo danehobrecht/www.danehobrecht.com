@@ -130,7 +130,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #resume section {
 	overflow-y: hidden;
-	overflow-x: hidden;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
