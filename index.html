@@ -14,10 +14,13 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-		<script type="application/javascript"> {
-			if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
-		}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+				integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+				crossorigin="anonymous"
+				referrerpolicy="no-referrer">
 		</script>
+		<script type="application/javascript" src="script.js"></script>
+		<script type="application/javascript"> { if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); } } </script>
 		<script type="application/ld+json"> {
 			"@context": "https://schema.org",
 			"@type": "Person",
@@ -83,7 +86,7 @@
 							<div class="information">
 								<h1>The Lightning Thief: The Percy Jackson Musical</h1>
 								<h2>As "Percy Jackson"</h4>
-								<a class="enabled" target="_blank" tabindex="-1" href="https://purchase.lagunaplayhouse.com/overview/8289">TICKETS</a>
+								<a class="disabled" target="_blank" tabindex="-1" href="https://purchase.lagunaplayhouse.com/overview/8289">TICKETS</a>
 								<p>
 									Laguna Playhouse Youth Theatre presents <i>The 
 									Lightning Thief: The Percy Jackson Musical</i>, an
@@ -409,6 +412,18 @@
 						</label>
 					</div>
 				</section>
+			</div>
+			<div class="dots">
+				<a id="active" href="#the-lightning-thief:-the-percy-jackson-musical"></a>
+				<a href="#richards-roast"></a>
+				<a href="#sweeney-todd"></a>
+				<a href="#footloose"></a>
+				<a href="#into-the-woods"></a>
+				<a href="#much-ado-about-nothing"></a>
+				<a href="#oliver"></a>
+				<a href="#fame-the-musical"></a>
+				<a href="#beauty-and-the-beast"></a>
+				<a href="#our-town"></a>
 			</div>
 			<div id="press">
 				<a target="_blank" href="https://www.octheatreguild.org/post/oc-theatre-guild-unveils-list-of-awards-nominees-4">

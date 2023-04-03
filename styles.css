@@ -128,9 +128,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	max-width: 1280px;
 }
 
-#resume { padding-top: 16px; }
-
 #resume section {
+	overflow-y: hidden;
 	overflow-x: auto;
 	position: relative;
 	white-space: nowrap;
@@ -143,6 +142,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-size: 1.2em;
 	max-width: 416px;
 	text-align: left;
+	padding-top: 16px;
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
@@ -188,6 +188,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	z-index: 1;
 	margin: 16px;
 	animation: none;
+	padding-top: 16px;
 	position: absolute;
 	pointer-events: none;
 	width: 32px !important;
@@ -202,7 +203,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	z-index: 1;
 	margin: 16px;
 	display: flex;
-	position: absolute;	
+	position: absolute;
 	align-items: center;
 	mix-blend-mode: difference;
 	transition: 0.16s !important;
@@ -290,6 +291,21 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #e2e2e2ff;
 	white-space: normal;
 }
+
+.dots a {
+	width: 12px;
+	height: 12px;
+	font-size: 0em;
+	transition: 0.32s;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 16px 6px 0px 6px;
+	background-color: #808080ff;
+}
+
+#active { background-color: #ffffffff; }
+
+#inactive { background-color: #808080ff; }
 
 #press {
 	margin: auto;
