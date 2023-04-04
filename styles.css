@@ -313,9 +313,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #reel {
-	margin: -8px;
 	font-size: 0;
-	padding-top: 16px;
+	padding-top: 8px;
+	margin: 0px -8px -8px -8px;
 }
 
 #reel iframe {
@@ -329,8 +329,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #biography {
 	overflow: auto;
-	padding-top: 32px;
-	margin: 16px 0px -16px 0px;
+	padding-top: 16px;
+	margin: 32px 0px -16px 0px;
 }
 
 #biography img {
