@@ -397,7 +397,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: flex;
 	color: #000000ff;
 	font-weight: 700;
-	font-size: 1.16em;
+	font-size: 1.08em;
 	transition: 0.32s;
 	align-items: center;
 	margin: 12px 0px 12px 0px;
@@ -410,8 +410,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #contact button img {
-	width: 18px;
-	height: 18px;
+	width: 17.2px;
+	height: 17.2px;
 	animation: none;
 	margin: auto 0px auto 6px;
 }
