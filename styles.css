@@ -195,6 +195,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #pdf p {
 	font-size: 1em;
 	color: #4d4d4dff;
+	font-weight: 600;
 	transition: 0.32s;
 	font-family: "Liberation Sans", sans-serif;
 }
