@@ -1,36 +1,10 @@
-/* Fonts */
-
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSans-Regular";
-	src: url("assets/fonts/liberation-sans/LiberationSans-Regular.ttf");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSans-Bold";
-	src: url("assets/fonts/liberation-sans/LiberationSans-Bold.ttf");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSerif-Regular";
-	src: url("assets/fonts/liberation-serif/LiberationSerif-Regular.ttf");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "LiberationSerif-Bold";
-	src: url("assets/fonts/liberation-serif/LiberationSerif-Bold.ttf");
-}
-
 /* Globals */
 
 html {
 	color: #ffffffff;
 	text-align: center;
 	background-color: #000000ff;
-	font-family: "LiberationSerif-Regular";
+	font-family: "Liberation Serif";
 }
 
 header {
@@ -91,7 +65,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #name a {
 	color: #ffffffff;
 	font-size: 3.3em;
-	font-family: "LiberationSerif-Bold";
+	font-weight: 700;
+	font-family: "Liberation Serif";
 }
 
 #navigation { margin: auto; }
@@ -129,7 +104,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #resume section {
-	overflow-y: hidden;
+	overflow: hidden;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
@@ -221,7 +196,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-size: 1em;
 	color: #4d4d4dff;
 	transition: 0.32s;
-	font-family: "LiberationSans-Bold";
+	font-family: "Liberation Sans";
 }
 
 #pdf:hover > * { opacity: 0.72; }
@@ -242,7 +217,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-style: italic;
 	padding-right: 2px;
 	white-space: pre-wrap;
-	font-family: "LiberationSans-Regular";
+	font-family: "Liberation Sans";
 }
 
 .information h2 {
@@ -258,7 +233,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	position: relative;
 	font-weight: normal;
 	border: 1px dashed #ffffffff;
-	font-family: "LiberationSans-Regular";
+	font-family: "Liberation Sans";
 }
 
 .information a {
@@ -272,7 +247,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: inline-block;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
-	font-family: "LiberationSans-Regular";
+	font-family: "Liberation Sans";
 }
 
 .enabled:hover {
@@ -295,16 +270,19 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	width: 12px;
 	height: 12px;
 	font-size: 0em;
-	transition: 0.32s;
+	transition: 0.16s;
 	border-radius: 50%;
 	display: inline-block;
 	margin: 16px 6px 0px 6px;
-	background-color: #808080ff;
+	background-color: #323232ff;
 }
 
-#active { background-color: #ffffffff; }
+#active {
+	transform: scale(1.32);
+	background-color: #ffffffff;
+}
 
-#inactive { background-color: #808080ff; }
+#inactive { background-color: #323232ff; }
 
 #press {
 	margin: auto;
@@ -373,7 +351,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: auto;
 	max-width: 480px;
 	padding-top: 48px;
-	font-family: LiberationSans-Regular;
+	font-family: Liberation Sans;
 }
 
 #contact #botcheck { display: none; }
@@ -411,7 +389,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	resize: vertical;
 	max-height: 184px;
 	min-height: 96px;
-	font-family: LiberationSans-Regular;
+	font-family: Liberation Sans;
 }
 
 #contact button {
@@ -471,7 +449,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-weight: 700;
 	transition: color 0.2s;
 	margin: 0px 4px 0px 4px;
-	font-family: "LiberationSans-Bold";
+	font-family: "Liberation Sans";
 }
 
 #resources a:hover { color: #ffffffff; }
