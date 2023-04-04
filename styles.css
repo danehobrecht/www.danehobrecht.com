@@ -360,7 +360,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin: auto;
 	font-size: 1.6em;
 	font-weight: 700;
-	margin-bottom: 16px;
+	margin-bottom: 8px;
 }
 
 #contact label {
@@ -394,9 +394,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact button {
 	display: flex;
-	font-size: 1em;
 	color: #000000ff;
 	font-weight: 700;
+	font-size: 1.16em;
 	transition: 0.32s;
 	align-items: center;
 	margin: 12px 0px 12px 0px;
@@ -409,10 +409,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #contact button img {
-	width: 16px;
-	height: 16px;
+	width: 18px;
+	height: 18px;
 	animation: none;
-	margin: auto 0px auto 4px;
+	margin: auto 0px auto 6px;
 }
 
 #contact button:hover {
