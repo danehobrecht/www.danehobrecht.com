@@ -97,13 +97,13 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #isaiah a:hover { color: #ffffffff; }
 
-.content {
+#content {
 	width: 92vw;
 	margin: auto;
 	max-width: 1280px;
 }
 
-#resume section {
+#resume {
 	overflow: hidden;
 	position: relative;
 	white-space: nowrap;
@@ -193,7 +193,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #pdf p {
-	font-size: 1em;
 	color: #4d4d4dff;
 	font-weight: 600;
 	transition: 0.32s;
