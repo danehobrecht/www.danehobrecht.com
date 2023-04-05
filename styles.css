@@ -1,10 +1,14 @@
 /* Globals */
 
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-serif.min.css");
+
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-sans.min.css");
+
 html {
 	color: #ffffffff;
 	text-align: center;
 	background-color: #000000ff;
-	font-family: "Liberation Serif", sans-serif;
+	font-family: 'Liberation Serif', sans-serif;
 }
 
 header {
@@ -66,7 +70,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #ffffffff;
 	font-size: 3.3em;
 	font-weight: 700;
-	font-family: "Liberation Serif", sans-serif;
+	font-family: 'Liberation Serif', sans-serif;
 }
 
 #navigation { margin: auto; }
@@ -196,7 +200,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #4d4d4dff;
 	font-weight: 600;
 	transition: 0.32s;
-	font-family: "Liberation Sans", sans-serif;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 #pdf:hover > * { opacity: 0.72; }
@@ -217,7 +221,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-style: italic;
 	padding-right: 2px;
 	white-space: pre-wrap;
-	font-family: "Liberation Sans", sans-serif;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 .information h2 {
@@ -233,7 +237,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	position: relative;
 	font-weight: normal;
 	border: 1px dashed #ffffffff;
-	font-family: "Liberation Sans", sans-serif;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 .information a {
@@ -247,7 +251,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	display: inline-block;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
-	font-family: "Liberation Sans", sans-serif;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 .enabled:hover {
@@ -449,7 +453,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-weight: 700;
 	transition: color 0.2s;
 	margin: 0px 4px 0px 4px;
-	font-family: "Liberation Sans", sans-serif;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 #resources a:hover { color: #ffffffff; }
