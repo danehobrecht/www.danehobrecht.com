@@ -22,7 +22,7 @@
 			"source": "**",
 			"headers": [ {
 				"key": "AddType",
-				"value": "image/svg+xml svg svgz"
+				"value": "image/svg+xml"
 			} ]
 		}, {
 			"source": "404.html",

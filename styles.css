@@ -80,7 +80,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #c0c0c0ff;
 	font-size: 1.6em;
 	margin: 0px 6px 0px 6px;
-	transition: color 0.32s;
+	transition: 0.32s;
 }
 
 #navigation span { color: #ffffffff; }
@@ -96,7 +96,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #isaiah a {
 	color: #c0c0c0ff;
 	font-size: 1.6em;
-	transition: color 0.32s;
+	transition: 0.32s;
 }
 
 #isaiah a:hover { color: #ffffffff; }
@@ -120,20 +120,20 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	font-size: 1.2em;
 	max-width: 416px;
 	text-align: left;
+	transition: 0.24s;
 	padding-top: 16px;
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	scroll-snap-align: center;
-	transition: all 0.24s ease-out;
 }
 
 .module img {
 	float: left;
 	width: 100%;
 	height: 100%;
+	transition: 0.24s;
 	border-radius: 16px;
-	transition: all 0.24s ease-out;
 }
 
 .module input { display: none; }
@@ -170,14 +170,14 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	mix-blend-mode: difference;
 }
 
+#pdf { right: 0; }
+
 .info img, #pdf img { animation: none; }
 
 .info img:hover , #pdf img:hover {
 	opacity: 0.72;
 	cursor: pointer;
 }
-
-#pdf { right: 0; }
 
 .information {
 	opacity: 0;
@@ -271,17 +271,20 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	padding: 36px 0px 36px 0px;
 }
 
-#press img {
+#press a {
+	font-size: 0;
+	transition: 0.32s;
+	display: inline-block;
+}
+
+#press a:hover { opacity: 0.72; }
+
+#press object {
 	width: 96px;
 	height: 100%;
 	animation: none;
-	transition: 0.32s;
 	margin-bottom: 8px;
-}
-
-#press img:hover, #press img:focus, #press img:active {
-	opacity: 0.72;
-	cursor: pointer;
+	pointer-events: none;
 }
 
 #press p {
@@ -336,18 +339,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #contact #botcheck { display: none; }
-
-#contact #direct {
-	display: flex;
-}
-
-#email, #phone {
-	margin: 4px;
-	font-size: 1.2em;
-	font-weight: 500;
-	color: #ffffffff;
-	font-family: 'Liberation Sans', sans-serif;
-}
 
 #contact legend {
 	margin: auto;
@@ -422,18 +413,22 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #socials { margin: 0px auto 16px auto; }
 
-#socials a { font-size: 0; }
+#socials a {
+	font-size: 0;
+	transition: 0.32s;
+	display: inline-block;
+}
 
-#socials img {
+#socials object {
 	width: 48px;
 	height: 100%;
 	animation: none;
+	pointer-events: none;
 	vertical-align: middle;
 	margin: 0px 8px 0px 8px;
-	transition: opacity 0.2s;
 }
 
-#socials img:hover { opacity: 0.72; }
+#socials a:hover { opacity: 0.72; }
 
 #resources { margin: auto; }
 
@@ -441,7 +436,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #c0c0c0ff;
 	font-size: 0.8em;
 	font-weight: 700;
-	transition: color 0.2s;
+	transition: 0.32s;
 	margin: 0px 4px 0px 4px;
 	font-family: 'Liberation Sans', sans-serif;
 }
