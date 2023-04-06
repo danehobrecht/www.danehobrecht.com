@@ -176,32 +176,20 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #pdf {
-	left: 0;
-	bottom: 0;
+	top: 0;
+	right: 0;
 	z-index: 1;
+	width: 32px;
+	height: 32px;
 	margin: 16px;
-	display: flex;
+	transition: 0.32s;
+	padding-top: 16px;
 	position: absolute;
 	align-items: center;
 	mix-blend-mode: difference;
-	transition: 0.16s !important;
 }
 
-#pdf img {
-	left: 0;
-	bottom: 0;
-	width: 32px;
-	height: 32px;
-	animation: none;
-	margin-right: 6px;
-}
-
-#pdf p {
-	color: #4d4d4dff;
-	font-weight: 600;
-	transition: 0.32s;
-	font-family: 'Liberation Sans', sans-serif;
-}
+#pdf img { animation: none; }
 
 #pdf:hover > * { opacity: 0.72; }
 
@@ -267,8 +255,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .information p {
 	color: #e2e2e2ff;
+	overflow-y: auto;
 	white-space: normal;
 }
+
+.dots { margin-top: 16px; }
 
 .dots a {
 	width: 12px;
@@ -277,7 +268,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: 0.16s;
 	border-radius: 50%;
 	display: inline-block;
-	margin: 16px 6px 0px 6px;
+	margin: 0px 6px 0px 6px;
 	background-color: #323232ff;
 }
 
@@ -360,11 +351,24 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact #botcheck { display: none; }
 
+#contact #direct {
+	display: flex;
+}
+
+#email, #phone {
+	margin: 4px;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: #ffffffff;
+	font-family: 'Liberation Sans', sans-serif;
+}
+
 #contact legend {
 	margin: auto;
 	font-size: 1.6em;
 	font-weight: 700;
 	margin-bottom: 8px;
+	font-family: 'Liberation Serif', sans-serif;
 }
 
 #contact label {
