@@ -140,8 +140,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 /* Information panel concealed */
 
-.module input:checked + label > .info { opacity: 0; }
-.module input:checked + label > #pdf {
+.module input:checked + label > .info, #pdf {
 	opacity: 0;
 	pointer-events: none;
 }
@@ -151,7 +150,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 /* Information panel revealed */
 
-.module input:not(:checked) + label > .info { opacity: 1; }
 .module input:not(:checked) + label > #pdf {
 	opacity: 1;
 	pointer-events: auto;
@@ -160,38 +158,26 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module input:not(:checked) + label > .information { opacity: 0; }
 .module input:not(:checked) + label > .information a { pointer-events: none; }
 
-.info {
+.info, #pdf {
 	top: 0;
-	left: 0;
-	z-index: 1;
-	margin: 16px;
-	animation: none;
-	padding-top: 16px;
-	position: absolute;
-	pointer-events: none;
-	width: 32px !important;
-	height: 32px !important;
-	mix-blend-mode: difference;
-	transition: 0.16s !important;
-}
-
-#pdf {
-	top: 0;
-	right: 0;
 	z-index: 1;
 	width: 32px;
 	height: 32px;
 	margin: 16px;
-	transition: 0.32s;
+	transition: 0.16s;
 	padding-top: 16px;
 	position: absolute;
-	align-items: center;
 	mix-blend-mode: difference;
 }
 
-#pdf img { animation: none; }
+.info img, #pdf img { animation: none; }
 
-#pdf:hover > * { opacity: 0.72; }
+.info img:hover , #pdf img:hover {
+	opacity: 0.72;
+	cursor: pointer;
+}
+
+#pdf { right: 0; }
 
 .information {
 	opacity: 0;
