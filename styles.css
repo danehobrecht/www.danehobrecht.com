@@ -177,15 +177,15 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #pdf {
+	bottom: 0;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
 	padding: 16px;
 	position: absolute;
-	bottom: 0;
-	border-radius: 0px 16px 0px 0px;
+	align-items: center;
 	background: #00000096;
+	box-sizing: border-box;
+	justify-content: center;
+	border-radius: 0px 16px 0px 0px;
 }
 
 #pdf img {
