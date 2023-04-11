@@ -383,7 +383,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #contact .required {
-	color: #323232ff;
+	color: #a30000ff;
 	font-weight: 700;
 }
 
