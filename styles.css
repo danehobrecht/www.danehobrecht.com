@@ -447,7 +447,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #socials object {
-	width: 48px;
+	width: 64px;
 	height: 100%;
 	animation: none;
 	pointer-events: none;
@@ -461,7 +461,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #resources a {
 	color: #c0c0c0ff;
-	font-size: 0.8em;
+	font-size: 0.96em;
 	font-weight: 700;
 	transition: 0.32s;
 	margin: 0px 4px 0px 4px;
