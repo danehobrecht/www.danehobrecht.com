@@ -32,7 +32,6 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	padding: 36px 0px 36px 0px;
-	background-color: #161616ff;
 }
 
 a { text-decoration: none; }
@@ -394,7 +393,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin-bottom: 8px;
 	border-radius: 8px;
 	box-sizing: border-box;
-	background-color: #161616ff;
+	background-color: #121212ff;
 }
 
 #contact input:focus, textarea:focus { outline: 2px solid #ffffffff; }
