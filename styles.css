@@ -453,18 +453,15 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #representation object {
 	width: 84px;
 	height: 100%;
-	margin: 16px;
+	margin: 12px;
 	animation: none;
 	pointer-events: none;
 	vertical-align: middle;
 }
 
-#representation p {
-	color: #ffffffff;
-	margin-bottom: 16px;
-}
+#representation p { margin-bottom: 16px; }
 
-#representation a:hover { color: #ffffffff; }
+#representation a:hover { opacity: 0.72; }
 
 #socials { margin: 0px auto 16px auto; }
 
