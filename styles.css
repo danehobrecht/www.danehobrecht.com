@@ -29,7 +29,6 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	color: #c0c0c0ff;
-	font-weight: 600;
 	flex-direction: column;
 	justify-content: center;
 	margin: 96px 0px 96px 0px;
@@ -444,7 +443,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #representation a {
 	margin: 4px;
-	font-size: 1em;
 	color: #c0c0c0ff;
 	transition: 0.32s;
 	display: inline-block;
@@ -486,6 +484,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #resources a {
 	color: #c0c0c0ff;
+	font-weight: 600;
 	font-size: 0.84em;
 	transition: 0.32s;
 	margin: 0px 4px 0px 4px;
