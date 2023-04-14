@@ -32,7 +32,7 @@ footer {
 	font-weight: 600;
 	flex-direction: column;
 	justify-content: center;
-	margin: 84px 0px 84px 0px;
+	margin: 96px 0px 96px 0px;
 	padding: 36px 0px 36px 0px;
 	font-family: 'Liberation Sans', sans-serif;
 }
@@ -447,6 +447,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #c0c0c0ff;
 	transition: 0.32s;
 	display: inline-block;
+	margin: 4px;
 }
 
 #representation object {
@@ -458,9 +459,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	vertical-align: middle;
 }
 
-#representation p { margin-bottom: 16px; }
+#representation p {
+	color: #ffffffff;
+	margin-bottom: 16px;
+}
 
-#representation a:hover { opacity: 0.72; }
+#representation a:hover { color: #ffffffff; }
 
 #socials { margin: 0px auto 16px auto; }
 
