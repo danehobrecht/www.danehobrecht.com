@@ -363,9 +363,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact {
 	width: 92vw;
-	margin: auto;
 	max-width: 480px;
-	padding-top: 48px;
+	padding-top: 16px;
+	margin: 32px auto 0px auto;
 	font-family: Liberation Sans;
 }
 
