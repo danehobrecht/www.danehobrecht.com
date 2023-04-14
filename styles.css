@@ -443,15 +443,15 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #contact a { color: #ffffffff; }
 
 #representation a {
+	margin: 4px;
 	font-size: 1em;
 	color: #c0c0c0ff;
 	transition: 0.32s;
 	display: inline-block;
-	margin: 4px;
 }
 
 #representation object {
-	width: 96px;
+	width: 84px;
 	height: 100%;
 	margin: 16px;
 	animation: none;
