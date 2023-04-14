@@ -193,7 +193,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-color: #00000096;
 }
 
-#pdf:hover { background-color: #00000084; }
+#pdf:hover { background-color: #00000072; }
 
 #pdf img {
 	width: 32px;
