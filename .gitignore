@@ -63,9 +63,3 @@ node_modules/
 
 # dotenv environment variables file
 .env
-
-# Conversion.txt
-assets/resume/sources/Conversion.txt
-
-# about.odt
-assets/documents/sources/about.odt
