@@ -446,6 +446,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	color: #c0c0c0ff;
 	transition: 0.32s;
 	display: inline-block;
+	font-family: 'Liberation Sans', sans-serif;
 }
 
 #representation object {
@@ -457,7 +458,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	vertical-align: middle;
 }
 
-#representation p { margin-bottom: 16px; }
+#representation p {
+	margin-bottom: 16px;
+	font-family: 'Liberation Serif', sans-serif;
+}
 
 #representation a:hover { opacity: 0.72; }
 
