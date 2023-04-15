@@ -121,7 +121,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .module {
 	font-size: 1.2em;
-	max-width: 416px;
+	max-width: 21.5em;
 	text-align: left;
 	transition: 0.24s;
 	padding-top: 16px;
