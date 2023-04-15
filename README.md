@@ -1,1 +1,1 @@
-[Lighthouse benchmark results](https://github.com/danehobrecht/www.danehobrecht.com/blob/main/assets/documents/sources/lighthouse-benchmark-results-001.pdf).
+[Lighthouse results](https://github.com/danehobrecht/www.danehobrecht.com/blob/main/assets/documents/sources/lighthouse-results-001.pdf).
