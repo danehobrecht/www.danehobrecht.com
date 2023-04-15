@@ -385,7 +385,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	margin-bottom: 4px;
 }
 
-#contact .required { color: #a30000ff; }
+#contact .required { color: #ff0000ff; }
 
 #contact input, textarea, button {
 	width: 100%;
