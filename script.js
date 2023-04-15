@@ -1,4 +1,6 @@
-if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('service-worker.js');
+}
 
 $(document).ready(function(){ 
 	$('.dots a').click(function(event) { 

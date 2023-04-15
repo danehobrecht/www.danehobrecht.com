@@ -1,6 +1,7 @@
 User-agent: Googlebot-Image
 
+Disallow: /assets/images/covers/sources
+Disallow: /assets/images/extras/sources
+Disallow: /assets/images/flyers/sources
 Disallow: /assets/images/icons
 Disallow: /assets/images/logos
-Disallow: /assets/images/flyers/sources
-Disallow: /assets/images/covers/sources
