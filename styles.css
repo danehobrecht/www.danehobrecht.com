@@ -31,7 +31,7 @@ footer {
 	color: #c0c0c0ff;
 	flex-direction: column;
 	justify-content: center;
-	margin: 96px 0px 96px 0px;
+	margin: 84px 0px 84px 0px;
 	padding: 36px 0px 36px 0px;
 	font-family: 'Liberation Sans', sans-serif;
 }
@@ -441,29 +441,32 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact a { color: #ffffffff; }
 
+#representation { font-size: 0.84em; }
+
 #representation a {
 	margin: 4px;
 	color: #c0c0c0ff;
 	transition: 0.32s;
 	display: inline-block;
-	font-family: 'Liberation Sans', sans-serif;
 }
 
 #representation object {
-	width: 84px;
+	width: 72px;
 	height: 100%;
-	margin: 12px;
 	animation: none;
+	margin-bottom: 8px;
 	pointer-events: none;
 	vertical-align: middle;
 }
 
-#representation p {
-	margin-bottom: 16px;
-	font-family: 'Liberation Serif', sans-serif;
-}
+#representation p { margin-bottom: 16px; }
 
 #representation a:hover { opacity: 0.72; }
+
+#telephone a:hover {
+	opacity: 1;
+	color: #ffffffff;
+}
 
 #socials { margin: 0px auto 16px auto; }
 
