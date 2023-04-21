@@ -33,7 +33,6 @@ footer {
 	justify-content: center;
 	margin: 84px 0px 84px 0px;
 	padding: 36px 0px 36px 0px;
-	font-family: 'Liberation Sans', sans-serif;
 }
 
 a { text-decoration: none; }
@@ -451,15 +450,23 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #representation object {
-	width: 72px;
+	width: 64px;
 	height: 100%;
 	animation: none;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
 	pointer-events: none;
 	vertical-align: middle;
 }
 
-#representation p { margin-bottom: 16px; }
+#representation p {
+	margin-bottom: 16px;
+	font-family: 'Liberation Serif', sans-serif;
+}
+
+#representation a {
+	font-size: 0.90em;
+	font-family: 'Liberation Sans', sans-serif;
+}
 
 #representation a:hover { opacity: 0.72; }
 
