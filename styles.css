@@ -441,41 +441,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact a { color: #ffffffff; }
 
-#representation { font-size: 0.84em; }
-
-#representation a {
-	margin: 4px;
-	color: #c0c0c0ff;
-	transition: 0.32s;
-	display: inline-block;
-}
-
-#representation object {
-	width: 64px;
-	height: 100%;
-	animation: none;
-	margin-bottom: 6px;
-	pointer-events: none;
-	vertical-align: middle;
-}
-
-#representation p {
-	margin-bottom: 16px;
-	font-family: 'Liberation Serif', sans-serif;
-}
-
-#representation a {
-	font-size: 0.90em;
-	font-family: 'Liberation Sans', sans-serif;
-}
-
-#representation a:hover { opacity: 0.72; }
-
-#telephone a:hover {
-	opacity: 1;
-	color: #ffffffff;
-}
-
 #socials { margin: 0px auto 16px auto; }
 
 #socials a {
