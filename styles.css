@@ -390,7 +390,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #contact input, textarea, button {
 	width: 100%;
 	padding: 8px;
-	outline: none;
 	font-size: 1em;
 	color: #ffffffff;
 	transition: 0.32s;
@@ -400,7 +399,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	background-color: #121212ff;
 }
 
-#contact input:focus, textarea:focus { background-color: #202020ff; }
+#contact input:focus, textarea:focus { 
+	outline: none;
+	background-color: #202020ff;
+}
 
 #contact textarea {
 	resize: vertical;
