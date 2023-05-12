@@ -392,7 +392,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	padding: 8px;
 	font-size: 1em;
 	color: #ffffffff;
-	transition: 0.32s;
+	transition: 0.16s;
 	margin-bottom: 8px;
 	border-radius: 8px;
 	box-sizing: border-box;
@@ -406,8 +406,8 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact textarea {
 	resize: vertical;
-	max-height: 184px;
 	min-height: 96px;
+	max-height: 184px;
 	font-family: Liberation Sans;
 }
 
