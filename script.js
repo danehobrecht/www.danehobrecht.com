@@ -7,3 +7,11 @@ $(document).ready(function(){
 		$(this).attr('id', 'active').siblings().attr('id', 'inactive');
 	});
 });
+
+window.onload = function() {
+	// Check if the URL has a fragment identifier ('#')
+	if (window.location.hash) {
+		// Remove the fragment identifier and update the URL
+		history.replaceState({}, document.title, window.location.pathname);
+	}
+};
