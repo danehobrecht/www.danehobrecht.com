@@ -13,6 +13,6 @@ $(document).ready(function(){
 
 	// Loop through each anchor link and modify its href attribute
 	anchorLinks.forEach(link => {
-		link.href = link.getAttribute('href').replace('#', ''); // Remove the "#" symbol
+		link.href = link.getAttribute('href').replace('#', '');
 	});
 });
