@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$('.dots a').click(function(event) { 
 		event.preventDefault();
 		$(this).attr('id', 'active').siblings().attr('id', 'inactive');
-		const targetId = $(this).attr('href').replace('#', '');
-		window.location.hash = targetId;
+		const targetId = $(this).attr('href').replace('#', ''); // Get the target ID
+		window.history.pushState({}, '', targetId); // Update the URL without the "#" symbol
 	});
 });
