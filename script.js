@@ -9,7 +9,7 @@ $(document).ready(function(){
 	});
 
 	document.addEventListener("DOMContentLoaded", function() {
-		const navLinks = document.querySelectorAll('nav a[href^="#"]'); // Select all navigation links
+		const navLinks = document.querySelectorAll('.dots a[href^="#"]'); // Select all navigation links
 
 		// Loop through each navigation link and add a click event listener
 		navLinks.forEach(link => {
