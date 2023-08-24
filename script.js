@@ -7,16 +7,18 @@ $(document).ready(function(){
 	$('.dots a').click(function(event) { 
 		$(this).attr('id', 'active').siblings().attr('id', 'inactive');
 	});
-	
-    document.addEventListener("DOMContentLoaded", function() {
-        const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-        anchorLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const targetId = link.getAttribute('href').replace('#', '');
-                window.location.hash = targetId; // Update the URL hash without reloading the page
-            });
-        });
-    });
+	document.addEventListener("DOMContentLoaded", function() {
+		const navLinks = document.querySelectorAll('nav a[href^="#"]'); // Select all navigation links
+
+		// Loop through each navigation link and add a click event listener
+		navLinks.forEach(link => {
+			link.addEventListener('click', function(event) {
+				event.preventDefault(); // Prevent the default link behavior
+
+				const targetId = link.getAttribute('href').replace('#', ''); // Get the target ID
+				window.location.href = targetId; // Update the URL without the "#" symbol
+			});
+		});
+	});
 });
