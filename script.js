@@ -8,11 +8,15 @@ $(document).ready(function(){
 		$(this).attr('id', 'active').siblings().attr('id', 'inactive');
 	});
 	
-	// Fetch anchor links
-	const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    document.addEventListener("DOMContentLoaded", function() {
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-	// Loop through each anchor link and modify its href attribute
-	anchorLinks.forEach(link => {
-		link.href = link.getAttribute('href').replace('#', '');
-	});
+        anchorLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').replace('#', '');
+                window.location.hash = targetId; // Update the URL hash without reloading the page
+            });
+        });
+    });
 });
