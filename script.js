@@ -44,7 +44,6 @@ $(document).ready(function() {
 
 		function calculateModuleWidth() {
 			const width = $('.module').eq(0).width();
-			console.log('Module Width:', width); // Added console log
 			return width;
 		}
 
