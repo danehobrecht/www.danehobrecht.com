@@ -42,7 +42,7 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
-/* Classes & IDs */
+/* Classes and IDs */
 
 * {
 	border: 0;
@@ -89,20 +89,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #navigation span { color: #ffffffff; }
 
 #navigation a:hover { color: #ffffffff; }
-
-#isaiah {
-	margin: auto;
-	max-height: 100%;
-	amax-width: 1280px;
-}
-
-#isaiah a {
-	color: #c0c0c0ff;
-	font-size: 1.6em;
-	transition: 0.32s;
-}
-
-#isaiah a:hover { color: #ffffffff; }
 
 #content {
 	width: 92vw;
