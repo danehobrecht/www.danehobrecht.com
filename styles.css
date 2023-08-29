@@ -293,7 +293,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .dots a:first-child,
 .dots a:last-child {
-	background-color: #282828ff;
+	background-color: #242424ff;
 }
 
 #active {
