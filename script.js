@@ -1,8 +1,10 @@
-// Install service worker
-if ('serviceWorker' in navigator) {  navigator.serviceWorker.register('service-worker.js');  }
-
-// Navigation dots
 $(document).ready(function() {
+	// Install service worker
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('service-worker.js');
+	}
+
+	// Navigation dots
 	const scrollContainer = $('#resume');
 	const dots = $('.dots a');
 	let moduleWidth = calculateModuleWidth();
