@@ -1,5 +1,5 @@
 // Install service worker
-if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
+if ('serviceWorker' in navigator) {  navigator.serviceWorker.register('service-worker.js');  }
 
 // Navigation dots
 $(document).ready(function() {
@@ -18,27 +18,29 @@ $(document).ready(function() {
 	let isDragging = false;
 	let startX, scrollLeft;
 
-	scrollContainer.mousedown(function(e) {
+	scrollContainer.on('mousedown', function(e) {
 		isDragging = true;
-		startX = e.pageX - scrollContainer.offset().left;
+		startX = e.clientX - scrollContainer.offset().left;
 		scrollLeft = scrollContainer.scrollLeft();
 	});
 
-	$(document).mousemove(function(e) {
+	$(document).on('mousemove', function(e) {
 		if (!isDragging) return;
 		e.preventDefault();
-		const x = e.pageX - scrollContainer.offset().left;
+		const x = e.clientX - scrollContainer.offset().left;
 		const walk = (x - startX) * 4;
 		scrollContainer.scrollLeft(scrollLeft - walk);
 	});
 
-	$(document).mouseup(function() {
+	$(document).on('mouseup', function() {
 		isDragging = false;
-	}).mouseleave(function() {
+	}).on('mouseleave', function() {
 		isDragging = false;
 	});
 
-	function calculateModuleWidth() { return $('.module').eq(0).width(); }
+	function calculateModuleWidth() {
+		return $('.module').eq(0).width();
+	}
 
 	function updateActiveDot(activeIndex) {
 		dots.removeAttr('id');
