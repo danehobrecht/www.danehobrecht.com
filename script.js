@@ -18,7 +18,7 @@ $(document).ready(function() {
 			const middleModuleIndex = Math.floor(snappedModuleIndex + containerWidth / (2 * moduleWidth));
 			updateActiveDot(middleModuleIndex);
 		});
-	
+
 		let isDragging = false;
 		let startX, scrollLeft;
 
