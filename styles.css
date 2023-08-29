@@ -55,6 +55,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	width: 16px;
 	height: 100%;
 	user-select: none;
+	border-radius: 16px;
 	display: inline-block;
 }
 
@@ -119,12 +120,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 .module {
 	font-size: 1.2em;
-	max-width: 21.5em;
 	text-align: left;
 	transition: 0.24s;
 	user-select: none;
 	padding-top: 16px;
 	position: relative;
+	max-width: 21.54em;
 	display: inline-block;
 	vertical-align: middle;
 	scroll-snap-align: center;
