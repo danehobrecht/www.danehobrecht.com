@@ -32,7 +32,7 @@ $(document).ready(function() {
 			if (!isDragging) return;
 			e.preventDefault();
 			const x = e.clientX - scrollContainer.offset().left;
-			const walk = (x - startX) * 4;
+			const walk = (x - startX) * 8;
 			scrollContainer.scrollLeft(scrollLeft - walk);
 		});
 
