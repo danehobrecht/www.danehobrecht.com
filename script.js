@@ -8,11 +8,6 @@ $(document).ready(function() {
 	const scrollContainer = $('#resume');
 	const dots = $('.dots a');
 	let moduleWidth = calculateModuleWidth();
-	let isDragging = false;
-	let startX, scrollLeft;
-
-	// Set the first dot as active initially
-	dots.first().attr('id', 'active');
 
 	scrollContainer.on('scroll', function() {
 		const scrollPosition = scrollContainer.scrollLeft();
@@ -21,6 +16,9 @@ $(document).ready(function() {
 		const middleModuleIndex = Math.floor(snappedModuleIndex + containerWidth / (2 * moduleWidth));
 		updateActiveDot(middleModuleIndex);
 	});
+
+	let isDragging = false;
+	let startX, scrollLeft;
 
 	scrollContainer.on('mousedown', function(e) {
 		isDragging = true;
