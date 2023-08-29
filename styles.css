@@ -1,16 +1,8 @@
 /* Globals */
 
-@font-face {
-	font-display: swap;
-	font-family: "Liberation Serif";
-	src: url("assets/fonts/liberation-serif/LiberationSerif-Regular.ttf");
-}
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-serif.min.css");
 
-@font-face {
-	font-display: swap;
-	font-family: "Liberation Sans";
-	src: url("assets/fonts/liberation-sans/LiberationSans-Regular.ttf");
-}
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-sans.min.css");
 
 html {
 	color: #ffffffff;
