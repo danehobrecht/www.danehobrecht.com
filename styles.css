@@ -454,7 +454,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #contact a { color: #ffffffff; }
 
-#socials { margin: 0px auto 16px auto; }
+#socials {
+	user-select: none;
+	margin: 0px auto 16px auto;
+}
 
 #socials a {
 	font-size: 0;
@@ -464,22 +467,26 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #socials object {
 	width: 56px;
+	margin: 8px;
 	height: 100%;
 	animation: none;
 	pointer-events: none;
 	vertical-align: middle;
-	margin: 8px;
 }
 
 #socials a:hover { opacity: 0.72; }
 
-#resources { margin: auto; }
+#resources {
+	margin: auto;
+	user-select: none;
+}
 
 #resources a {
 	color: #c0c0c0ff;
 	font-weight: 600;
 	font-size: 0.84em;
 	transition: 0.32s;
+	user-select: text;
 	margin: 0px 4px 0px 4px;
 }
 
