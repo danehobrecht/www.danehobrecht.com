@@ -17,12 +17,27 @@
 			"headers": [ {
 				"key": "Cache-Control",
 				"value": "max-age=31536000"
+			} {
+				"key": "Content-Encoding",
+				"value": "gzip"
+			} ]
+		}, {
+			"source": "**/*.js",
+			"headers": [ {
+				"key": "Cache-Control",
+				"value": "max-age=300"
+			} {
+				"key": "Content-Encoding",
+				"value": "gzip"
 			} ]
 		}, {
 			"source": "**",
 			"headers": [ {
 				"key": "AddType",
 				"value": "image/svg+xml"
+			} {
+				"key": "Content-Encoding",
+				"value": "gzip"
 			} ]
 		}, {
 			"source": "404.html",
