@@ -99,10 +99,12 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #resume {
+	margin-top: 16px;
 	overflow-y: hidden;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
+	scroll-margin-top: 16px;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 	/** Hide scrollbar while keeping its functionality **/
@@ -123,7 +125,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	text-align: left;
 	transition: 0.24s;
 	user-select: none;
-	padding-top: 16px;
 	position: relative;
 	max-width: 21.64em;
 	display: inline-block;
@@ -164,10 +165,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	top: 0;
 	z-index: 1;
 	width: 32px;
-	height: 32px;
 	margin: 16px;
+	height: 32px;
 	transition: 0.12s;
-	padding-top: 16px;
 	position: absolute;
 	mix-blend-mode: difference;
 }
