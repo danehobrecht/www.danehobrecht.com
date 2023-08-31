@@ -17,7 +17,7 @@
 			"headers": [ {
 				"key": "Cache-Control",
 				"value": "max-age=31536000"
-			} {
+			}, {
 				"key": "Content-Encoding",
 				"value": "gzip"
 			} ]
@@ -26,7 +26,7 @@
 			"headers": [ {
 				"key": "Cache-Control",
 				"value": "max-age=300"
-			} {
+			}, {
 				"key": "Content-Encoding",
 				"value": "gzip"
 			} ]
@@ -35,7 +35,7 @@
 			"headers": [ {
 				"key": "AddType",
 				"value": "image/svg+xml"
-			} {
+			}, {
 				"key": "Content-Encoding",
 				"value": "gzip"
 			} ]
