@@ -139,9 +139,9 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	border-radius: 16px;
 }
 
-/* Hide */
 .module input { display: none; }
 
+/* Hide */
 .module input:not(:checked) + label > img { opacity: 1; }
 
 .module input:not(:checked) + label > .information { opacity: 0; }
@@ -181,26 +181,22 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 #pdf {
 	bottom: 0;
-	margin: 8px;
+	z-index: 1;
+	width: 36px;
+	height: 36px;
+	margin: 16px;
+	transition: 0.12s;
 	display: flex;
-	padding: 12px;
-	transition: 0.32s;
+	padding-top: 16px;
 	position: absolute;
-	align-items: center;
-	border-radius: 16px;
-	box-sizing: border-box;
-	justify-content: center;
-	background-color: #00000096;
+	mix-blend-mode: difference;
 }
 
-#pdf:hover { background-color: #00000072; }
+#pdf:hover { opacity: 0.48; }
 
 #pdf img {
-	width: 32px;
-	height: 32px;
 	animation: none;
 	user-select: none;
-	margin-right: 6px;
 }
 
 #pdf p {
