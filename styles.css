@@ -288,6 +288,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: 0.16s;
 	border-radius: 50%;
 	display: inline-block;
+	will-change: transform;
 	margin: 0px 6px 0px 6px;
 	background-color: #323232ff;
 }
@@ -300,6 +301,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 #active {
 	transform: scale(1.16);
 	background-color: #ffffffff;
+	-webkit-transform: scale(1.16);
 }
 
 #inactive { background-color: #323232ff; }
