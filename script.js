@@ -22,13 +22,13 @@ $(document).ready(function() {
 		let isDragging = false;
 		let startX, scrollLeft;
 
-		scrollContainer.on('mousedown touchstart', function(e) {
+		scrollContainer.on('mousedown', function(e) {
 			isDragging = true;
 			startX = e.clientX - scrollContainer.offset().left;
 			scrollLeft = scrollContainer.scrollLeft();
 		});
 
-		$(document).on('mousemove touchmove', function(e) {
+		$(document).on('mousemove', function(e) {
 			if (!isDragging) return;
 			e.preventDefault();
 			const x = e.clientX - scrollContainer.offset().left;
@@ -36,7 +36,11 @@ $(document).ready(function() {
 			scrollContainer.scrollLeft(scrollLeft - walk);
 		});
 
-		$(document).on('mouseup mouseleave touchend', function() { isDragging = false; });
+		$(document).on('mouseup', function() {
+			isDragging = false;
+		}).on('mouseleave', function() {
+			isDragging = false;
+		});
 
 		function calculateModuleWidth() {
 			const width = $('.module').eq(0).width();
