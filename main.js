@@ -1,23 +1,17 @@
 $(document).ready(function() {
-	// Install service worker
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('service-worker.js');
-	}
+	// Auto-scroll handling
+	$('#resume').scrollLeft(0);
+	history.scrollRestoration = "manual";
 
 	// Navigation dots
 	$(window).on('load', function() {
-		const scrollContainer = $('#resume');
+		const resumeContainer = $('#resume');
 		const dots = $('.dots a');
 		let moduleWidth = calculateModuleWidth();
 
-		// Set initial dot
-		const firstModuleHref = $('.dots a').eq(0).attr('href');
-		const initialScrollPosition = $(firstModuleHref).position().left;
-		$('#resume').scrollLeft(initialScrollPosition);
-
-		scrollContainer.on('scroll touchmove', function() {
-			const scrollPosition = scrollContainer.scrollLeft();
-			const containerWidth = scrollContainer.innerWidth();
+		resumeContainer.on('scroll touchmove', function() {
+			const scrollPosition = resumeContainer.scrollLeft();
+			const containerWidth = resumeContainer.innerWidth();
 			const snappedModuleIndex = Math.floor(scrollPosition / moduleWidth);
 			const middleModuleIndex = Math.floor(snappedModuleIndex + containerWidth / (2 * moduleWidth));
 			updateActiveDot(middleModuleIndex);
@@ -26,18 +20,18 @@ $(document).ready(function() {
 		let isDragging = false;
 		let startX, scrollLeft;
 
-		scrollContainer.on('mousedown', function(e) {
+		resumeContainer.on('mousedown', function(e) {
 			isDragging = true;
-			startX = e.clientX - scrollContainer.offset().left;
-			scrollLeft = scrollContainer.scrollLeft();
+			startX = e.clientX - resumeContainer.offset().left;
+			scrollLeft = resumeContainer.scrollLeft();
 		});
 
 		$(document).on('mousemove', function(e) {
 			if (!isDragging) return;
 			e.preventDefault();
-			const x = e.clientX - scrollContainer.offset().left;
+			const x = e.clientX - resumeContainer.offset().left;
 			const walk = (x - startX) * 8;
-			scrollContainer.scrollLeft(scrollLeft - walk);
+			resumeContainer.scrollLeft(scrollLeft - walk);
 		});
 
 		$(document).on('mouseup', function() {
