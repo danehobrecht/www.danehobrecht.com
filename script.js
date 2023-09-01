@@ -4,8 +4,8 @@ $(document).ready(function() {
 		navigator.serviceWorker.register('service-worker.js');
 	}
 
+	// Navigation dots
 	$(window).on('load', function() {
-		// Navigation dots
 		const scrollContainer = $('#resume');
 		const dots = $('.dots a');
 		let moduleWidth = calculateModuleWidth();
