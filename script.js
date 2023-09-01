@@ -10,6 +10,11 @@ $(document).ready(function() {
 		const dots = $('.dots a');
 		let moduleWidth = calculateModuleWidth();
 
+		// Set initial dot
+		const firstModuleHref = $('.dots a').eq(0).attr('href');
+		const initialScrollPosition = $(firstModuleHref).position().left;
+		$('#resume').scrollLeft(initialScrollPosition);
+
 		scrollContainer.on('scroll touchmove', function() {
 			const scrollPosition = scrollContainer.scrollLeft();
 			const containerWidth = scrollContainer.innerWidth();
