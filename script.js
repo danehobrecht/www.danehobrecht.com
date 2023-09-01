@@ -22,7 +22,6 @@ $(document).ready(function() {
 		let isDragging = false;
 		let startX, scrollLeft;
 
-		// Desktop support
 		scrollContainer.on('mousedown', function(e) {
 			isDragging = true;
 			startX = e.clientX - scrollContainer.offset().left;
@@ -42,23 +41,6 @@ $(document).ready(function() {
 		}).on('mouseleave', function() {
 			isDragging = false;
 		});
-
-		// Mobile support
-		scrollContainer.on('touchstart', function(e) {
-			isDragging = true;
-			startX = e.touches[0].clientX - scrollContainer.offset().left;
-			scrollLeft = scrollContainer.scrollLeft();
-		});
-
-		$(document).on('touchmove', function(e) {
-			if (!isDragging) return;
-			e.preventDefault();
-			const x = e.touches[0].clientX - scrollContainer.offset().left;
-			const walk = (x - startX) * 8;
-			scrollContainer.scrollLeft(scrollLeft - walk);
-		});
-
-		$(document).on('touchend', function() { isDragging = false; });
 
 		function calculateModuleWidth() {
 			const width = $('.module').eq(0).width();
