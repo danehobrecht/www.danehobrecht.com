@@ -1,15 +1,17 @@
-$(document).ready(() => {
+$(document).ready(function() {
+	// Install service worker
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('service-worker.js');
 	}
 
+	// Navigation dots
 	const scrollContainer = $('#resume');
 	const dots = $('.dots a');
-	let moduleWidth = calculateModuleWidth();
-	let isDragging = false, startX, scrollLeft;
 
-	$(window).on('load', () => {
-		scrollContainer.on('scroll', () => {
+	$(window).on('load', function() {
+		let moduleWidth = calculateModuleWidth();
+
+		scrollContainer.on('scroll', function() {
 			const scrollPosition = scrollContainer.scrollLeft();
 			const containerWidth = scrollContainer.width();
 			const snappedModuleIndex = Math.floor(scrollPosition / moduleWidth);
@@ -17,13 +19,16 @@ $(document).ready(() => {
 			updateActiveDot(middleModuleIndex);
 		});
 
-		scrollContainer.on('mousedown touchstart', (e) => {
+		let isDragging = false;
+		let startX, scrollLeft;
+
+		scrollContainer.on('mousedown touchstart', function(e) {
 			isDragging = true;
 			startX = e.clientX - scrollContainer.offset().left;
 			scrollLeft = scrollContainer.scrollLeft();
 		});
 
-		$(document).on('mousemove touchmove', (e) => {
+		$(document).on('mousemove touchmove', function(e) {
 			if (!isDragging) return;
 			e.preventDefault();
 			const x = e.clientX - scrollContainer.offset().left;
@@ -31,15 +36,16 @@ $(document).ready(() => {
 			scrollContainer.scrollLeft(scrollLeft - walk);
 		});
 
-		$(document).on('mouseup mouseleave touchend', () => { isDragging = false; });
+		$(document).on('mouseup mouseleave touchend', function() { isDragging = false; });
+
+		function calculateModuleWidth() {
+			const width = $('.module').eq(0).width();
+			return width;
+		}
+
+		function updateActiveDot(activeIndex) {
+			dots.removeAttr('id');
+			dots.eq(activeIndex).attr('id', 'active');
+		}
 	});
-
-	function calculateModuleWidth() {
-		return $('.module').eq(0).width();
-	}
-
-	function updateActiveDot(activeIndex) {
-		dots.removeAttr('id');
-		dots.eq(activeIndex).attr('id', 'active');
-	}
 });
