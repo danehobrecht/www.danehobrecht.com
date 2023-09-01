@@ -11,9 +11,9 @@ $(document).ready(function() {
 	$(window).on('load', function() {
 		let moduleWidth = calculateModuleWidth();
 
-		scrollContainer.on('scroll', function() {
+		scrollContainer.on('scroll touchmove', function() {
 			const scrollPosition = scrollContainer.scrollLeft();
-			const containerWidth = scrollContainer.width();
+			const containerWidth = scrollContainer.innerWidth();
 			const snappedModuleIndex = Math.floor(scrollPosition / moduleWidth);
 			const middleModuleIndex = Math.floor(snappedModuleIndex + containerWidth / (2 * moduleWidth));
 			updateActiveDot(middleModuleIndex);
