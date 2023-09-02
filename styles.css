@@ -158,10 +158,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	z-index: 1;
 	width: 32px;
 	height: 32px;
-	margin-left: 8px;
+	margin-top: 16px;
+	margin-left: 6px;
 	transition: 0.12s;
 	position: absolute;
-	margin-top: 23.33px;
 	mix-blend-mode: difference;
 }
 
