@@ -103,7 +103,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	overflow-y: hidden;
 	position: relative;
 	white-space: nowrap;
-	border-radius: 16px;
 	scroll-behavior: smooth;
 	scroll-margin-top: 16px;
 	-ms-scroll-margin-top: 16px;
@@ -130,7 +129,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	transition: 0.24s;
 	user-select: none;
 	position: relative;
-	max-width: 21.64em;
+	max-width: 21.66em;
 	display: inline-block;
 	vertical-align: middle;
 	scroll-snap-align: center;
@@ -139,40 +138,30 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 .module img {
 	float: left;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	transition: 0.24s;
-	border-radius: 16px;
 }
 
 /* Hide */
 .module input { display: none; }
-
 .module input:not(:checked) + label > img { opacity: 1; }
-
 .module input:not(:checked) + label > .information { opacity: 0; }
-
 .module input:not(:checked) + label > .information a { pointer-events: none; }
 
 /* Show */
-.module input:checked + label > .info {
-	opacity: 0;
-	pointer-events: none;
-}
-
+.module input:checked + label > .info { opacity: 0; pointer-events: none; }
 .module input:checked + label > img { opacity: 0.24; }
-
 .module input:checked + label > .information { opacity: 1; }
-
 .module input:checked + label > .information a { pointer-events: auto; }
 
 .info {
-	top: 0;
 	z-index: 1;
 	width: 32px;
-	margin: 16px;
 	height: 32px;
+	margin-left: 8px;
 	transition: 0.12s;
 	position: absolute;
+	margin-top: 23.33px;
 	mix-blend-mode: difference;
 }
 
@@ -192,7 +181,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	position: absolute;
 	align-items: center;
 	border-radius: 16px;
-	box-sizing: border-box;
 	justify-content: center;
 	background-color: #00000096;
 }
@@ -221,7 +209,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	overflow: hidden;
 	transition: 0.32s;
 	position: absolute;
-	box-sizing: border-box;
 	mask-image: linear-gradient(180deg, #000000ff 84%, #00000000 100%);
 }
 
@@ -259,8 +246,18 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	pointer-events: none;
 	display: inline-block;
 	margin: 12px 0px 12px 0px;
-	background-color: #ffffffff;
+	background-color: #fde300ff;
 	font-family: 'Liberation Sans', sans-serif;
+}
+
+.information a img {
+	width: 4.8em;
+	animation: none;
+}
+
+.information p {
+	overflow-y: auto;
+	white-space: normal;
 }
 
 .enabled:hover {
@@ -272,12 +269,6 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	opacity: 0.24;
 	cursor: not-allowed;
 	pointer-events: none;
-}
-
-.information p {
-	color: #e2e2e2ff;
-	overflow-y: auto;
-	white-space: normal;
 }
 
 .dots {
