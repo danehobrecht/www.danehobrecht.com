@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
 	// Auto-scroll handling
 	$('#resume').scrollLeft(0);
 	history.scrollRestoration = "manual";
@@ -48,8 +48,8 @@ $(document).ready(function() {
 		dots.removeAttr('id');
 		dots.eq(activeIndex).attr('id', 'active');
 	}
-	
-    dots.on('click', function(e) {
+
+	dots.on('click', function(e) {
 		dots.removeAttr('id');
 		$(this).attr('id', 'active');
     });
