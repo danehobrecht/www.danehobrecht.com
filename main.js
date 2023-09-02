@@ -1,9 +1,8 @@
 $(window).on('load', function() {
-	// Auto-scroll handling
+	// Resume navigation (dots)
 	$('#resume').scrollLeft(0);
 	history.scrollRestoration = "manual";
 
-	// Navigation dots
 	const resumeContainer = $('#resume');
 	const dots = $('.dots a');
 	let moduleWidth = calculateModuleWidth();
@@ -52,5 +51,5 @@ $(window).on('load', function() {
 	dots.on('click', function(e) {
 		dots.removeAttr('id');
 		$(this).attr('id', 'active');
-    });
+	});
 });
