@@ -106,7 +106,10 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	border-radius: 16px;
 	scroll-behavior: smooth;
 	scroll-margin-top: 16px;
+	-ms-scroll-margin-top: 16px;
+	-moz-scroll-margin-top: 16px;
 	scroll-snap-type: x mandatory;
+	-webkit-scroll-margin-top: 16px;
 	-webkit-overflow-scrolling: touch;
 	/** Hide scrollbar while keeping its functionality **/
 	/* IE and Edge (Legacy ) */
