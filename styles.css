@@ -286,7 +286,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 .bars a {
 	width: 20px;
-	height: 6px;
+	height: 5.6px;
 	font-size: 0em;
 	transition: 0.16s;
 	border-radius: 0.8px;
@@ -298,7 +298,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 #active {
 	transition: 0.04s;
-	outline: 0.4px solid white;
 	background-color: #ffffffff;
 }
 
