@@ -8,7 +8,6 @@ $(window).on('load', function() {
 	let spacebarPressed = false;
 	let startX, scrollLeft, animationFrame;
 	let moduleWidth = calculateModuleWidth();
-	
 
 	resumeContainer.scrollLeft(0);
 	history.scrollRestoration = "manual";
