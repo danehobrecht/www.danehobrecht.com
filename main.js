@@ -58,8 +58,7 @@ $(window).on('load', function() {
 	resumeContainer.on('scroll touchmove', function() {
 		const scrollPosition = resumeContainer.scrollLeft();
 		const containerWidth = resumeContainer.innerWidth();
-		const snappedModuleIndex = Math.floor(scrollPosition / moduleWidth);
-		const middleModuleIndex = Math.floor(snappedModuleIndex + containerWidth / (2 * moduleWidth));
+		const middleModuleIndex = Math.floor(scrollPosition / moduleWidth + containerWidth / (2 * moduleWidth));
 		updateActiveDot(middleModuleIndex);
 	});
 
@@ -73,14 +72,11 @@ $(window).on('load', function() {
 		const moduleCount = Math.floor(containerWidth / moduleWidth);
 		const scrollDistance = moduleWidth * moduleCount * 0.32;
 
-		if (e.key === 'ArrowLeft') {
+		if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
 			e.preventDefault();
 			arrowKeyPressed = true;
-			resumeContainer.scrollLeft(currentScrollLeft - scrollDistance);
-		} else if (e.key === 'ArrowRight') {
-			e.preventDefault();
-			arrowKeyPressed = true;
-			resumeContainer.scrollLeft(currentScrollLeft + scrollDistance);
+			const scrollDirection = e.key === 'ArrowLeft' ? -1 : 1;
+			resumeContainer.scrollLeft(currentScrollLeft + scrollDirection * scrollDistance);
 		}
 
 		if ((e.key === ' ' || e.key === 'Spacebar') && !spacebarPressed) {
