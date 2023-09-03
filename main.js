@@ -1,4 +1,4 @@
-// Flyer navigation
+// Module navigation
 $(window).on('load', function() {
 	const bars = $('.bars a');
 	const resumeContainer = $('#resume');
