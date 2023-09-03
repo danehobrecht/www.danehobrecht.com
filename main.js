@@ -2,10 +2,10 @@
 $(window).on('load', function() {
 	const bars = $('.bars a');
 	const resumeContainer = $('#resume');
-	history.scrollRestoration = "manual";
 	let moduleWidth = calculateModuleWidth();
 
 	resumeContainer.scrollLeft(0);
+	history.scrollRestoration = "manual";
 
 	function calculateModuleWidth() {
 		const width = $('.module').eq(0).width();
