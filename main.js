@@ -18,7 +18,7 @@ $(window).on('load', function() {
 	}
 
 	// Mouse/Touch controls
-	bars.on('click', function(e) {
+	bars.on('click', function() {
 		bars.removeAttr('id');
 		$(this).attr('id', 'active');
 	});
