@@ -289,7 +289,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	height: 5.6px;
 	font-size: 0em;
 	transition: 0.16s;
-	border-radius: 0.8px;
+	border-radius: 1.6px;
 	display: inline-block;
 	will-change: transform;
 	margin: 0px 6px 0px 6px;
