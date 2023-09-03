@@ -40,7 +40,7 @@ a { text-decoration: none; }
 
 img { image-rendering: -webkit-optimize-contrast; }
 
-img, iframe { animation: pulse 1.6s ease-in-out infinite; }
+img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 /* Classes and IDs */
 
@@ -99,6 +99,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 }
 
 #resume {
+	outline: none;
 	margin-top: 16px;
 	overflow-y: hidden;
 	position: relative;
@@ -132,7 +133,11 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	max-width: 21.66em;
 	display: inline-block;
 	vertical-align: middle;
+	scroll-margin-top: 16px;
 	scroll-snap-align: center;
+	-ms-scroll-margin-top: 16px;
+	-moz-scroll-margin-top: 16px;
+	-webkit-scroll-margin-top: 16px;
 }
 
 .module img {
@@ -271,32 +276,30 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 	pointer-events: none;
 }
 
-.dots {
+.bars {
+	display: flex;
 	margin-top: 16px;
 	user-select: none;
+	align-items: center;
+	justify-content: center;
 }
 
-.dots a {
-	width: 12px;
-	height: 12px;
+.bars a {
+	width: 20px;
+	height: 6px;
 	font-size: 0em;
 	transition: 0.16s;
-	border-radius: 50%;
+	border-radius: 0.8px;
 	display: inline-block;
 	will-change: transform;
 	margin: 0px 6px 0px 6px;
 	background-color: #323232ff;
 }
 
-.dots a:first-child,
-.dots a:last-child {
-	background-color: #242424ff;
-}
-
 #active {
-	transform: scale(1.16);
+	transition: 0.04s;
+	outline: 0.4px solid white;
 	background-color: #ffffffff;
-	-webkit-transform: scale(1.16);
 }
 
 #inactive { background-color: #323232ff; }
@@ -513,7 +516,7 @@ img, iframe { animation: pulse 1.6s ease-in-out infinite; }
 
 /* Animations */
 
-@keyframes pulse {
+@keyframes render {
 	00.00% { background-color: #131313ff; }
 	50.00% { background-color: #131313a3; }
 	100.0% { background-color: #131313ff; }
