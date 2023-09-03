@@ -2,11 +2,18 @@
 $(window).on('load', function() {
 	const bars = $('.bars a');
 	const resumeContainer = $('#resume');
+
+	let isDragging = false;
+	let arrowKeyPressed = false;
+	let spacebarPressed = false;
+	let startX, scrollLeft, animationFrame;
 	let moduleWidth = calculateModuleWidth();
+	
 
 	resumeContainer.scrollLeft(0);
 	history.scrollRestoration = "manual";
 
+	// Calculative functions
 	function calculateModuleWidth() {
 		const width = $('.module').eq(0).width();
 		return width;
@@ -27,9 +34,6 @@ $(window).on('load', function() {
 		resumeContainer.focus();
 		resumeContainer.attr('tabindex', 0);
 	});
-
-	let isDragging = false;
-	let startX, scrollLeft, animationFrame;
 
 	resumeContainer.on('mousedown', function(e) {
 		isDragging = true;
@@ -63,9 +67,6 @@ $(window).on('load', function() {
 	});
 
 	// Keyboard controls
-	let arrowKeyPressed = false;
-	let spacebarPressed = false;
-
 	resumeContainer.on('keydown', function(e) {
 		const currentScrollLeft = resumeContainer.scrollLeft();
 		const containerWidth = resumeContainer.innerWidth();
