@@ -51,7 +51,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	scroll-behavior: smooth;
 }
 
-.h-spacer-8px {
+.h-spacer-16px {
 	width: 16px;
 	height: 100%;
 	user-select: none;
