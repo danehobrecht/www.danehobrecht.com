@@ -104,6 +104,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	overflow-y: hidden;
 	position: relative;
 	white-space: nowrap;
+	border-radius: 16px;
 	scroll-behavior: smooth;
 	scroll-margin-top: 16px;
 	-ms-scroll-margin-top: 16px;
@@ -145,6 +146,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	width: 100%;
 	height: auto;
 	transition: 0.24s;
+	border-radius: 16px;
 }
 
 /* Hide */
@@ -163,8 +165,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	z-index: 1;
 	width: 32px;
 	height: 32px;
-	margin-top: 16px;
-	margin-left: 6px;
+	margin: 16px;
 	transition: 0.12s;
 	position: absolute;
 	mix-blend-mode: difference;
@@ -251,13 +252,14 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	pointer-events: none;
 	display: inline-block;
 	margin: 12px 0px 12px 0px;
-	background-color: #fde300ff;
+	background-color: #ffffffff;
 	font-family: 'Liberation Sans', sans-serif;
 }
 
 .information a img {
 	width: 4.8em;
 	animation: none;
+	border-radius: 0;
 }
 
 .information p {
@@ -286,10 +288,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 .bars a {
 	width: 20px;
-	height: 5.6px;
+	height: 6px;
 	font-size: 0em;
 	transition: 0.16s;
-	border-radius: 1.6px;
+	border-radius: 2px;
 	display: inline-block;
 	will-change: transform;
 	margin: 0px 6px 0px 6px;
