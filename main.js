@@ -62,6 +62,7 @@ $(window).on('load', function() {
 		const scrollPosition = resumeContainer.scrollLeft();
 		const containerWidth = resumeContainer.innerWidth();
 		const middleModuleIndex = Math.floor(scrollPosition / moduleWidth + containerWidth / (2 * moduleWidth));
+		$('input[type="checkbox"]').prop('checked', false);
 		updateActiveDot(middleModuleIndex);
 	});
 

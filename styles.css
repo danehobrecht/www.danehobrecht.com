@@ -156,23 +156,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 .module input:not(:checked) + label > .information a { pointer-events: none; }
 
 /* Show */
-.module input:hover + label > .info,
-.module input:active + label > .info { 
-	opacity: 0;
-	pointer-events: none; 
-}
-.module input:hover + label > img,
-.module input:active + label > img {
-	opacity: 0.24;
-}
-.module input:hover + label > .information,
-.module input:active + label > .information {
-	opacity: 1;
-}
-.module input:hover + label > .information a,
-.module input:active + label > .information a {
-	pointer-events: auto;
-}
+.module input:checked + label > .info { opacity: 0; pointer-events: none; }
+.module input:checked + label > img { opacity: 0.24; }
+.module input:checked + label > .information { opacity: 1; }
+.module input:checked + label > .information a { pointer-events: auto; }
 
 .info {
 	z-index: 1;
@@ -181,11 +168,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	margin: 16px;
 	transition: 0.12s;
 	position: absolute;
-	pointer-events: none;
 	mix-blend-mode: difference;
 }
 
 .info img { animation: none; }
+
+.info img:hover  {
+	opacity: 0.48;
+	cursor: pointer;
+}
 
 #pdf {
 	bottom: 0;
