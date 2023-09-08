@@ -60,7 +60,6 @@ $(window).on('load', function() {
 
 	resumeContainer.on('scroll touchmove', function() {
 		// Uncheck modules on scroll
-		$(':checkbox').prop('checked', false);
 		$('.module').css('pointer-events', 'none');
 		clearTimeout(scrollTimeout);
 		scrollTimeout = setTimeout(function() { $('.module').css('pointer-events', 'auto'); }, 200);
