@@ -59,7 +59,7 @@ $(window).on('load', function() {
 	});
 
 	resumeContainer.on('scroll touchmove', function() {
-		// Uncheck modules on scroll
+		// Disable module hover functionality on scroll
 		$('.module').css('pointer-events', 'none');
 		clearTimeout(scrollTimeout);
 		scrollTimeout = setTimeout(function() { $('.module').css('pointer-events', 'auto'); }, 200);
