@@ -174,6 +174,11 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 .info img { animation: none; }
 
+.info img:hover  {
+	opacity: 0.48;
+	cursor: pointer;
+}
+
 #pdf {
 	bottom: 0;
 	margin: 8px;
