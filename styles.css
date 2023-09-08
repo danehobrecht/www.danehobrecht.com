@@ -168,7 +168,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	margin: 16px;
 	transition: 0.12s;
 	position: absolute;
-	pointer-events: none;
 	mix-blend-mode: difference;
 }
 
