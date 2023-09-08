@@ -6,8 +6,8 @@ $(window).on('load', function() {
 	let isDragging = false;
 	let arrowKeyPressed = false;
 	let spacebarPressed = false;
+	let startX, scrollLeft, animationFrame;
 	let moduleWidth = calculateModuleWidth();
-	let startX, scrollLeft, scrollTimeout, animationFrame;
 
 	resumeContainer.scrollLeft(0);
 	history.scrollRestoration = "manual";
@@ -59,10 +59,6 @@ $(window).on('load', function() {
 	});
 
 	resumeContainer.on('scroll touchmove', function() {
-		// Disable module hover functionality on scroll
-		$('.module').css('pointer-events', 'none');
-		clearTimeout(scrollTimeout);
-		scrollTimeout = setTimeout(function() { $('.module').css('pointer-events', 'auto'); }, 200);
 		const scrollPosition = resumeContainer.scrollLeft();
 		const containerWidth = resumeContainer.innerWidth();
 		const middleModuleIndex = Math.floor(scrollPosition / moduleWidth + containerWidth / (2 * moduleWidth));
