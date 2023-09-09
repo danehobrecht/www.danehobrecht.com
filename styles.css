@@ -188,7 +188,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 #pdf p {
 	color: #ffffffff;
 	font-size: 1.2em;
-	font-weight: 900;
+	font-weight: 700;
 	font-family: Arial, sans;
 }
 
