@@ -1,14 +1,10 @@
 /* Globals */
 
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-serif.min.css");
-
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-sans.min.css");
-
 html {
 	color: #ffffffff;
 	text-align: center;
 	background-color: #000000ff;
-	font-family: 'Liberation Serif', sans-serif;
+	font-family: Georgia, serif;
 }
 
 header {
@@ -33,7 +29,7 @@ footer {
 	justify-content: center;
 	margin: 24px 0px 24px 0px;
 	padding: 36px 0px 36px 0px;
-	font-family: 'Liberation Sans', sans-serif;
+	font-family: Arial, sans;
 }
 
 a { text-decoration: none; }
@@ -73,9 +69,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 #name a {
 	color: #ffffffff;
-	font-size: 3.3em;
+	font-size: 3.06em;
 	font-weight: 700;
-	font-family: 'Liberation Serif', sans-serif;
+	font-family: Georgia, serif;
 }
 
 #navigation { margin: auto; }
@@ -83,7 +79,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 #navigation a {
 	float: left;
 	color: #c0c0c0ff;
-	font-size: 1.6em;
+	font-size: 1.36em;
 	margin: 0px 6px 0px 6px;
 	transition: 0.32s;
 }
@@ -101,28 +97,16 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 #resume {
 	outline: none;
 	margin-top: 16px;
-	overflow-y: hidden;
+	overflow: auto hidden;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
-	scroll-behavior: smooth;
 	scroll-margin-top: 16px;
 	-ms-scroll-margin-top: 16px;
 	-moz-scroll-margin-top: 16px;
 	scroll-snap-type: x mandatory;
 	-webkit-scroll-margin-top: 16px;
 	-webkit-overflow-scrolling: touch;
-	/** Hide scrollbar while keeping its functionality **/
-	/* IE and Edge (Legacy ) */
-	-ms-overflow-style: none;
-	/* Chrome and Safari */
-	&::-webkit-scrollbar {
-		width: 0;
-		background: transparent;
-	}
-	/* Firefox */
-	scrollbar-width: thin;
-	scrollbar-color: transparent transparent;
 }
 
 .module {
@@ -205,7 +189,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	color: #ffffffff;
 	font-size: 1.2em;
 	font-weight: 900;
-	font-family: 'Liberation Sans', sans-serif;
+	font-family: Arial, sans;
 }
 
 .information {
@@ -223,7 +207,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	font-style: italic;
 	padding-right: 2px;
 	white-space: pre-wrap;
-	font-family: 'Liberation Sans', sans-serif;
+	font-family: Arial, sans;
 }
 
 .information h2 {
@@ -239,7 +223,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	position: relative;
 	font-weight: normal;
 	border: 1px dashed #ffffffff;
-	font-family: 'Liberation Sans', sans-serif;
+	font-family: Arial, sans;
 }
 
 .information a {
@@ -253,7 +237,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	display: inline-block;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
-	font-family: 'Liberation Sans', sans-serif;
+	font-family: Arial, sans;
 }
 
 .information a img {
@@ -264,6 +248,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 .information p {
 	overflow-y: auto;
+	font-size: 0.92em;
 	white-space: normal;
 }
 
@@ -376,7 +361,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	max-width: 480px;
 	padding-top: 16px;
 	margin: 32px auto 0px auto;
-	font-family: Liberation Sans;
+	font-family: Arial, sans;
 }
 
 #contact #botcheck { display: none; }
@@ -386,7 +371,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	font-size: 1.6em;
 	font-weight: 700;
 	margin-bottom: 8px;
-	font-family: 'Liberation Serif', sans-serif;
+	font-family: Georgia, serif;
 }
 
 #contact label {
@@ -419,7 +404,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	resize: vertical;
 	min-height: 96px;
 	max-height: 184px;
-	font-family: Liberation Sans;
+	font-family: Arial, sans;
 }
 
 #contact button {
@@ -562,9 +547,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
 
-	#name a { font-size: 2.48em; }
+	#name a { font-size: 2.24em; }
 
-	#navigation a { font-size: 1.48em; }
+	#navigation a { font-size: 1.24em; }
 
 	.module img { max-width: 500px; }
 }
@@ -572,7 +557,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
 
-	#name a { font-size: 2.1em; }
+	#name a { font-size: 1.86em; }
 
-	#navigation a { font-size: 1.2em; }
+	#navigation a { font-size: 0.96em; }
 }
