@@ -3,8 +3,8 @@
 html {
 	color: #ffffffff;
 	text-align: center;
-	background-color: #000000ff;
 	font-family: Georgia, serif;
+	background-color: #000000ff;
 }
 
 header {
@@ -27,9 +27,9 @@ footer {
 	color: #c0c0c0ff;
 	flex-direction: column;
 	justify-content: center;
+	font-family: Arial, sans;
 	margin: 24px 0px 24px 0px;
 	padding: 36px 0px 36px 0px;
-	font-family: Arial, sans;
 }
 
 a { text-decoration: none; }
@@ -80,8 +80,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	float: left;
 	color: #c0c0c0ff;
 	font-size: 1.36em;
-	margin: 0px 6px 0px 6px;
 	transition: 0.32s;
+	margin: 0px 6px 0px 6px;
 }
 
 #navigation span { color: #ffffffff; }
@@ -97,10 +97,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 #resume {
 	outline: none;
 	margin-top: 16px;
-	overflow: auto hidden;
 	position: relative;
 	white-space: nowrap;
 	border-radius: 16px;
+	overflow: auto hidden;
 	scroll-margin-top: 16px;
 	-ms-scroll-margin-top: 16px;
 	-moz-scroll-margin-top: 16px;
@@ -222,8 +222,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	margin-top: 8px;
 	position: relative;
 	font-weight: normal;
-	border: 1px dashed #ffffffff;
 	font-family: Arial, sans;
+	border: 1px dashed #ffffffff;
 }
 
 .information a {
@@ -235,9 +235,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	border-radius: 4px;
 	pointer-events: none;
 	display: inline-block;
+	font-family: Arial, sans;
 	margin: 12px 0px 12px 0px;
 	background-color: #ffffffff;
-	font-family: Arial, sans;
 }
 
 .information a img {
@@ -360,8 +360,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	width: 92vw;
 	max-width: 480px;
 	padding-top: 16px;
-	margin: 32px auto 0px auto;
 	font-family: Arial, sans;
+	margin: 32px auto 0px auto;
 }
 
 #contact #botcheck { display: none; }
