@@ -386,14 +386,14 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 #contact input, textarea, button {
 	width: 100%;
-	padding: 8px;
+	padding: 12px;
 	font-size: 1em;
-	color: #ffffffff;
+	color: #eeeeeeff;
 	transition: 0.16s;
 	margin-bottom: 8px;
 	border-radius: 8px;
 	box-sizing: border-box;
-	background-color: #121212ff;
+	background-color: #282828ff;
 }
 
 #contact input:focus, textarea:focus { 
