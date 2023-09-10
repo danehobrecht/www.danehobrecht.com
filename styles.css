@@ -3,6 +3,7 @@
 html {
 	color: #ffffffff;
 	text-align: center;
+	scroll-behavior: smooth;
 	font-family: Georgia, serif;
 	background-color: #000000ff;
 }
