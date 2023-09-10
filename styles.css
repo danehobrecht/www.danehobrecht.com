@@ -394,12 +394,12 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	margin-bottom: 8px;
 	border-radius: 8px;
 	box-sizing: border-box;
-	background-color: #202020ff;
+	background-color: #242424ff;
 }
 
 #contact input:focus, textarea:focus { 
 	outline: none;
-	background-color: #202020ff;
+	background-color: #323232ff;
 }
 
 #contact textarea {
