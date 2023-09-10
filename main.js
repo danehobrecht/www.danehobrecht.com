@@ -2,7 +2,7 @@ $(window).on('load', function() {
 	const resumeContainer = $('#resume');
 	let startX, scrollLeft, isDragging = false;
 
-  	// Reset position (Chrome)
+	// Reset position (Chrome)
 	resumeContainer.scrollLeft(0);
 
 	resumeContainer.on('mousedown', (e) => {
