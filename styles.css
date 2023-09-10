@@ -228,21 +228,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 .information a {
-	padding: 16px;
-	font-size: 1em;
-	color: #000000ff;
 	font-weight: 700;
 	transition: 0.32s;
-	font-family: Arial;
-	border-radius: 4px;
 	pointer-events: none;
 	display: inline-block;
-	margin: 12px 0px 12px 0px;
-	background-color: #ffffffff;
+	margin: 16px 0px 16px 0px;
 }
 
 .information a img {
-	width: 4.8em;
+	width: 7.2em;
 	animation: none;
 	border-radius: 0;
 }
@@ -391,8 +385,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	color: #eeeeeeff;
 	transition: 0.16s;
 	font-family: Arial;
-	margin-bottom: 8px;
 	border-radius: 8px;
+	margin-bottom: 8px;
 	box-sizing: border-box;
 	background-color: #242424ff;
 }
