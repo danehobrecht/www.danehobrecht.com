@@ -252,7 +252,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	white-space: normal;
 }
 
-.enabled { animation: flicker 4s infinite; }
+.enabled { animation: flicker 4.8s infinite; }
 
 .enabled:hover { opacity: 0.64; }
 
