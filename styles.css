@@ -232,13 +232,18 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	transition: 0.32s;
 	pointer-events: none;
 	display: inline-block;
+	outline-offset: -9.2px;
 	margin: 16px 0px 16px 0px;
+	outline: 6px dotted #d3d3d3ff;
 }
 
 .information a img {
-	width: 7.2em;
+	width: 6.4em;
+	padding: 8px;
 	animation: none;
 	border-radius: 0;
+	background-color: #ffffffff;
+	border: 12px solid #000000ff;
 }
 
 .information p {
@@ -247,43 +252,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	white-space: normal;
 }
 
-.enabled:hover {
-	opacity: 0.72;
-	cursor: pointer;
-}
+.enabled { outline-color: #ffd700ff !important; }
+
+.enabled:hover { opacity: 0.64; }
 
 .disabled {
 	opacity: 0.24;
 	cursor: not-allowed;
 	pointer-events: none;
 }
-
-.bars {
-	display: flex;
-	margin-top: 16px;
-	user-select: none;
-	align-items: center;
-	justify-content: center;
-}
-
-.bars a {
-	width: 20px;
-	height: 6px;
-	font-size: 0em;
-	transition: 0.16s;
-	border-radius: 4px;
-	display: inline-block;
-	will-change: transform;
-	margin: 0px 6px 0px 6px;
-	background-color: #323232ff;
-}
-
-#active {
-	transition: 0.04s;
-	background-color: #ffffffff;
-}
-
-#inactive { background-color: #323232ff; }
 
 #press {
 	margin: auto;
