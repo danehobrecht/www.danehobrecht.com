@@ -230,9 +230,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 .information a {
 	font-weight: 700;
 	transition: 0.32s;
+	outline-offset: -9px;
 	pointer-events: none;
 	display: inline-block;
-	outline-offset: -9.2px;
 	margin: 16px 0px 16px 0px;
 	outline: 6px dotted #d3d3d3ff;
 }
