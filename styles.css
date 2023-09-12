@@ -235,6 +235,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	display: inline-block;
 	margin: 16px 0px 16px 0px;
 	outline: 6px dotted #ffd700ff;
+	-webkit-outline: 6px dotted #ffd700ff;
 }
 
 .information a img {
@@ -261,6 +262,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	cursor: not-allowed;
 	pointer-events: none;
 	outline: 6px dotted #d3d3d3ff !important;
+	-webkit-outline: 6px dotted #d3d3d3ff !important;
 }
 
 #press {
@@ -495,15 +497,19 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 @keyframes flicker {
 	0%, 90%, 100% {
 		outline: 6px dotted #ffd700ff;
+		webkit-outline: 6px dotted #ffd700ff;
 	}
 	95%, 99% {
 		outline: 6px dotted #ffd700ff;
+		webkit-outline: 6px dotted #ffd700ff;
 	}
 	96%, 98% {
 		outline: 6px dotted #323232ff;
+		webkit-outline: 6px dotted #323232ff;
 	}
 	97% {
 		outline: 6px dotted #ffd700ff;
+		webkit-outline: 6px dotted #ffd700ff;
 	}
 }
 
