@@ -228,14 +228,22 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 .information a {
+	padding: 0;
 	font-weight: 700;
 	transition: 0.32s;
-	outline-offset: -9px;
+	position: relative;
 	pointer-events: none;
 	display: inline-block;
 	margin: 16px 0px 16px 0px;
-	outline: 6px dotted #ffd700ff;
-	-webkit-outline: 6px dotted #ffd700ff;
+	border: 12px solid #000000ff;
+}
+
+.information a::before {
+	inset: -9px;
+	content: '';
+	position: absolute;
+	border: 6px dotted #ffd700ff;
+	animation: flicker 4s infinite;
 }
 
 .information a img {
@@ -244,7 +252,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	animation: none;
 	border-radius: 0;
 	background-color: #ffffffff;
-	border: 12px solid #000000ff;
 }
 
 .information p {
@@ -253,17 +260,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	white-space: normal;
 }
 
-.enabled { animation: flicker 4.8s infinite; }
-
 .enabled:hover { opacity: 0.64; }
 
 .disabled {
 	opacity: 0.24;
 	cursor: not-allowed;
 	pointer-events: none;
-	outline: 6px dotted #d3d3d3ff !important;
-	-webkit-outline: 6px dotted #d3d3d3ff !important;
 }
+
+.disabled::before { border-color: #d3d3d3ff !important; }
 
 #press {
 	margin: auto;
@@ -496,20 +501,16 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 @keyframes flicker {
 	0%, 90%, 100% {
-		outline: 6px dotted #ffd700ff;
-		webkit-outline: 6px dotted #ffd700ff;
+		border-color: #ffd700ff;
 	}
 	95%, 99% {
-		outline: 6px dotted #ffd700ff;
-		webkit-outline: 6px dotted #ffd700ff;
+		border-color: #ffd700ff;
 	}
 	96%, 98% {
-		outline: 6px dotted #323232ff;
-		webkit-outline: 6px dotted #323232ff;
+		border-color: #323232ff;
 	}
 	97% {
-		outline: 6px dotted #ffd700ff;
-		webkit-outline: 6px dotted #ffd700ff;
+		border-color: #ffd700ff;
 	}
 }
 
