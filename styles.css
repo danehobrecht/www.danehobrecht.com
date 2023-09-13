@@ -243,7 +243,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	content: '';
 	position: absolute;
 	border: 6px dotted #ffd700ff;
-	animation: flicker 4s infinite;
+	animation: flicker 4.8s infinite;
 }
 
 .information a img {
