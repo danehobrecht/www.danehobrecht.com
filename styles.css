@@ -374,13 +374,13 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	width: 100%;
 	padding: 12px;
 	font-size: 1em;
-	color: #eeeeeeff;
+	color: #ffffffff;
 	transition: 0.16s;
 	font-family: Arial;
 	border-radius: 8px;
 	margin-bottom: 8px;
 	box-sizing: border-box;
-	background-color: #242424ff;
+	background-color: #161616ff;
 }
 
 #contact input:focus, textarea:focus { 
