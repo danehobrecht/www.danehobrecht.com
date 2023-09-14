@@ -385,7 +385,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 #contact input:focus, textarea:focus { 
 	outline: none;
-	background-color: #323232ff;
+	background-color: #242424ff;
 }
 
 #contact textarea {
