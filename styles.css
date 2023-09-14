@@ -245,8 +245,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	border-width: 13.5px;
 	border-color: #ffd700ff;
 	border-image-repeat: round;
-	border-image-slice: 33% 33%;
 	animation: flicker 4.8s infinite;
+	border-image-slice: 33.33% 33.33%;
 	border-image-source: url("assets/images/extras/bright-bulbs.svg");
 }
 
