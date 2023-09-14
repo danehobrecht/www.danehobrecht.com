@@ -273,7 +273,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 .disabled::before {
-	border-color: #d3d3d3ff !important;
+	border-color: #696969ff !important;
 	border-image-source: url("assets/images/extras/dim-bulbs.svg") !important;
 }
 
@@ -516,7 +516,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		border-image-source: url("assets/images/extras/bright-bulbs.svg");
 	}
 	96%, 98% {
-		border-color: #323232ff;
+		border-color: #696969ff;
 		border-image-source: url("assets/images/extras/dim-bulbs.svg");
 	}
 	97% {
