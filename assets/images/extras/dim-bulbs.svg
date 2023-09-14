@@ -5,8 +5,8 @@
    viewBox="0 0 25 25"
    version="1.1"
    id="svg15"
-   sodipodi:docname="dots.svg"
-   inkscape:export-filename="dots.svg"
+   sodipodi:docname="dim-bulbs.svg"
+   inkscape:export-filename="dim-bulbs.svg"
    inkscape:export-xdpi="61.439999"
    inkscape:export-ydpi="61.439999"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -37,143 +37,143 @@
      fill="none"
      fill-rule="evenodd"
      sketch:type="MSPage"
-     style="fill:#323232;fill-opacity:1">
+     style="fill:#696969;fill-opacity:1">
     <g
        id="Artboard-1"
        sketch:type="MSArtboardGroup"
        transform="translate(-140,-154)"
        fill="#D57E00"
-       style="fill:#323232;fill-opacity:1">
+       style="fill:#696969;fill-opacity:1">
       <g
          id="dots"
          sketch:type="MSLayerGroup"
          transform="translate(140,154)"
-         style="fill:#323232;fill-opacity:1">
+         style="fill:#696969;fill-opacity:1">
         <g
            id="dot"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g1"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle1"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g3"
            transform="translate(0,20)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g2"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle2"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g5"
            transform="translate(0,10)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g4"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle3"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g7"
            transform="translate(10)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g6"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle5"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g9"
            transform="translate(10,20)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g8"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle7"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g11"
            transform="translate(20)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g10"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle9"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g13"
            transform="translate(20,20)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g12"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle11"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
         <g
            id="g15"
            transform="translate(20,10)"
            sketch:type="MSShapeGroup"
-           style="fill:#323232;fill-opacity:1">
+           style="fill:#696969;fill-opacity:1">
           <g
              id="g14"
-             style="fill:#323232;fill-opacity:1">
+             style="fill:#696969;fill-opacity:1">
             <circle
                cx="2.5"
                cy="2.5"
                r="2.5"
                id="circle13"
-               style="fill:#323232;fill-opacity:1" />
+               style="fill:#696969;fill-opacity:1" />
           </g>
         </g>
       </g>
