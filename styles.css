@@ -241,9 +241,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 .information a::before {
 	content: '';
 	inset: -9.6px;
+	border-width: 8px;
 	position: absolute;
 	border-style: dotted;
-	border-width: 8px;
 	border-color: #ffd700ff;
 	border-image-repeat: round;
 	border-image-slice: 33% 33%;
