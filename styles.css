@@ -228,7 +228,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 .information a {
-	padding: 0;
 	font-weight: 700;
 	transition: 0.32s;
 	position: relative;
@@ -242,8 +241,13 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	inset: -9px;
 	content: '';
 	position: absolute;
-	border: 6px dotted #ffd700ff;
+	border-width: 12px;
+	border-style: dotted;
+	border-color: #ffd700ff;
+	border-image-repeat: round;
+	border-image-slice: 33% 33%;
 	animation: flicker 4.8s infinite;
+	border-image-source: url("assets/images/extras/bright-bulbs.svg");
 }
 
 .information a img {
@@ -268,7 +272,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	pointer-events: none;
 }
 
-.disabled::before { border-color: #d3d3d3ff !important; }
+.disabled::before {
+	border-color: #d3d3d3ff !important;
+	border-image-source: url("assets/images/extras/dim-bulbs.svg") !important;
+}
 
 #press {
 	margin: auto;
@@ -502,15 +509,19 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 @keyframes flicker {
 	0%, 90%, 100% {
 		border-color: #ffd700ff;
+		border-image-source: url("assets/images/extras/bright-bulbs.svg");
 	}
 	95%, 99% {
 		border-color: #ffd700ff;
+		border-image-source: url("assets/images/extras/bright-bulbs.svg");
 	}
 	96%, 98% {
 		border-color: #323232ff;
+		border-image-source: url("assets/images/extras/dim-bulbs.svg");
 	}
 	97% {
 		border-color: #ffd700ff;
+		border-image-source: url("assets/images/extras/bright-bulbs.svg");
 	}
 }
 
