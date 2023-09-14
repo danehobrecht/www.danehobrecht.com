@@ -238,14 +238,14 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 .information a::before {
-	inset: -9px;
 	content: '';
+	inset: -9.6px;
 	position: absolute;
 	border-width: 12px;
 	border-style: dotted;
 	border-color: #ffd700ff;
 	border-image-repeat: round;
-	border-image-slice: 33% 33%;
+	border-image-slice: 32% 32%;
 	animation: flicker 4.8s infinite;
 	border-image-source: url("assets/images/extras/bright-bulbs.svg");
 }
