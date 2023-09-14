@@ -248,7 +248,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	border-image-repeat: round;
 	border-image-slice: 33% 33%;
 	animation: flicker 4.8s infinite;
-	border-image-source: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><image xlink:href='assets/images/extras/bright-bulbs.svg'/></svg>");
+	border-image-source: url("data:image/svg+xml;charset=utf-8,<object data='assets/images/extras/bright-bulbs.svg' type='image/svg+xml'></object>");
 }
 
 .information a img {
@@ -275,7 +275,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 .disabled::before {
 	border-color: #696969ff !important;
-	border-image-source: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><image xlink:href='assets/images/extras/dim-bulbs.svg'/></svg>") !important;
+	border-image-source: url("data:image/svg+xml;charset=utf-8,<object data='assets/images/extras/dim-bulbs.svg' type='image/svg+xml'></object>") !important;
 }
 
 #press {
@@ -510,19 +510,19 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 @keyframes flicker {
 	0%, 90%, 100% {
 		border-color: #ffd700ff;
-		border-image-source: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><image xlink:href='assets/images/extras/bright-bulbs.svg'/></svg>");
+		border-image-source: url("data:image/svg+xml;charset=utf-8,<object data='assets/images/extras/bright-bulbs.svg' type='image/svg+xml'></object>");
 	}
 	95%, 99% {
 		border-color: #ffd700ff;
-		border-image-source: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><image xlink:href='assets/images/extras/bright-bulbs.svg'/></svg>");
+		border-image-source: url("data:image/svg+xml;charset=utf-8,<object data='assets/images/extras/bright-bulbs.svg' type='image/svg+xml'></object>");
 	}
 	96%, 98% {
 		border-color: #696969ff;
-		border-image-source: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><image xlink:href='assets/images/extras/dim-bulbs.svg'/></svg>");
+		border-image-source: url("data:image/svg+xml;charset=utf-8,<object data='assets/images/extras/dim-bulbs.svg' type='image/svg+xml'></object>");
 	}
 	97% {
 		border-color: #ffd700ff;
-		border-image-source: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><image xlink:href='assets/images/extras/bright-bulbs.svg'/></svg>");
+		border-image-source: url("data:image/svg+xml;charset=utf-8,<object data='assets/images/extras/bright-bulbs.svg' type='image/svg+xml'></object>");
 	}
 }
 
