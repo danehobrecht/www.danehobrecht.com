@@ -28,6 +28,15 @@
 				"value": "gzip"
 			}]
 		}, {
+			"source": "**/*.webp",
+			"headers": [{
+				"key": "Content-Type",
+				"value": "image/webp"
+			}, {
+				"key": "Content-Encoding",
+				"value": "gzip"
+			}]
+		}, {
 			"source": "**/*.css",
 			"headers": [{
 				"key": "Content-Encoding",
