@@ -6,46 +6,40 @@
 			"**/.*",
 			"**/node_modules/**"
 		],
-		"headers": [ {
-			"source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-			"headers": [ {
-				"key": "Access-Control-Allow-Origin",
-				"value": "*"
-			} ]
+		"headers": [{
+			"source": "**",
+			"headers": [{
+				"key": "Cache-Control",
+				"value": "no-store, must-revalidate"
+			}]
 		}, {
 			"source": "**/*.@(jpg|jpeg|gif|png)",
-			"headers": [ {
-				"key": "Cache-Control",
-				"value": "max-age=31536000"
-			}, {
+			"headers": [{
 				"key": "Content-Encoding",
 				"value": "gzip"
-			} ]
+			}]
 		}, {
-			"source": "**/*.js",
-			"headers": [ {
-				"key": "Cache-Control",
-				"value": "max-age=300"
-			}, {
-				"key": "Content-Encoding",
-				"value": "gzip"
-			} ]
-		}, {
-			"source": "**",
-			"headers": [ {
+			"source": "**/*.svg",
+			"headers": [{
 				"key": "AddType",
 				"value": "image/svg+xml"
 			}, {
 				"key": "Content-Encoding",
 				"value": "gzip"
-			} ]
+			}]
 		}, {
-			"source": "404.html",
-			"headers": [ {
-				"key": "Cache-Control",
-				"value": "max-age=300"
-			} ]
-		} ],
+			"source": "**/*.css",
+			"headers": [{
+				"key": "Content-Encoding",
+				"value": "gzip"
+			}]
+		}, {
+			"source": "**/*.js",
+			"headers": [{
+				"key": "Content-Encoding",
+				"value": "gzip"
+			}]
+		}],
 		"cleanUrls": true,
 		"trailingSlash": false
 	}
