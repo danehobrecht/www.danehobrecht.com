@@ -473,18 +473,19 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	opacity: 0;
 	color: #ffffffff;
 	position: absolute;
-	animation: redirect 8.4s;
+    animation: redirect 8.4s;
 	transform: translate(-50%, -50%);
 }
 
 #redirect p {
 	margin-top: 8px;
-	font-size: 1.4em;
+	font-size: 1.12em;
 }
 
 #redirect a {
 	color: #ffffffff;
-	font-size: 3.2em;
+	font-size: 2.56em;
+	font-family: Arial;
 }
 
 /* Animations */
