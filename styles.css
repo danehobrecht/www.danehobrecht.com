@@ -293,11 +293,13 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 #press object {
 	width: 96px;
-	height: 100%;
+	height: auto;
 	animation: none;
 	margin-bottom: 8px;
 	pointer-events: none;
 }
+
+#press #adapt { width: 132px; }
 
 #press p {
 	color: #ffffffff;
