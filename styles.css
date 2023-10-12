@@ -283,6 +283,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	padding: 36px 0px 36px 0px;
 }
 
+#press table { margin: auto; }
+
 #press a {
 	font-size: 0;
 	transition: 0.32s;
@@ -305,8 +307,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	color: #ffffffff;
 	overflow: hidden;
 	font-size: 1.2em;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
 
 #reel {
