@@ -284,7 +284,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 #press table { margin: auto; }
-
 #press a {
 	font-size: 0;
 	transition: 0.32s;
