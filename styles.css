@@ -13,8 +13,8 @@ header {
 	left: 0;
 	right: 0;
 	margin: auto;
-	display: flex;
 	height: 112px;
+	display: flex;
 	position: absolute;
 	flex-direction: column;
 	padding: 24px 0px 24px 0px;
