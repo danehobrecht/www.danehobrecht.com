@@ -220,43 +220,23 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		pointer-events: none;
 		display: inline-block;
 		margin: 16px 0px 16px 0px;
-		border: 12px solid #000000ff;
-	}
-	& a::before {
-		content: '';
-		inset: -9.6px;
-		border-width: 8px;
-		position: absolute;
-		border-style: dotted;
-		border-color: #ffd700ff;
-		border-image-repeat: round;
-		border-image-slice: 33% 33%;
-		animation: flicker 4.8s infinite;
-		border-image-source: url('<object type="image/svg+xml" data="assets/images/extras/bright-bulbs.svg"></object>');
 	}
 	& a img {
-		width: 6.4em;
-		padding: 8px;
-		animation: none;
+		width: 9.6em;
 		border-radius: 0;
-		background-color: #ffffffff;
+		animation: flicker 4.8s infinite;
 	}
 	& p {
 		overflow-y: auto;
 		font-size: 0.92em;
 		white-space: normal;
 	}
-}
-
-.enabled:hover { opacity: 0.64; }
-
-.disabled {
-	opacity: 0.24;
-	cursor: not-allowed;
-	pointer-events: none;
-	&::before {
-		border-color: #696969ff !important;
-		border-image-source: url('<object type="image/svg+xml" data="assets/images/extras/dim-bulbs.svg"></object>') !important;
+	& .enabled:hover { opacity: 0.64; }
+	& .disabled {
+		opacity: 0.24;
+		cursor: not-allowed;
+		pointer-events: none;
+		& img { animation: none; }
 	}
 }
 
@@ -464,20 +444,16 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 @keyframes flicker {
 	0%, 90%, 100% {
-		border-color: #ffd700ff;
-		border-image-source: url('<object type="image/svg+xml" data="assets/images/extras/bright-bulbs.svg"></object>');
+		content: url("assets/images/extras/tickets-sign-bright.webp");
 	}
 	95%, 99% {
-		border-color: #ffd700ff;
-		border-image-source: url('<object type="image/svg+xml" data="assets/images/extras/bright-bulbs.svg"></object>');
+		content: url("assets/images/extras/tickets-sign-bright.webp");
 	}
 	96%, 98% {
-		border-color: #696969ff;
-		border-image-source: url('<object type="image/svg+xml" data="assets/images/extras/dim-bulbs.svg"></object>');
+		content: url("assets/images/extras/tickets-sign-dim.webp");
 	}
 	97% {
-		border-color: #ffd700ff;
-		border-image-source: url('<object type="image/svg+xml" data="assets/images/extras/bright-bulbs.svg"></object>');
+		content: url("assets/images/extras/tickets-sign-bright.webp");
 	}
 }
 
