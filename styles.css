@@ -259,7 +259,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		margin-bottom: 8px;
 		pointer-events: none;
 	}
-	& #adapt { width: 132px; }
+	& .adapt { width: 132px; }
 	& p {
 		color: #ffffffff;
 		overflow: hidden;
