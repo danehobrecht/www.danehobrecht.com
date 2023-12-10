@@ -160,14 +160,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 #pdf {
 	bottom: 0;
 	margin: 8px;
+	padding: 8px;
 	display: flex;
-	padding: 12px;
 	transition: 0.32s;
-	position: absolute;
 	align-items: center;
+	position: absolute;
 	border-radius: 16px;
+	border: 2px solid white;
 	justify-content: center;
-	background-color: #00000096;
+	background-color: #000000a3;
 	&:hover { background-color: #00000072; }
 	& img {
 		width: 32px;
