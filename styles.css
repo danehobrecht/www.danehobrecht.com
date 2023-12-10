@@ -287,7 +287,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	margin: 32px 0px -16px 0px;
 	& img {
 		float: left;
-		width: 92vw;
 		height: 100%;
 		max-width: 480px;
 		user-select: none;
