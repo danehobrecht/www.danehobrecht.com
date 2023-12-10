@@ -166,9 +166,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	align-items: center;
 	position: absolute;
 	border-radius: 16px;
-	border: 2px solid white;
 	justify-content: center;
 	background-color: #000000a3;
+	border: 1.6px solid #ffffffff;
 	&:hover { background-color: #00000072; }
 	& img {
 		width: 32px;
