@@ -1,1 +1,1 @@
-[Lighthouse results](https://www.danehobrecht.com/performance).
+[Lighthouse results](https://www.danehobrecht.com/lighthouse-results).
