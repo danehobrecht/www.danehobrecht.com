@@ -1,1 +1,1 @@
-[Lighthouse results](https://www.danehobrecht.com/lighthouse-results).
+[Lighthouse](https://www.danehobrecht.com/lighthouse) results.
