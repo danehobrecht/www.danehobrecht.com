@@ -234,7 +234,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	}
 	& .enabled:hover { opacity: 0.64; }
 	& .disabled {
-		opacity: 0.24;
+		opacity: 0.36;
 		cursor: not-allowed;
 		pointer-events: none;
 		& img { animation: none; }
