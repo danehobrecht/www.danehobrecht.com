@@ -223,7 +223,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		margin: 16px 0px 16px 0px;
 	}
 	& a img {
-		width: 9.6em;
+		width: 9.2em;
 		border-radius: 0;
 		animation: flicker 4.8s infinite;
 	}
@@ -232,9 +232,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-size: 0.92em;
 		white-space: normal;
 	}
-	& .enabled:hover { opacity: 0.64; }
+	& .enabled:hover { filter: brightness(1.64); }
 	& .disabled {
-		opacity: 0.36;
+		opacity: 0.24;
 		cursor: not-allowed;
 		pointer-events: none;
 		& img { animation: none; }
@@ -444,18 +444,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 @keyframes flicker {
-	0%, 90%, 100% {
-		content: url("assets/images/extras/tickets-sign-bright.webp");
-	}
-	95%, 99% {
-		content: url("assets/images/extras/tickets-sign-bright.webp");
-	}
-	96%, 98% {
-		content: url("assets/images/extras/tickets-sign-dim.webp");
-	}
-	97% {
-		content: url("assets/images/extras/tickets-sign-bright.webp");
-	}
+	0%, 90%, 100% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
+	95%, 99% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
+	96%, 98% { content: url("assets/images/extras/tickets-sign-dim.webp"); }
+	97% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
 }
 
 @keyframes redirect {
