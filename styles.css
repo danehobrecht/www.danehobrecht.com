@@ -224,7 +224,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	}
 	& a img {
 		width: 9.2em;
-		border-radius: 0;
+		border-radius: 4px;
 		animation: flicker 4.8s infinite;
 	}
 	& p {
@@ -232,7 +232,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-size: 0.92em;
 		white-space: normal;
 	}
-	& .enabled:hover { filter: brightness(1.64); }
+	& .enabled:hover { filter: brightness(1.84); }
 	& .disabled {
 		opacity: 0.24;
 		cursor: not-allowed;
