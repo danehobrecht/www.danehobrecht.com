@@ -228,11 +228,11 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		pointer-events: none;
 		display: inline-block;
 		margin: 16px 0px 16px 0px;
-	}
-	& a img {
-		width: 9.2em;
-		border-radius: 4px;
-		animation: flicker 4.8s infinite;
+		& img {
+			width: 9.2em;
+			border-radius: 4px;
+			animation: flicker 4.8s infinite;
+		}
 	}
 	& p {
 		overflow-y: auto;
@@ -362,16 +362,16 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 			opacity: 0.72;
 			cursor: pointer;
 		}
-	}
-	& button span {
-		margin: auto;
-		display: flex;
-	}
-	& button img {
-		width: 17.2px;
-		height: 17.2px;
-		animation: none;
-		margin: auto 0px auto 6px;
+		& span {
+			margin: auto;
+			display: flex;
+		}
+		& img {
+			width: 17.2px;
+			height: 17.2px;
+			animation: none;
+			margin: auto 0px auto 6px;
+		}
 	}
 	& p, a { font-size: 0.96em }
 	& p { color: #808080ff; }
