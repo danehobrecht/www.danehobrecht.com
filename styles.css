@@ -150,10 +150,12 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	transition: 0.12s;
 	position: absolute;
 	mix-blend-mode: difference;
-	& img { animation: none; }
-	& img:hover  {
-		opacity: 0.48;
-		cursor: pointer;
+	& img {
+		animation: none;
+		&:hover  {
+			opacity: 0.48;
+			cursor: pointer;
+		}
 	}
 }
 
@@ -250,8 +252,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-size: 0;
 		transition: 0.32s;
 		display: inline-block;
+		&:hover { opacity: 0.72; }
 	}
-	& a:hover { opacity: 0.72; }
 	& object {
 		width: 96px;
 		height: auto;
@@ -351,6 +353,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		align-items: center;
 		margin: 12px 0px 12px 0px;
 		background-color: #ffffffff;
+		&:hover {
+			opacity: 0.72;
+			cursor: pointer;
+		}
 	}
 	& button span {
 		margin: auto;
@@ -361,10 +367,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		height: 17.2px;
 		animation: none;
 		margin: auto 0px auto 6px;
-	}
-	& button:hover {
-		opacity: 0.72;
-		cursor: pointer;
 	}
 	& p, a { font-size: 0.96em }
 	& p { color: #808080ff; }
@@ -378,6 +380,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-size: 0;
 		transition: 0.32s;
 		display: inline-block;
+		&:hover { opacity: 0.72; }
 	}
 	& object {
 		width: 56px;
@@ -387,7 +390,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		pointer-events: none;
 		vertical-align: middle;
 	}
-	& a:hover { opacity: 0.72; }
 }
 
 #resources {
@@ -400,8 +402,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		transition: 0.32s;
 		user-select: text;
 		margin: 0px 4px 0px 4px;
+		&:hover { color: #ffffffff; }
 	}
-	& a:hover { color: #ffffffff; }
 }
 
 #redirect {
