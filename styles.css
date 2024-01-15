@@ -77,15 +77,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 #navigation {
 	margin: auto;
-	a {
+	& a {
 		float: left;
 		color: #c0c0c0ff;
 		font-size: 1.36em;
 		transition: 0.32s;
 		margin: 0px 6px 0px 6px;
+		&:hover { color: #ffffffff; }
 	}
-	span { color: #ffffffff; }
-	a:hover { color: #ffffffff; }
+	& span { color: #ffffffff; }
 }
 
 #content {
@@ -123,7 +123,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	-ms-scroll-margin-top: 16px;
 	-moz-scroll-margin-top: 16px;
 	-webkit-scroll-margin-top: 16px;
-	img {
+	& img {
 		float: left;
 		width: 100%;
 		height: auto;
@@ -131,15 +131,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		border-radius: 16px;
 	}
 	/* Hide */
-	input { display: none; }
-	input:not(:checked) + label > img { opacity: 1; }
-	input:not(:checked) + label > .information { opacity: 0; }
-	input:not(:checked) + label > .information a { pointer-events: none; }
+	& input { display: none; }
+	& input:not(:checked) + label > img { opacity: 1; }
+	& input:not(:checked) + label > .information { opacity: 0; }
+	& input:not(:checked) + label > .information a { pointer-events: none; }
 	/* Show */
-	input:checked + label > .info { opacity: 0; pointer-events: none; }
-	input:checked + label > img { opacity: 0.16; }
-	input:checked + label > .information { opacity: 1; }
-	input:checked + label > .information a { pointer-events: auto; }
+	& input:checked + label > .info { opacity: 0; pointer-events: none; }
+	& input:checked + label > img { opacity: 0.16; }
+	& input:checked + label > .information { opacity: 1; }
+	& input:checked + label > .information a { pointer-events: auto; }
 }
 
 .info {
@@ -150,8 +150,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	transition: 0.12s;
 	position: absolute;
 	mix-blend-mode: difference;
-	img { animation: none; }
-	img:hover  {
+	& img { animation: none; }
+	& img:hover  {
 		opacity: 0.48;
 		cursor: pointer;
 	}
@@ -170,14 +170,14 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	background-color: #000000a3;
 	border: 1.6px solid #ffffffff;
 	&:hover { background-color: #00000072; }
-	img {
+	& img {
 		width: 32px;
 		height: 32px;
 		animation: none;
 		user-select: none;
 		margin-right: 4px;
 	}
-	p {
+	& p {
 		color: #ffffffff;
 		font-size: 1.2em;
 		font-weight: 700;
@@ -193,18 +193,18 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	transition: 0.32s;
 	position: absolute;
 	mask-image: linear-gradient(180deg, #000000ff 84%, #00000000 100%);
-	h1 {
+	& h1 {
 		font-size: 1.64em;
 		font-style: italic;
 		font-family: Arial;
 		padding-right: 2px;
 		white-space: pre-wrap;
 	}
-	h2 {
+	& h2 {
 		font-size: 1.12em;
 		font-weight: normal;
 	}
-	h3 {
+	& h3 {
 		padding: 8px;
 		display: block;
 		font-size: 1em;
@@ -214,7 +214,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-weight: normal;
 		border: 1px dashed #ffffffff;
 	}
-	a {
+	& a {
 		font-weight: 700;
 		transition: 0.32s;
 		position: relative;
@@ -222,22 +222,22 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		display: inline-block;
 		margin: 16px 0px 16px 0px;
 	}
-	a img {
+	& a img {
 		width: 9.2em;
 		border-radius: 4px;
 		animation: flicker 4.8s infinite;
 	}
-	p {
+	& p {
 		overflow-y: auto;
 		font-size: 0.92em;
 		white-space: normal;
 	}
-	.enabled:hover { filter: brightness(1.84); }
-	.disabled {
+	& .enabled:hover { filter: brightness(1.84); }
+	& .disabled {
 		opacity: 0.24;
 		cursor: not-allowed;
 		pointer-events: none;
-		img { animation: none; }
+		& img { animation: none; }
 	}
 }
 
@@ -245,22 +245,22 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	margin: auto;
 	position: relative;
 	padding: 36px 0px 36px 0px;
-	table { margin: auto; }
-	a {
+	& table { margin: auto; }
+	& a {
 		font-size: 0;
 		transition: 0.32s;
 		display: inline-block;
 	}
-	a:hover { opacity: 0.72; }
-	object {
+	& a:hover { opacity: 0.72; }
+	& object {
 		width: 96px;
 		height: auto;
 		animation: none;
 		margin-bottom: 8px;
 		pointer-events: none;
 	}
-	.adapt { width: 132px; }
-	p {
+	& .adapt { width: 132px; }
+	& p {
 		color: #ffffffff;
 		overflow: hidden;
 		font-size: 1.2em;
@@ -271,7 +271,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	font-size: 0;
 	padding-top: 8px;
 	margin: 0px -8px -8px -8px;
-	iframe {
+	& iframe {
 		width: 92vw;
 		margin: 8px;
 		max-width: 580px;
@@ -285,7 +285,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	overflow: auto;
 	padding-top: 16px;
 	margin: 32px 0px -16px 0px;
-	img {
+	& img {
 		float: left;
 		width: 100%;
 		height: auto;
@@ -294,7 +294,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		border-radius: 16px;
 		margin: 0px 12px 16px 0px;
 	}
-	p {
+	& p {
 		font-size: 1.2em;
 		text-align: left;
 	}
@@ -306,22 +306,22 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	padding-top: 16px;
 	font-family: Arial;
 	margin: 32px auto 0px auto;
-	#botcheck { display: none; }
-	legend {
+	& #botcheck { display: none; }
+	& legend {
 		margin: auto;
 		font-size: 1.6em;
 		font-weight: 700;
 		margin-bottom: 8px;
 		font-family: Georgia;
 	}
-	label {
+	& label {
 		font-size: 1em;
 		display: block;
 		text-align: left;
 		margin-bottom: 4px;
 	}
-	.required { color: #ff0000ff; }
-	input, textarea, button {
+	& .required { color: #ff0000ff; }
+	& input, textarea, button {
 		width: 100%;
 		padding: 12px;
 		font-size: 1em;
@@ -333,16 +333,16 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		box-sizing: border-box;
 		background-color: #161616ff;
 	}
-	input:focus, textarea:focus {
+	& input:focus, textarea:focus {
 		outline: none;
 		background-color: #242424ff;
 	}
-	textarea {
+	& textarea {
 		resize: vertical;
 		min-height: 96px;
 		max-height: 184px;
 	}
-	button {
+	& button {
 		display: flex;
 		color: #000000ff;
 		font-weight: 700;
@@ -352,34 +352,34 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		margin: 12px 0px 12px 0px;
 		background-color: #ffffffff;
 	}
-	button span {
+	& button span {
 		margin: auto;
 		display: flex;
 	}
-	button img {
+	& button img {
 		width: 17.2px;
 		height: 17.2px;
 		animation: none;
 		margin: auto 0px auto 6px;
 	}
-	button:hover {
+	& button:hover {
 		opacity: 0.72;
 		cursor: pointer;
 	}
-	p, a { font-size: 0.96em }
-	p { color: #808080ff; }
-	a { color: #ffffffff; }
+	& p, a { font-size: 0.96em }
+	& p { color: #808080ff; }
+	& a { color: #ffffffff; }
 }
 
 #socials {
 	user-select: none;
 	margin: 0px auto 16px auto;
-	a {
+	& a {
 		font-size: 0;
 		transition: 0.32s;
 		display: inline-block;
 	}
-	object {
+	& object {
 		width: 56px;
 		margin: 8px;
 		height: 100%;
@@ -387,13 +387,13 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		pointer-events: none;
 		vertical-align: middle;
 	}
-	a:hover { opacity: 0.72; }
+	& a:hover { opacity: 0.72; }
 }
 
 #resources {
 	margin: auto;
 	user-select: none;
-	a {
+	& a {
 		color: #c0c0c0ff;
 		font-weight: 600;
 		font-size: 0.84em;
@@ -401,7 +401,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		user-select: text;
 		margin: 0px 4px 0px 4px;
 	}
-	a:hover { color: #ffffffff; }
+	& a:hover { color: #ffffffff; }
 }
 
 #redirect {
@@ -413,11 +413,11 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	position: absolute;
 	animation: redirect 8.4s;
 	transform: translate(-50%, -50%);
-	p {
+	& p {
 		margin-top: 8px;
 		font-size: 1.12em;
 	}
-	a {
+	& a {
 		color: #ffffffff;
 		font-size: 2.56em;
 		font-family: Arial;
