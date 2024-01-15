@@ -130,16 +130,21 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		transition: 0.24s;
 		border-radius: 16px;
 	}
-	/* Hide */
-	& input { display: none; }
-	& input:not(:checked) + label > img { opacity: 1; }
-	& input:not(:checked) + label > .information { opacity: 0; }
-	& input:not(:checked) + label > .information a { pointer-events: none; }
-	/* Show */
-	& input:checked + label > .info { opacity: 0; pointer-events: none; }
-	& input:checked + label > img { opacity: 0.16; }
-	& input:checked + label > .information { opacity: 1; }
-	& input:checked + label > .information a { pointer-events: auto; }
+	& input {
+		/* Hide */
+		display: none;
+		&:not(:checked) + label > img { opacity: 1; }
+		&:not(:checked) + label > .information { opacity: 0; }
+		&:not(:checked) + label > .information a { pointer-events: none; }
+		/* Show */
+		&:checked + label > .info {
+			opacity: 0;
+			pointer-events: none;
+		}
+		&:checked + label > img { opacity: 0.16; }
+		&:checked + label > .information { opacity: 1; }
+		&:checked + label > .information a { pointer-events: auto; }
+	}
 }
 
 .info {
