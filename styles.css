@@ -163,6 +163,10 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 			cursor: pointer;
 		}
 	}
+	& p {
+		color: #000000ff;
+		mix-blend-mode: difference;
+	}
 }
 
 #pdf {
