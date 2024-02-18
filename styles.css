@@ -3,9 +3,9 @@
 html {
 	color: #ffffffff;
 	text-align: center;
-	font-family: Georgia;
 	scroll-behavior: smooth;
 	background-color: #000000ff;
+	font-family: Georgia, serif;
 }
 
 header {
@@ -164,8 +164,11 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		}
 	}
 	& p {
-		color: #000000ff;
-		mix-blend-mode: difference;
+		color: #ffffffff;
+		font-weight: 700;
+		font-family: Arial;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
