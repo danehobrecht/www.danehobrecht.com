@@ -4,8 +4,8 @@ html {
 	color: #ffffffff;
 	text-align: center;
 	scroll-behavior: smooth;
-	background-color: #000000ff;
 	font-family: Georgia, serif;
+	background-color: #000000ff;
 }
 
 header {
@@ -26,11 +26,11 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	color: #c0c0c0ff;
-	font-family: Arial;
 	flex-direction: column;
 	justify-content: center;
 	margin: 24px 0px 24px 0px;
 	padding: 36px 0px 36px 0px;
+	font-family: Arial, sans-serif;
 }
 
 a { text-decoration: none; }
@@ -72,7 +72,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	color: #ffffffff;
 	font-weight: 700;
 	font-size: 3.06em;
-	font-family: Georgia;
+	font-family: Georgia, serif;
 }
 
 #navigation {
@@ -166,9 +166,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	& p {
 		color: #ffffffff;
 		font-weight: 700;
-		font-family: Arial;
 		align-items: center;
 		justify-content: center;
+		font-family: Arial, sans-serif;
 	}
 }
 
@@ -178,8 +178,8 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	padding: 8px;
 	display: flex;
 	transition: 0.32s;
-	align-items: center;
 	position: absolute;
+	align-items: center;
 	border-radius: 16px;
 	justify-content: center;
 	background-color: #000000a3;
@@ -196,7 +196,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		color: #ffffffff;
 		font-size: 1.2em;
 		font-weight: 700;
-		font-family: Arial;
+		font-family: Arial, sans-serif;
 	}
 }
 
@@ -211,9 +211,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	& h1 {
 		font-size: 1.64em;
 		font-style: italic;
-		font-family: Arial;
 		padding-right: 2px;
 		white-space: pre-wrap;
+		font-family: Arial, sans-serif;
 	}
 	& h2 {
 		font-size: 1.12em;
@@ -225,9 +225,9 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-size: 1em;
 		margin-top: 8px;
 		position: relative;
-		font-family: Arial;
 		font-weight: normal;
 		border: 1px dashed #ffffffff;
+		font-family: Arial, sans-serif;
 	}
 	& a {
 		font-weight: 700;
@@ -319,15 +319,15 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	width: 92vw;
 	max-width: 480px;
 	padding-top: 16px;
-	font-family: Arial;
 	margin: 32px auto 0px auto;
+	font-family: Arial, sans-serif;
 	& #botcheck { display: none; }
 	& legend {
 		margin: auto;
 		font-size: 1.6em;
 		font-weight: 700;
 		margin-bottom: 8px;
-		font-family: Georgia;
+		font-family: Georgia, serif;
 	}
 	& label {
 		font-size: 1em;
@@ -342,11 +342,11 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 		font-size: 1em;
 		color: #ffffffff;
 		transition: 0.16s;
-		font-family: Arial;
 		border-radius: 8px;
 		margin-bottom: 8px;
 		box-sizing: border-box;
 		background-color: #161616ff;
+		font-family: Arial, sans-serif;
 	}
 	& input:focus, textarea:focus {
 		outline: none;
@@ -435,7 +435,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	& a {
 		color: #ffffffff;
 		font-size: 2.56em;
-		font-family: Arial;
+		font-family: Arial, sans-serif;
 	}
 }
 
