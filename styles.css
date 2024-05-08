@@ -68,11 +68,13 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 	background-image: url("assets/images/covers/dane-hobrecht-cover-001.webp");
 }
 
-#name a {
-	color: #ffffffff;
-	font-weight: 700;
-	font-size: 3.06em;
-	font-family: Georgia, serif;
+#name {
+	& a {
+		color: #ffffffff;
+		font-weight: 700;
+		font-size: 3.06em;
+		font-family: Georgia, serif;
+	}
 }
 
 #navigation {
@@ -493,17 +495,17 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
 
-	#name a { font-size: 2.24em; }
+	#name { & a { font-size: 2.24em; } }
 
-	#navigation a { font-size: 1.24em; }
+	#navigation { & a { font-size: 1.24em; } }
 
-	.module img { max-width: 500px; }
+	.module { & img { max-width: 500px; } }
 }
 
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
 
-	#name a { font-size: 1.86em; }
+	#name { & a { font-size: 1.86em; } }
 
-	#navigation a { font-size: 0.96em; }
+	#navigation { & a { font-size: 0.96em; } }
 }
