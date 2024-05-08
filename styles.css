@@ -442,17 +442,17 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 /* Animations */
 
 @keyframes render {
-	00.00% { background-color: #131313ff; }
-	50.00% { background-color: #131313a3; }
-	100.0% { background-color: #131313ff; }
+	0% { background-color: #131313ff; }
+	50% { background-color: #131313a3; }
+	100% { background-color: #131313ff; }
 }
 
 @keyframes reveal {
-	00.00% {
+	0% {
 		opacity: 0.01;
 		filter: blur(3px);
 	}
-	100.0% {
+	100% {
 		opacity: 1.00;
 		filter: blur(0px);
 	}
@@ -466,23 +466,23 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 @keyframes redirect {
-	00.00% {
+	0% {
 		opacity: 0;
 		filter: blur(3px);
 	}
-	25.00% {
+	25% {
 		opacity: 1;
 		filter: blur(0px);
 	}
-	50.00% {
+	50% {
 		opacity: 1;
 		filter: blur(0px);
 	}
-	75.00% {
+	75% {
 		opacity: 1;
 		filter: blur(0px);
 	}
-	100.0% {
+	100% {
 		opacity: 0;
 		filter: blur(3px);
 	}
