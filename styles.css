@@ -461,7 +461,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 @keyframes flicker {
-	0% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
+	0% { content: url("assets/images/extras/tickets-sign-dim.webp"); }
 	1%, 90%, 100% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
 	95%, 99% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
 	96%, 98% { content: url("assets/images/extras/tickets-sign-dim.webp"); }
