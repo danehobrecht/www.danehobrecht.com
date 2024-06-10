@@ -181,7 +181,7 @@ video {
 #pdf {
 	bottom: 0;
 	margin: 8px;
-	padding: 8px;
+	padding: 12px;
 	display: flex;
 	transition: 0.32s;
 	position: absolute;
@@ -189,14 +189,13 @@ video {
 	border-radius: 16px;
 	justify-content: center;
 	background-color: #000000a3;
-	border: 1.6px solid #ffffffff;
 	&:hover { background-color: #00000072; }
 	& img {
-		width: 32px;
-		height: 32px;
+		width: 36px;
+		height: 36px;
 		animation: none;
 		user-select: none;
-		margin-right: 4px;
+		/* margin-right: 4px; */
 	}
 	& p {
 		color: #ffffffff;
