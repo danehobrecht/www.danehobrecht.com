@@ -60,7 +60,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 .reveal { animation: reveal 3s; }
 
 video {
-	width: 100vw; 
+	width: 100vw;
 	height: 100vh;
 	opacity: 0.48;
 	object-fit: cover;
