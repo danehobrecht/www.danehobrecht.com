@@ -228,8 +228,9 @@ video {
 		padding: 8px;
 		display: block;
 		font-size: 1em;
-		margin-top: 8px;
+		margin-top: 16px;
 		position: relative;
+		border-radius: 8px;
 		font-weight: normal;
 		border: 1px dashed #ffffffff;
 		font-family: Arial, sans-serif;
