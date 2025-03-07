@@ -158,16 +158,15 @@ video {
 	z-index: 1;
 	width: 32px;
 	height: 32px;
-	margin: 16px;
+	margin: 12px;
+	padding: 8px;
 	transition: 0.12s;
 	position: absolute;
-	mix-blend-mode: difference;
-	& img {
-		animation: none;
-		&:hover  {
-			opacity: 0.48;
-			cursor: pointer;
-		}
+	border-radius: 16px;
+	background-color: #000000a3;
+	&:hover  {
+		opacity: 0.48;
+		cursor: pointer;
 	}
 	& p {
 		color: #ffffffff;
@@ -176,6 +175,7 @@ video {
 		justify-content: center;
 		font-family: Arial, sans-serif;
 	}
+	& img { animation: none; }
 }
 
 #pdf {
