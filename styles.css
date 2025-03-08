@@ -122,7 +122,7 @@ video {
 	transition: 0.24s;
 	user-select: none;
 	position: relative;
-	max-width: 17.23em;
+	max-width: 21.55em;
 	display: inline-block;
 	vertical-align: middle;
 	scroll-margin-top: 16px;
@@ -511,5 +511,3 @@ video {
 	#name { & a { font-size: 1.86em; } }
 	#navigation { & a { font-size: 0.96em; } }
 }
-
-@-moz-document url-prefix() { /* Firefox browser rules */ .module { max-width: 21.53em; } }
