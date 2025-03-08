@@ -184,10 +184,11 @@ video {
 	display: flex;
 	position: sticky;
 	transition: 0.32s;
+	margin-top: -48px;
 	margin-left: -48px;
 	align-items: center;
 	border-radius: 16px;
-	top: calc(100% - 60px); /* simulate `bottom` (doesn't work with `sticky`) */
+	top: calc(100% - 60px); /* Simulate `bottom` (doesn't work with `sticky`) */
 	justify-content: center;
 	background-color: #000000a3;
 	&:hover { opacity: 0.48; }
