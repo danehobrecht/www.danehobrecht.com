@@ -1,5 +1,4 @@
 /* Globals */
-
 html {
 	color: #ffffffff;
 	text-align: center;
@@ -41,7 +40,6 @@ img { image-rendering: pixelated; }
 img, iframe { animation: render 1.6s ease-in-out infinite; }
 
 /* Classes and IDs */
-
 * {
 	border: 0;
 	margin: 0;
@@ -179,16 +177,17 @@ video {
 }
 
 #pdf {
-	left: 12px;
+	left: 16px;
 	z-index: 1;
+	width: 32px;
 	padding: 8px;
+	display: flex;
 	position: sticky;
 	transition: 0.32s;
 	margin-left: -48px;
 	align-items: center;
 	border-radius: 16px;
-	display: inline-block;
-	top: calc(100% - 64px); /* simulate `bottom` (doesn't work with `sticky`) */
+	top: calc(100% - 60px); /* simulate `bottom` (doesn't work with `sticky`) */
 	justify-content: center;
 	background-color: #000000a3;
 	&:hover { opacity: 0.48; }
@@ -448,7 +447,6 @@ video {
 }
 
 /* Animations */
-
 @keyframes render {
 	0% { background-color: #131313ff; }
 	50% { background-color: #131313a3; }
@@ -498,7 +496,6 @@ video {
 }
 
 /* Resolutions */
-
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
 	#name { & a { font-size: 2.24em; } }
