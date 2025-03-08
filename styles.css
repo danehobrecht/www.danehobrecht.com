@@ -160,7 +160,7 @@ video {
 	height: 32px;
 	margin: 12px;
 	padding: 8px;
-	transition: 0.12s;
+	transition: 0.32s;
 	position: absolute;
 	border-radius: 16px;
 	background-color: #000000a3;
@@ -179,29 +179,30 @@ video {
 }
 
 #pdf {
-	bottom: 0;
-	margin: 8px;
-	padding: 12px;
+	padding: 8px;
 	display: flex;
+	max-width: 480px;
+	margin-top: 16px;
 	transition: 0.32s;
-	position: absolute;
 	align-items: center;
 	border-radius: 16px;
 	justify-content: center;
+	margin: 8px auto 0px auto;
 	background-color: #000000a3;
-	&:hover { background-color: #00000072; }
+	border: 2px dashed #ffffffff;
+	&:hover { opacity: 0.48; }
+	& p {
+		color: #ffffffff;
+		font-weight: 700;
+		font-size: 1.2em;
+		margin-right: 4px;
+		font-family: Arial, sans-serif;
+	}
 	& img {
 		width: 36px;
 		height: 36px;
 		animation: none;
 		user-select: none;
-		/* margin-right: 4px; */
-	}
-	& p {
-		color: #ffffffff;
-		font-size: 1.2em;
-		font-weight: 700;
-		font-family: Arial, sans-serif;
 	}
 }
 
@@ -316,8 +317,8 @@ video {
 		margin: 0px 12px 16px 0px;
 	}
 	& p {
-		font-size: 1.2em;
 		text-align: left;
+		font-size: 1.16em;
 	}
 }
 
@@ -499,18 +500,13 @@ video {
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
-
 	#name { & a { font-size: 2.24em; } }
-
 	#navigation { & a { font-size: 1.24em; } }
-
 	.module { & img { max-width: 500px; } }
 }
 
 @media screen and (max-width: 320px) {
 	header { height: 80px; }
-
 	#name { & a { font-size: 1.86em; } }
-
 	#navigation { & a { font-size: 0.96em; } }
 }
