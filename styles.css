@@ -179,28 +179,28 @@ video {
 }
 
 #pdf {
+	z-index: 1;
+	left: 12px;
+	bottom: 12px;
 	padding: 8px;
 	display: flex;
-	max-width: 480px;
-	margin-top: 16px;
 	transition: 0.32s;
+	position: absolute;
 	align-items: center;
 	border-radius: 16px;
 	justify-content: center;
-	margin: 8px auto 0px auto;
 	background-color: #000000a3;
-	border: 2px dashed #ffffffff;
 	&:hover { opacity: 0.48; }
 	& p {
 		color: #ffffffff;
 		font-weight: 700;
-		font-size: 1.2em;
+		font-size: 1.16em;
 		margin-right: 4px;
 		font-family: Arial, sans-serif;
 	}
 	& img {
-		width: 36px;
-		height: 36px;
+		width: 32px;
+		height: 32px;
 		animation: none;
 		user-select: none;
 	}
