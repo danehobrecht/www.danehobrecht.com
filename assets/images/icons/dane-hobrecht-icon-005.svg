@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="681.28937"
+   height="244.10257"
+   viewBox="0 0 20.438681 7.3230771"
+   id="Layer_1"
+   data-name="Layer 1"
+   version="1.1"
+   sodipodi:docname="dane-hobrecht-icon-005.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="20.438681"
+       height="7.3230772"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}</style>
+    <clipPath
+       id="clip-path">
+      <rect
+         class="cls-1"
+         y="-0.13"
+         width="24"
+         height="24"
+         id="rect1"
+         x="0" />
+    </clipPath>
+  </defs>
+  <title
+     id="title1">scroll-horizontal</title>
+  <g
+     class="cls-2"
+     clip-path="url(#clip-path)"
+     id="g3"
+     transform="translate(-1.7806599,-8.3369226)">
+    <path
+       d="m 18.54,15.66 a 0.79,0.79 0 0 1 -0.53,-0.22 0.75,0.75 0 0 1 0,-1.06 L 20.42,12 18.07,9.62 A 0.75,0.75 0 0 1 19.13,8.56 L 22,11.44 a 0.75,0.75 0 0 1 0,1.06 l -2.94,2.94 a 0.77,0.77 0 0 1 -0.52,0.22 z"
+       id="path1"
+       style="fill:#ffffff" />
+    <path
+       d="M 5.4,15.66 A 0.75,0.75 0 0 1 4.87,15.44 L 2,12.56 A 0.75,0.75 0 0 1 2,11.5 L 4.93,8.56 A 0.75307702,0.75307702 0 0 1 6,9.62 L 3.58,12 5.93,14.35 a 0.75,0.75 0 0 1 0,1.06 0.79,0.79 0 0 1 -0.53,0.25 z"
+       id="path2"
+       style="fill:#ffffff" />
+    <path
+       d="M 12,15.66 A 3.66,3.66 0 1 1 15.66,12 3.66,3.66 0 0 1 12,15.66 Z M 12,9.84 A 2.16,2.16 0 1 0 14.16,12 2.16,2.16 0 0 0 12,9.84 Z"
+       id="path3"
+       style="fill:#ffffff" />
+  </g>
+</svg>

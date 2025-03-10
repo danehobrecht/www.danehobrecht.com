@@ -160,7 +160,7 @@ video {
 	transition: 0.32s;
 	position: absolute;
 	border-radius: 16px;
-	background-color: #000000a3;
+	background-color: #000000c3;
 	&:hover  {
 		opacity: 0.48;
 		cursor: pointer;
@@ -176,7 +176,7 @@ video {
 }
 
 #pdf {
-	left: 16px;
+	left: 12px;
 	z-index: 1;
 	width: 32px;
 	padding: 8px;
@@ -189,15 +189,30 @@ video {
 	border-radius: 16px;
 	top: calc(100% - 60px); /* Simulate `bottom` (doesn't work with `sticky`) */
 	justify-content: center;
-	background-color: #000000a3;
+	background-color: #000000c3;
 	&:hover { opacity: 0.48; }
-	& p {
-		color: #ffffffff;
-		font-weight: 700;
-		font-size: 1.16em;
-		margin-right: 4px;
-		font-family: Arial, sans-serif;
+	& img {
+		width: 32px;
+		height: 32px;
+		animation: none;
+		user-select: none;
 	}
+}
+
+#h-scroll {
+	z-index: 1;
+	width: 32px;
+	padding: 4px 8px 4px 8px;
+	display: flex;
+	position: sticky;
+	margin-top: -40px;
+	margin-left: -48px;
+	align-items: center;
+	border-radius: 16px;
+	top: calc(100% - 54px); /* Simulate `bottom` (doesn't work with `sticky`) */
+	left: calc(50% - 16px);
+	justify-content: center;
+	background-color: #000000c3;
 	& img {
 		width: 32px;
 		height: 32px;
