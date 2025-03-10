@@ -202,16 +202,16 @@ video {
 #h-scroll {
 	z-index: 1;
 	width: 32px;
-	padding: 4px 8px 4px 8px;
 	display: flex;
 	position: sticky;
 	margin-top: -40px;
 	margin-left: -48px;
 	align-items: center;
 	border-radius: 16px;
-	top: calc(100% - 54px); /* Simulate `bottom` (doesn't work with `sticky`) */
+	top: calc(100% - 56px); /* Simulate `bottom` (doesn't work with `sticky`) */
 	left: calc(50% - 16px);
 	justify-content: center;
+	padding: 4px 8px 4px 8px;
 	background-color: #000000c3;
 	& img {
 		width: 32px;
