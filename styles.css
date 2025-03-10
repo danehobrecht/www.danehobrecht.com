@@ -208,6 +208,7 @@ video {
 	margin-left: -48px;
 	align-items: center;
 	border-radius: 16px;
+	pointer-events: none;
 	top: calc(100% - 56px); /* Simulate `bottom` (doesn't work with `sticky`) */
 	left: calc(50% - 16px);
 	justify-content: center;
