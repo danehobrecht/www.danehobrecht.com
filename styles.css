@@ -210,7 +210,7 @@ video {
 	border-radius: 16px;
 	pointer-events: none;
 	top: calc(100% - 54px); /* Simulate `bottom` (doesn't work with `sticky`) */
-	left: calc(50% - 16px);
+	left: calc(50% - 24px);
 	justify-content: center;
 	padding: 2px 8px 2px 8px;
 	background-color: #000000c3;
