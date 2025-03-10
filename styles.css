@@ -109,9 +109,12 @@ video {
 	overflow-y: hidden;
 	white-space: nowrap;
 	border-radius: 16px;
-	scroll-margin-top: 16px; /* TODO: Fix on Chrome */
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
+	scroll-margin-top: 16px; /* TODO: Fix on Chrome */
+	-ms-scroll-margin-top: 16px;
+	-moz-scroll-margin-top: 16px;
+	-webkit-scroll-margin-top: 16px;
 }
 
 .module {
@@ -123,11 +126,7 @@ video {
 	max-width: 21.66em;
 	display: inline-block;
 	vertical-align: middle;
-	scroll-margin-top: 16px;
 	scroll-snap-align: center;
-	-ms-scroll-margin-top: 16px;
-	-moz-scroll-margin-top: 16px;
-	-webkit-scroll-margin-top: 16px;
 	& img {
 		float: left;
 		width: 100%;
@@ -237,6 +236,7 @@ video {
 		border: 1px dashed #ffffffff;
 		font-family: Arial, sans-serif;
 	}
+	/* Tickets button */
 	& a {
 		font-weight: 700;
 		transition: 0.32s;
@@ -244,18 +244,18 @@ video {
 		pointer-events: none;
 		display: inline-block;
 		margin: 16px 0px 16px 0px;
-		& img {
-			width: 9.2em;
-			border-radius: 4px;
-			animation: flicker 4.8s infinite;
-		}
+		padding: 12px 16px 12px 16px;
+		background-color: #ffffffff;
+		color: #000000ff;
+		border-radius: 8px;
+		font-family: Arial, sans-serif;
 	}
 	& p {
 		overflow-y: auto;
 		font-size: 0.92em;
 		white-space: normal;
 	}
-	& .enabled { &:hover { filter: brightness(1.48); } }
+	& .enabled { &:hover { opacity: 0.48; } }
 	& .disabled {
 		opacity: 0.24;
 		cursor: not-allowed;
@@ -463,14 +463,6 @@ video {
 		opacity: 1.00;
 		filter: blur(0px);
 	}
-}
-
-@keyframes flicker {
-	0% { content: url("assets/images/extras/tickets-sign-dim.webp"); }
-	1%, 90%, 100% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
-	95%, 99% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
-	96%, 98% { content: url("assets/images/extras/tickets-sign-dim.webp"); }
-	97% { content: url("assets/images/extras/tickets-sign-bright.webp"); }
 }
 
 @keyframes redirect {
