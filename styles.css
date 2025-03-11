@@ -39,6 +39,13 @@ img { image-rendering: pixelated; }
 
 img, iframe { animation: render 1.6s ease-in-out infinite; }
 
+video {
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.64;
+	object-fit: cover;
+}
+
 /* Classes and IDs */
 * {
 	border: 0;
@@ -56,13 +63,6 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 }
 
 .reveal { animation: reveal 3s; }
-
-video {
-	width: 100vw;
-	height: 100vh;
-	opacity: 0.64;
-	object-fit: cover;
-}
 
 #cover {
 	width: auto;
@@ -118,169 +118,169 @@ video {
 	-moz-scroll-margin-top: 16px;
 	-webkit-scroll-margin-top: 16px;
 	*/
-}
 
-.module {
-	font-size: 1.2em;
-	text-align: left;
-	transition: 0.24s;
-	user-select: none;
-	position: relative;
-	max-width: 21.66em;
-	display: inline-block;
-	vertical-align: middle;
-	scroll-snap-align: center;
-	& img {
-		float: left;
-		width: 100%;
-		height: auto;
-		transition: 0.24s;
-		border-radius: 16px;
-	}
-	& input {
-		/* Hide */
-		display: none;
-		&:not(:checked) + label > img { opacity: 1; }
-		&:not(:checked) + label > .information { opacity: 0; }
-		&:not(:checked) + label > .information a { pointer-events: none; }
-		/* Show */
-		&:checked + label > .info {
-			opacity: 0;
-			pointer-events: none;
-		}
-		&:checked + label > img { opacity: 0.16; }
-		&:checked + label > .information { opacity: 1; }
-		&:checked + label > .information a { pointer-events: auto; }
-	}
-}
-
-.info {
-	z-index: 1;
-	width: 32px;
-	height: 32px;
-	margin: 12px;
-	padding: 8px;
-	transition: 0.32s;
-	position: absolute;
-	border-radius: 16px;
-	background-color: #000000c3;
-	&:hover  {
-		opacity: 0.48;
-		cursor: pointer;
-	}
-	& p {
-		color: #ffffffff;
-		font-weight: 700;
-		align-items: center;
-		justify-content: center;
-		font-family: Arial, sans-serif;
-	}
-	& img { animation: none; }
-}
-
-#pdf {
-	left: 12px;
-	z-index: 1;
-	width: 32px;
-	padding: 8px;
-	display: flex;
-	position: sticky;
-	transition: 0.32s;
-	margin-top: -48px;
-	margin-left: -48px;
-	align-items: center;
-	border-radius: 16px;
-	top: calc(100% - 60px); /* Simulate `bottom` (doesn't work with `sticky`) */
-	justify-content: center;
-	background-color: #000000c3;
-	&:hover { opacity: 0.48; }
-	& img {
+	#pdf-icon {
+		left: 12px;
+		z-index: 1;
 		width: 32px;
-		height: 32px;
-		animation: none;
-		user-select: none;
-	}
-}
-
-#h-scroll {
-	z-index: 1;
-	width: 32px;
-	display: flex;
-	position: sticky;
-	margin-top: -36px;
-	margin-left: -48px;
-	align-items: center;
-	border-radius: 16px;
-	pointer-events: none;
-	top: calc(100% - 54px); /* Simulate `bottom` (doesn't work with `sticky`) */
-	left: calc(50% - 24px);
-	justify-content: center;
-	padding: 2px 8px 2px 8px;
-	background-color: #000000c3;
-	& img {
-		width: 32px;
-		height: 32px;
-		animation: none;
-		user-select: none;
-	}
-}
-
-.information {
-	opacity: 0;
-	height: 100%;
-	padding: 16px;
-	overflow: hidden;
-	transition: 0.32s;
-	position: absolute;
-	mask-image: linear-gradient(180deg, #000000ff 84%, #00000000 100%);
-	& h1 {
-		font-size: 1.64em;
-		font-style: italic;
-		padding-right: 2px;
-		white-space: pre-wrap;
-		font-family: Arial, sans-serif;
-	}
-	& h2 {
-		font-size: 1.12em;
-		font-weight: normal;
-	}
-	& h3 {
 		padding: 8px;
-		display: block;
-		font-size: 1em;
-		margin-top: 16px;
-		position: relative;
-		border-radius: 8px;
-		font-weight: normal;
-		border: 1px dashed #ffffffff;
-		font-family: Arial, sans-serif;
-	}
-	/* Tickets button */
-	& a {
-		color: #000000ff;
-		font-weight: 700;
+		display: flex;
+		position: sticky;
 		transition: 0.32s;
-		font-size: 1.16em;
+		margin-top: -48px;
+		margin-left: -48px;
+		align-items: center;
+		border-radius: 16px;
+		top: calc(100% - 60px); /* Simulate `bottom` (doesn't work with `sticky`) */
+		justify-content: center;
+		background-color: #000000c3;
+		&:hover { opacity: 0.48; }
+		& img {
+			width: 32px;
+			height: 32px;
+			animation: none;
+			user-select: none;
+		}
+	}
+
+	#h-scroll-icon {
+		z-index: 1;
+		width: 32px;
+		display: flex;
+		position: sticky;
+		margin-top: -36px;
+		margin-left: -48px;
+		align-items: center;
+		border-radius: 16px;
+		pointer-events: none;
+		top: calc(100% - 54px); /* Simulate `bottom` (doesn't work with `sticky`) */
+		left: calc(50% - 24px);
+		justify-content: center;
+		padding: 2px 8px 2px 8px;
+		background-color: #000000c3;
+		& img {
+			width: 32px;
+			height: 32px;
+			animation: none;
+			user-select: none;
+		}
+	}
+
+	.module {
+		font-size: 1.2em;
+		text-align: left;
+		transition: 0.24s;
+		user-select: none;
 		position: relative;
-		border-radius: 8px;
-		pointer-events: none;
+		max-width: 21.66em;
 		display: inline-block;
-		margin: 16px 0px 16px 0px;
-		background-color: #ffffffff;
-		padding: 12px 16px 12px 16px;
-		font-family: Arial, sans-serif;
+		vertical-align: middle;
+		scroll-snap-align: center;
+		& img {
+			float: left;
+			width: 100%;
+			height: auto;
+			transition: 0.24s;
+			border-radius: 16px;
+		}
+		& input {
+			/* Hide */
+			display: none;
+			&:not(:checked) + label > img { opacity: 1; }
+			&:not(:checked) + label > .information { opacity: 0; }
+			&:not(:checked) + label > .information a { pointer-events: none; }
+			/* Show */
+			&:checked + label > .info-icon {
+				opacity: 0;
+				pointer-events: none;
+			}
+			&:checked + label > img { opacity: 0.16; }
+			&:checked + label > .information { opacity: 1; }
+			&:checked + label > .information a { pointer-events: auto; }
+		}
 	}
-	& p {
-		overflow-y: auto;
-		font-size: 0.92em;
-		white-space: normal;
-	}
-	& .enabled { &:hover { opacity: 0.48; } }
-	& .disabled {
-		opacity: 0.24;
-		cursor: not-allowed;
-		pointer-events: none;
+
+	.info-icon {
+		z-index: 1;
+		width: 32px;
+		height: 32px;
+		margin: 12px;
+		padding: 8px;
+		transition: 0.32s;
+		position: absolute;
+		border-radius: 16px;
+		background-color: #000000c3;
+		&:hover  {
+			opacity: 0.48;
+			cursor: pointer;
+		}
+		& p {
+			color: #ffffffff;
+			font-weight: 700;
+			align-items: center;
+			justify-content: center;
+			font-family: Arial, sans-serif;
+		}
 		& img { animation: none; }
+	}
+
+	.information {
+		opacity: 0;
+		height: 100%;
+		padding: 16px;
+		overflow: hidden;
+		transition: 0.32s;
+		position: absolute;
+		mask-image: linear-gradient(180deg, #000000ff 84%, #00000000 100%);
+		& h1 {
+			font-size: 1.64em;
+			font-style: italic;
+			padding-right: 2px;
+			white-space: pre-wrap;
+			font-family: Arial, sans-serif;
+		}
+		& h2 {
+			font-size: 1.12em;
+			font-weight: normal;
+		}
+		& h3 {
+			padding: 8px;
+			display: block;
+			font-size: 1em;
+			margin-top: 16px;
+			position: relative;
+			border-radius: 8px;
+			font-weight: normal;
+			border: 1px dashed #ffffffff;
+			font-family: Arial, sans-serif;
+		}
+		/* Tickets button */
+		& a {
+			color: #000000ff;
+			font-weight: 700;
+			transition: 0.32s;
+			font-size: 1.16em;
+			position: relative;
+			border-radius: 8px;
+			pointer-events: none;
+			display: inline-block;
+			margin: 16px 0px 16px 0px;
+			background-color: #ffffffff;
+			padding: 12px 16px 12px 16px;
+			font-family: Arial, sans-serif;
+		}
+		& p {
+			overflow-y: auto;
+			font-size: 0.92em;
+			white-space: normal;
+		}
+		& .enabled { &:hover { opacity: 0.48; } }
+		& .disabled {
+			opacity: 0.24;
+			cursor: not-allowed;
+			pointer-events: none;
+			& img { animation: none; }
+		}
 	}
 }
 
