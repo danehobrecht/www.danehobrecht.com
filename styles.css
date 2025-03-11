@@ -103,7 +103,7 @@ video {
 }
 
 #resume {
-	margin-top: 16px;
+	padding-top: 16px;
 	position: relative;
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -111,10 +111,13 @@ video {
 	border-radius: 16px;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
-	scroll-margin-top: 16px; /* TODO: Fix on Chrome */
+	/* TODO: Fix on Chrome
+	margin-top: 16px;
+	scroll-margin-top: 16px;
 	-ms-scroll-margin-top: 16px;
 	-moz-scroll-margin-top: 16px;
 	-webkit-scroll-margin-top: 16px;
+	*/
 }
 
 .module {
