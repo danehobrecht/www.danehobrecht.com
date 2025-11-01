@@ -148,19 +148,19 @@ video {
 		width: 32px;
 		display: flex;
 		position: sticky;
-		margin-top: -28px;
+		margin-top: -32px;
 		margin-left: -48px;
 		align-items: center;
 		border-radius: 16px;
 		pointer-events: none;
-		top: calc(100% - 50px);  /* Simulate `bottom` (doesn't work with `sticky`) */
+		top: calc(100% - 52px);  /* Simulate `bottom` (doesn't work with `sticky`) */
 		left: calc(50% - 24px);
 		justify-content: center;
 		padding: 2px 8px 2px 8px;
 		background-color: #000000c3;
 		& img {
 			width: 32px;
-			height: 24px;
+			height: 28px;
 			animation: none;
 			user-select: none;
 		}
