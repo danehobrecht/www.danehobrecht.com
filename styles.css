@@ -189,6 +189,7 @@ video {
 			&:not(:checked) + label > img { opacity: 1; }
 			&:not(:checked) + label > .information { opacity: 0; }
 			&:not(:checked) + label > .information a { pointer-events: none; }
+			&:not(:checked) + label > .information p { overflow-y: hidden; }
 			/* Show */
 			&:checked + label > .info-icon {
 				opacity: 0;
@@ -197,6 +198,7 @@ video {
 			&:checked + label > img { opacity: 0.16; }
 			&:checked + label > .information { opacity: 1; }
 			&:checked + label > .information a { pointer-events: auto; }
+			&:checked + label > .information p { overflow-y: auto; }
 		}
 	}
 
