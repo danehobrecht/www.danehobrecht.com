@@ -76,1043 +76,1009 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,600;1,6..96,300;1,6..96,400;1,6..96,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ─── Reset & Base ───────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --black:   #050505;
-      --offblack: #0d0d0d;
-      --surface: #111111;
-      --border:  #222222;
-      --muted:   #555555;
-      --silver:  #999999;
-      --light:   #cccccc;
-      --white:   #f5f4f0;
-      --gold:    #c9a96e;
-      --gold-dim:#8a6e42;
-
-      --font-display: 'Bodoni Moda', serif;
-      --font-body:    'Bodoni Moda', serif;
-      --font-ui:      'DM Sans', sans-serif;
-
-      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    html {
-      background: var(--black);
-      color: var(--white);
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      scroll-padding-top: 2rem;
-    }
-
-    body { font-family: var(--font-body); }
-
-    a { text-decoration: none; color: inherit; }
-
-    /* ─── Noise grain overlay ────────────────────────────────────── */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.028;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 200px 200px;
-    }
-
-    /* ─── Hero ───────────────────────────────────────────────────── */
-    #hero {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    #hero video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      z-index: 1;
-      transition: opacity 1.2s ease;
-    }
-
-    #hero video.loaded { opacity: 0.5; }
-
-    #hero-fallback {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background: url('https://www.danehobrecht.com/assets/images/covers/dane-hobrecht-cover-001.webp') center/cover no-repeat;
-      opacity: 0.5;
-      transition: opacity 1.2s ease;
-    }
-
-    #hero-fallback.hidden { opacity: 0; }
-
-    #hero-gradient {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background:
-        linear-gradient(to right, rgba(5,5,5,0.45) 0%, transparent 50%),
-        linear-gradient(to bottom, transparent 40%, rgba(5,5,5,0.3) 65%, rgba(5,5,5,0.88) 88%, var(--black) 100%);
-    }
-
-    #hero-content {
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      padding: 0 6vw 7vh;
-      animation: heroFade 1.8s var(--ease-out) both;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-
-    .hero-name {
-      font-family: var(--font-display);
-      font-size: clamp(3.2rem, 7vw, 6rem);
-      font-weight: 300;
-      letter-spacing: 0.12em;
-      line-height: 0.9;
-      color: rgba(245, 244, 240, 0.88);
-    }
-
-    .hero-sub {
-      font-family: var(--font-body);
-      font-style: italic;
-      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-      color: var(--light);
-      margin-top: 1.2rem;
-      font-weight: 300;
-    }
-
-    /* ─── Nav ────────────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 1.8rem 6vw;
-      transition: background 0.4s ease, backdrop-filter 0.4s ease;
-    }
-
-    nav.scrolled {
-      background: rgba(5,5,5,0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-name {
-      position: absolute;
-      left: 6vw;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      color: var(--white);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    nav.scrolled-name .nav-name { opacity: 1; }
-
-    .nav-links {
-      display: flex;
-      gap: 2.4rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--silver);
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover { color: var(--white); }
-
-    /* ─── Section scaffolding ────────────────────────────────────── */
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 5rem 6vw;
-    }
-
-    .section-label {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 300;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 3.5rem;
-    }
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* ─── Resume / Credits ───────────────────────────────────────── */
-    #resume { background: var(--black); }
-
-    .credits-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-
-    .credit-row {
-      display: grid;
-      grid-template-columns: 2.5rem 1fr auto;
-      grid-template-rows: auto auto;
-      align-items: start;
-      gap: 0 1.5rem;
-      padding: 1.8rem 0;
-      border-bottom: 1px solid var(--border);
-      cursor: pointer;
-      transition: background 0.2s ease;
-      position: relative;
-    }
-
-    .credit-row:first-child { border-top: 1px solid var(--border); }
-
-    .credit-row:hover { background: rgba(255,255,255,0.022); }
-
-    .credit-year {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 400;
-      color: var(--muted);
-      padding-top: 0.22rem;
-      letter-spacing: 0.05em;
-    }
-
-    .credit-main { flex: 1; }
-
-    .credit-title {
-      font-family: var(--font-body);
-      font-style: italic;
-      font-size: 1.28rem;
-      font-weight: 400;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 0.3rem;
-    }
-
-    .credit-role {
-      font-family: var(--font-ui);
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--silver);
-      letter-spacing: 0.08em;
-    }
-
-    .credit-venue {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 300;
-      color: var(--muted);
-      margin-top: 0.25rem;
-    }
-
-    .credit-type {
-      font-family: var(--font-ui);
-      font-size: 0.64rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      border: 1px solid var(--gold-dim);
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-      white-space: nowrap;
-      align-self: flex-start;
-      margin-top: 0.15rem;
-    }
-
-    .credit-expand {
-      display: none;
-      grid-column: 2 / 4;
-      padding: 1.2rem 0 0.8rem;
-      animation: expandIn 0.3s var(--ease-out) both;
-    }
-
-    .credit-expand-inner {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    .credit-flyer {
-      flex-shrink: 0;
-      width: 140px;
-      border-radius: 4px;
-      display: block;
-      opacity: 0.9;
-      transition: opacity 0.2s ease;
-    }
-
-    .credit-flyer:hover { opacity: 1; }
-
-    .credit-expand-body {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      flex: 1;
-    }
-
-    .credit-tickets {
-      display: inline-block;
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 0.55rem 1.1rem;
-      border-radius: 2px;
-      transition: opacity 0.2s ease;
-      align-self: flex-start;
-    }
-
-    .credit-tickets.available {
-      color: var(--black);
-      background: var(--gold);
-    }
-
-    .credit-tickets.available:hover { opacity: 0.8; }
-
-    .credit-tickets.disabled {
-      color: var(--muted);
-      border: 1px solid var(--border);
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .credit-synopsis {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--light);
-      max-width: 60ch;
-    }
-
-    .credit-row.open .credit-expand { display: block; }
-
-    .credit-row.open .credit-title { color: var(--gold); }
-
-    @media (max-width: 600px) {
-      .credit-expand-inner { flex-direction: column; }
-      .credit-flyer { width: 100%; max-width: 180px; }
-    }
-
-    .credit-row.credits-hidden {
-      display: none;
-    }
-
-    .credits-toggle {
-      margin-top: 1.8rem;
-      background: none;
-      border: none;
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--silver);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0;
-      transition: color 0.2s ease;
-    }
-
-    .credits-toggle:hover { color: var(--white); }
-
-    .credits-toggle-icon {
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
-
-    .credits-toggle.expanded .credits-toggle-icon { transform: rotate(180deg); }
-
-    .resume-actions { display: none; }
-
-    .btn-primary {
-      font-family: var(--font-ui);
-      font-size: 0.76rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--black);
-      background: var(--white);
-      padding: 0.85rem 1.8rem;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.2s ease;
-      display: inline-block;
-    }
-
-    .btn-primary:hover { opacity: 0.78; }
-
-    .btn-ghost {
-      font-family: var(--font-ui);
-      font-size: 0.76rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--silver);
-      border: 1px solid var(--border);
-      padding: 0.85rem 1.8rem;
-      transition: color 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn-ghost:hover { color: var(--white); border-color: var(--silver); }
-
-    /* ─── Press ──────────────────────────────────────────────────── */
-    #press { background: var(--offblack); }
-
-    .press-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-
-    .press-card {
-      background: var(--offblack);
-      padding: 2.4rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-      transition: background 0.2s ease;
-    }
-
-    .press-card:hover { background: var(--surface); }
-
-    .press-logo {
-      display: block;
-      width: 160px;
-      height: 48px;
-      opacity: 0.85;
-      filter: brightness(0) invert(1);
-      pointer-events: none;
-      margin: 0 auto;
-    }
-
-    .press-logo-lg {
-      width: 260px;
-      height: 80px;
-    }
-
-    .press-card { align-items: center; }
-
-    .press-quotes { display: flex; flex-direction: column; gap: 0.9rem; width: 100%; }
-
-    .press-quote {
-      font-family: var(--font-body);
-      font-style: italic;
-      font-size: 1.12rem;
-      color: var(--light);
-      line-height: 1.5;
-      padding-left: 1rem;
-      border-left: 2px solid var(--gold);
-    }
-
-    .press-link {
-      font-family: var(--font-ui);
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-top: auto;
-      transition: opacity 0.2s ease;
-    }
-
-    .press-link:hover { opacity: 0.7; }
-
-    /* ─── Reel ───────────────────────────────────────────────────── */
-    #reel { background: var(--black); }
-
-    .reel-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 1px;
-      background: var(--border);
-    }
-
-    .reel-item {
-      position: relative;
-      overflow: hidden;
-      background: var(--surface);
-    }
-
-    .reel-item iframe {
-      width: 100%;
-      aspect-ratio: 16/9;
-      border: none;
-      display: block;
-    }
-
-    .reel-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      background: var(--border);
-    }
-
-    .reel-stack .reel-item { flex: 1; }
-
-    /* ─── Biography ──────────────────────────────────────────────── */
-    #biography { background: var(--offblack); }
-
-    .bio-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .bio-image-wrap {
-      position: relative;
-    }
-
-    .bio-image-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border: 1px solid var(--border);
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .bio-image {
-      display: block;
-      width: 100%;
-      height: auto;
-      filter: grayscale(18%);
-      transition: filter 0.5s ease;
-    }
-
-    .bio-image-wrap:hover .bio-image { filter: grayscale(0%); }
-
-    .bio-text { display: flex; flex-direction: column; gap: 1.8rem; }
-
-    .bio-paragraph {
-      font-family: var(--font-body);
-      font-size: 1.16rem;
-      line-height: 1.85;
-      color: var(--light);
-      font-weight: 300;
-    }
-
-    .bio-paragraph em { font-style: italic; color: var(--white); }
-
-    .bio-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      margin-top: 1rem;
-    }
-
-    .stat {
-      background: var(--offblack);
-      padding: 1.4rem 1rem;
-      text-align: center;
-    }
-
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 300;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.65rem;
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* ─── Contact ────────────────────────────────────────────────── */
-    #contact { background: var(--black); }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-
-    .contact-info { display: flex; flex-direction: column; gap: 1.6rem; }
-
-    .contact-blurb {
-      font-family: var(--font-body);
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: var(--light);
-      font-weight: 300;
-    }
-
-    .contact-detail {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
-
-    .contact-detail-label {
-      font-family: var(--font-ui);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .contact-detail-value {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      color: var(--white);
-    }
-
-    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
-
-    .field-group { display: flex; flex-direction: column; gap: 0.5rem; }
-
-    .field-label {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--silver);
-    }
-
-    .field-label .req { color: #c05050; margin-left: 2px; }
-
-    .field-input,
-    .field-textarea {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--white);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 0.9rem 1rem;
-      width: 100%;
-      transition: border-color 0.2s ease, background 0.2s ease;
-      outline: none;
-      -webkit-appearance: none;
-    }
-
-    .field-input:focus,
-    .field-textarea:focus {
-      border-color: var(--gold-dim);
-      background: #161616;
-    }
-
-    .field-textarea {
-      resize: vertical;
-      min-height: 120px;
-      max-height: 240px;
-    }
-
-    .field-textarea::placeholder,
-    .field-input::placeholder { color: var(--muted); }
-
-    .form-note {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .form-note a { color: var(--silver); text-decoration: underline; text-underline-offset: 2px; }
-
-    .form-confirmation {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 1.4rem 1.2rem;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.5s ease;
-    }
-
-    .form-confirmation.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .form-confirmation-title {
-      font-family: var(--font-ui);
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .form-confirmation-body {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--light);
-      line-height: 1.6;
-    }
-
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 6vw;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.6rem;
-      text-align: left;
-    }
-
-    .footer-name {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      color: var(--silver);
-    }
-
-    .footer-socials {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-socials a {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .footer-socials a:hover { color: var(--white); }
-
-    .footer-socials .sep {
-      width: 1px;
-      height: 12px;
-      background: var(--border);
-      flex-shrink: 0;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: flex-start;
-      gap: 1.6rem;
-    }
-
-    .footer-links a {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover { color: var(--silver); }
-
-    /* ─── Awards banner ──────────────────────────────────────────── */
-    .awards-strip {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      padding: 1rem 6vw;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .awards-inner {
-      display: flex;
-      gap: 4rem;
-      white-space: nowrap;
-      animation: marquee 28s linear infinite;
-      will-change: transform;
-      transform: translateZ(0);
-    }
-
-    .award-item {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-shrink: 0;
-    }
-
-    .award-dot {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--gold-dim);
-    }
-
-    /* ─── Animations ─────────────────────────────────────────────── */
-    @keyframes heroFade {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes expandIn {
-      from { opacity: 0; transform: translateY(-6px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── Responsive ─────────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .bio-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .reel-grid { grid-template-columns: 1fr; }
-      .reel-stack { flex-direction: row; }
-    }
-
-    @media (max-width: 600px) {
-      .nav-links { gap: 1.2rem; }
-      .credit-row { grid-template-columns: 2rem 1fr auto; gap: 0.8rem; }
-      .press-grid { grid-template-columns: 1fr; }
-      .bio-stats { grid-template-columns: repeat(3, 1fr); }
-      .reel-stack { flex-direction: column; }
-      .awards-inner { gap: 2.5rem; }
-    }
-
-    @media (max-width: 400px) {
-      .nav-links a { font-size: 0.7rem; }
-      .hero-name { letter-spacing: 0.06em; }
-    }
-
-    /* ─── Hero resume CTA ────────────────────────────────────────── */
-    #hero-resume-cta {
-      position: absolute;
-      left: 6vw;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 101;
-      font-family: var(--font-ui);
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--black);
-      background: var(--white);
-      padding: 0.55rem 1.1rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
-      white-space: nowrap;
-    }
-
-    #hero-resume-cta.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    #hero-resume-cta.visible:hover { filter: brightness(0.82); }
-    /* ─── Lightbox ───────────────────────────────────────────────── */
-    #lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(5,5,5,0.92);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      cursor: pointer;
-    }
-
-    #lightbox.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    #lightbox img {
-      max-width: min(480px, 88vw);
-      max-height: 88vh;
-      object-fit: contain;
-      transform: scale(0.92);
-      transition: transform 0.3s var(--ease-out);
-      pointer-events: none;
-    }
-
-    #lightbox.open img { transform: scale(1); }
-
-    /* ─── Scrollbar ──────────────────────────────────────────────── */
-    ::-webkit-scrollbar-track { background: var(--black); }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-    /* ─── Selection ──────────────────────────────────────────────── */
-    ::selection { background: var(--gold); color: var(--black); }
-
-    /* ─── Hamburger ──────────────────────────────────────────────── */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 6px;
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--white);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      transform-origin: center;
-    }
-
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { transform: scaleX(0); opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    .nav-mobile-menu {
-      position: fixed;
-      inset: 0;
-      z-index: 99;
-      background: rgba(5,5,5,0.97);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.35s ease;
-      display: flex;
-    }
-
-    .nav-mobile-menu.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .nav-mobile-menu a {
-      font-family: var(--font-ui);
-      font-size: 1.1rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--white);
-      transition: color 0.2s ease;
-    }
-
-    .represented-list {
-      display: flex !important;
-      flex-direction: column;
-      gap: 0.4rem;
-      margin-top: 0.2rem;
-    }
-
-    .rep-link {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      color: var(--silver);
-      transition: color 0.2s ease;
-      width: fit-content;
-    }
-
-    .rep-link:hover { color: var(--white); }
-
-    .nav-mobile-menu a { color: var(--white); }
-
-    .nav-mobile-menu a:hover { color: var(--silver); }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-    }
-  </style>
+/* ─── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:   #050505;
+  --offblack: #0d0d0d;
+  --surface: #111111;
+  --border:  #222222;
+  --muted:   #555555;
+  --silver:  #999999;
+  --light:   #cccccc;
+  --white:   #f5f4f0;
+  --gold:    #c9a96e;
+  --gold-dim:#8a6e42;
+
+  --font-display: 'Bodoni Moda', serif;
+  --font-body:    'Bodoni Moda', serif;
+  --font-ui:      'DM Sans', sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background: var(--black);
+  color: var(--white);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 2rem;
+}
+
+body { font-family: var(--font-body); }
+
+a { text-decoration: none; color: inherit; }
+
+/* ─── Noise grain overlay ────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────── */
+#hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+#hero video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1.2s ease;
+}
+
+#hero video.loaded { opacity: 0.5; }
+
+#hero-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('https://www.danehobrecht.com/assets/images/covers/dane-hobrecht-cover-001.webp') center/cover no-repeat;
+  opacity: 0.5;
+  transition: opacity 1.2s ease;
+}
+
+#hero-fallback.hidden { opacity: 0; }
+
+#hero-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(to right, rgba(5,5,5,0.45) 0%, transparent 50%),
+    linear-gradient(to bottom, transparent 40%, rgba(5,5,5,0.3) 65%, rgba(5,5,5,0.88) 88%, var(--black) 100%);
+}
+
+#hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 0 6vw 7vh;
+  animation: heroFade 1.8s var(--ease-out) both;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 0.9;
+  color: rgba(245, 244, 240, 0.88);
+}
+
+.hero-sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  color: var(--light);
+  margin-top: 1.2rem;
+  font-weight: 300;
+}
+
+/* ─── Nav ────────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.8rem 6vw;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.scrolled {
+  background: rgba(5,5,5,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-name {
+  position: absolute;
+  left: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--white);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav.scrolled-name .nav-name { opacity: 1; }
+
+.nav-links {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+/* ─── Section scaffolding ────────────────────────────────────── */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 6vw;
+}
+
+.section-label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 3.5rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─── Resume / Credits ───────────────────────────────────────── */
+#resume { background: var(--black); }
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.credit-row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 0 1.5rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.credit-row:first-child { border-top: 1px solid var(--border); }
+
+.credit-row:hover { background: rgba(255,255,255,0.022); }
+
+.credit-year {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--muted);
+  padding-top: 0.22rem;
+  letter-spacing: 0.05em;
+}
+
+.credit-main { flex: 1; }
+
+.credit-title {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.28rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+
+.credit-role {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--silver);
+  letter-spacing: 0.08em;
+}
+
+.credit-venue {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.credit-type {
+  font-family: var(--font-ui);
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  border: 1px solid var(--gold-dim);
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: 0.15rem;
+}
+
+.credit-expand {
+  display: none;
+  grid-column: 2 / 4;
+  padding: 1.2rem 0 0.8rem;
+  animation: expandIn 0.3s var(--ease-out) both;
+}
+
+.credit-expand-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.credit-flyer {
+  flex-shrink: 0;
+  width: 140px;
+  border-radius: 4px;
+  display: block;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.credit-flyer:hover { opacity: 1; }
+
+.credit-expand-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.credit-tickets {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.1rem;
+  border-radius: 2px;
+  transition: opacity 0.2s ease;
+  align-self: flex-start;
+}
+
+.credit-tickets.enabled { color: var(--black); background: var(--gold); }
+
+.credit-tickets.enabled:hover { opacity: 0.8; }
+
+.credit-tickets.disabled {
+  color: var(--muted);
+  border: 1px solid var(--border);
+  cursor: default;
+  pointer-events: none;
+}
+
+.credit-synopsis {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--light);
+  max-width: 60ch;
+}
+
+.credit-row.open .credit-expand { display: block; }
+
+.credit-row.open .credit-title { color: var(--gold); }
+
+.credit-row.credits-hidden { display: none; }
+
+.credits-toggle {
+  margin-top: 1.8rem;
+  background: none;
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.credits-toggle:hover { color: var(--white); }
+
+.credits-toggle-icon { display: inline-block; transition: transform 0.3s ease; }
+
+.credits-toggle.expanded .credits-toggle-icon { transform: rotate(180deg); }
+
+.resume-actions { display: none; }
+
+.btn-primary {
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  padding: 0.85rem 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover { opacity: 0.78; }
+
+.btn-ghost {
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+  border: 1px solid var(--border);
+  padding: 0.85rem 1.8rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-ghost:hover { color: var(--white); border-color: var(--silver); }
+
+/* ─── Press ──────────────────────────────────────────────────── */
+#press { background: var(--offblack); }
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.press-card {
+  background: var(--offblack);
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  transition: background 0.2s ease;
+}
+
+.press-card:hover { background: var(--surface); }
+
+.press-logo {
+  display: block;
+  width: 160px;
+  height: 48px;
+  opacity: 0.85;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+  margin: 0 auto;
+}
+
+.press-logo-lg { width: 260px; height: 80px; }
+
+.press-card { align-items: center; }
+
+.press-quotes { display: flex; flex-direction: column; gap: 0.9rem; width: 100%; }
+
+.press-quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.12rem;
+  color: var(--light);
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 2px solid var(--gold);
+}
+
+.press-link {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: auto;
+  transition: opacity 0.2s ease;
+}
+
+.press-link:hover { opacity: 0.7; }
+
+/* ─── Reel ───────────────────────────────────────────────────── */
+#reel { background: var(--black); }
+
+.reel-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.reel-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.reel-item iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+}
+
+.reel-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+}
+
+.reel-stack .reel-item { flex: 1; }
+
+/* ─── Biography ──────────────────────────────────────────────── */
+#biography { background: var(--offblack); }
+
+.bio-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.bio-image-wrap { position: relative; }
+
+.bio-image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bio-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(18%);
+  transition: filter 0.5s ease;
+}
+
+.bio-image-wrap:hover .bio-image { filter: grayscale(0%); }
+
+.bio-text { display: flex; flex-direction: column; gap: 1.8rem; }
+
+.bio-paragraph {
+  font-family: var(--font-body);
+  font-size: 1.16rem;
+  line-height: 1.85;
+  color: var(--light);
+  font-weight: 300;
+}
+
+.bio-paragraph em { font-style: italic; color: var(--white); }
+
+.bio-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.stat {
+  background: var(--offblack);
+  padding: 1.4rem 1rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── Contact ────────────────────────────────────────────────── */
+#contact { background: var(--black); }
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 1.6rem; }
+
+.contact-blurb {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--light);
+  font-weight: 300;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-detail-label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.contact-detail-value {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--white);
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.field-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.field-label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+.field-label .req { color: #c05050; margin-left: 2px; }
+
+.field-input,
+.field-textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--white);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.9rem 1rem;
+  width: 100%;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.field-input:focus,
+.field-textarea:focus { border-color: var(--gold-dim); background: #161616; }
+
+.field-textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 240px;
+}
+
+.field-textarea::placeholder,
+.field-input::placeholder { color: var(--muted); }
+
+.form-note {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.form-note a { color: var(--silver); text-decoration: underline; text-underline-offset: 2px; }
+
+.form-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.4rem 1.2rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.form-confirmation.visible { opacity: 1; pointer-events: auto; }
+
+.form-confirmation-title {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.form-confirmation-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--light);
+  line-height: 1.6;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  text-align: left;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--silver);
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover { color: var(--white); }
+
+.footer-socials .sep {
+  width: 1px;
+  height: 12px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+.footer-links a {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover { color: var(--silver); }
+
+/* ─── Awards banner ──────────────────────────────────────────── */
+.awards-strip {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1rem 6vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.awards-inner {
+  display: flex;
+  gap: 4rem;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.award-item {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.award-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+}
+
+/* ─── Animations ─────────────────────────────────────────────── */
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+/* ─── Hero resume CTA ────────────────────────────────────────── */
+#hero-resume-cta {
+  position: absolute;
+  left: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 101;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  padding: 0.55rem 1.1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  white-space: nowrap;
+}
+
+#hero-resume-cta.visible { opacity: 1; pointer-events: auto; }
+
+#hero-resume-cta.visible:hover { filter: brightness(0.82); }
+/* ─── Lightbox ───────────────────────────────────────────────── */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(5,5,5,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+#lightbox.open { opacity: 1; pointer-events: auto; }
+
+#lightbox img {
+  max-width: min(480px, 88vw);
+  max-height: 88vh;
+  object-fit: contain;
+  transform: scale(0.92);
+  transition: transform 0.3s var(--ease-out);
+  pointer-events: none;
+}
+
+#lightbox.open img { transform: scale(1); }
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ─── Selection ──────────────────────────────────────────────── */
+::selection { background: var(--gold); color: var(--black); }
+
+/* ─── Hamburger ──────────────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { transform: scaleX(0); opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.nav-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(5,5,5,0.97);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  display: flex;
+}
+
+.nav-mobile-menu.open { opacity: 1; pointer-events: auto; }
+
+.nav-mobile-menu a {
+  font-family: var(--font-ui);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: color 0.2s ease;
+}
+
+.represented-list {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.rep-link {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--silver);
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.rep-link:hover { color: var(--white); }
+
+.nav-mobile-menu a { color: var(--white); }
+
+.nav-mobile-menu a:hover { color: var(--silver); }
+
+@media (max-width: 600px) {
+  .credit-expand-inner { flex-direction: column; }
+  .credit-flyer { width: 100%; max-width: 180px; }
+  .nav-links { gap: 1.2rem; }
+  .credit-row { grid-template-columns: 2rem 1fr auto; gap: 0.8rem; }
+  .press-grid { grid-template-columns: 1fr; }
+  .bio-stats { grid-template-columns: repeat(3, 1fr); }
+  .reel-stack { flex-direction: column; }
+  .awards-inner { gap: 2.5rem; }
+}
+
+@media (max-width: 900px) {
+  .bio-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .reel-grid { grid-template-columns: 1fr; }
+  .reel-stack { flex-direction: row; }
+}
+
+@media (max-width: 400px) {
+  .nav-links a { font-size: 0.7rem; }
+  .hero-name { letter-spacing: 0.06em; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+}
+</style>
 </head>
 <body>
 
-  <!-- ─── Nav ─────────────────────────────────────────────────── -->
   <nav id="nav" aria-label="Main navigation">
     <a class="nav-name" href="#">DANE HOBRECHT</a>
     <a id="hero-resume-cta" href="assets/documents/dane-hobrecht-resume-headshot.pdf" aria-label="Download Dane Hobrecht resume and headshot PDF" target="_blank" rel="noopener">↓ Resume &amp; Headshot</a>
@@ -1128,7 +1094,6 @@
     </button>
   </nav>
 
-  <!-- ─── Mobile menu ───────────────────────────────────────────── -->
   <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
     <a href="#resume" class="mobile-link">Credits</a>
     <a href="#press" class="mobile-link">Press</a>
@@ -1137,7 +1102,6 @@
     <a href="#contact" class="mobile-link">Get in Touch</a>
   </div>
 
-  <!-- ─── Hero ─────────────────────────────────────────────────── -->
   <section id="hero" aria-label="Hero">
     <div id="hero-fallback"></div>
     <video loop muted autoplay playsinline poster="https://www.danehobrecht.com/assets/images/covers/dane-hobrecht-cover-001.webp" aria-label="Dane Hobrecht demo reel" aria-hidden="true">
@@ -1151,7 +1115,6 @@
     </div>
   </section>
 
-  <!-- ─── Awards strip ──────────────────────────────────────────── -->
   <div class="awards-strip">
     <div class="awards-inner">
       <span class="award-item"><span class="award-dot"></span>OC Theatre Guild — Outstanding Lead Actor, <em>The Shape of Things</em></span>
@@ -1167,7 +1130,6 @@
     </div>
   </div>
 
-  <!-- ─── Resume ────────────────────────────────────────────────── -->
   <section id="resume" aria-labelledby="resume-title">
     <div class="section">
       <p class="section-label fade-in">Selected Credits</p>
@@ -1177,121 +1139,51 @@
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2025</span>
-          <div class="credit-main">
-            <div class="credit-title">Good King Wenceslas</div>
-            <div class="credit-role">as Good King Wenceslas</div>
-            <div class="credit-venue">Sisters of St. Joseph of Orange</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Good King Wenceslas</div><div class="credit-role">as Good King Wenceslas</div><div class="credit-venue">Sisters of St. Joseph of Orange</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-016.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-016.webp" loading="lazy" alt="Good King Wenceslas flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.eventbrite.com/e/good-king-wenceslas-tickets-1708585397919" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">A fast-paced, slyly humorous, topical Theatre for Youth version of the classic story of charity and humility — a modernized telling based on the traditional Christmas carol.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-016.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-016.webp" loading="lazy" alt="Good King Wenceslas flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.eventbrite.com/e/good-king-wenceslas-tickets-1708585397919" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">A fast-paced, slyly humorous, topical Theatre for Youth version of the classic story of charity and humility — a modernized telling based on the traditional Christmas carol.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2025</span>
-          <div class="credit-main">
-            <div class="credit-title">Death of a Salesman</div>
-            <div class="credit-role">as Bernard</div>
-            <div class="credit-venue">Lyceum Theater</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Death of a Salesman</div><div class="credit-role">as Bernard</div><div class="credit-venue">Lyceum Theater</div></div>
           <span class="credit-type">Drama</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-015.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-015.webp" loading="lazy" alt="Death of a Salesman flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://ci.ovationtix.com/36168/production/1211133" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Arthur Miller's Pulitzer Prize and Tony Award-winning drama. Willy Loman's unrealistic and unrelenting pursuit of the American Dream leads to tragedy for himself and his family.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-015.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-015.webp" loading="lazy" alt="Death of a Salesman flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://ci.ovationtix.com/36168/production/1211133" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Arthur Miller's Pulitzer Prize and Tony Award-winning drama. Willy Loman's unrealistic and unrelenting pursuit of the American Dream leads to tragedy for himself and his family.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2025</span>
-          <div class="credit-main">
-            <div class="credit-title">Footloose</div>
-            <div class="credit-role">as Chuck Cranston</div>
-            <div class="credit-venue">Lyceum Theater</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Footloose</div><div class="credit-role">as Chuck Cranston</div><div class="credit-venue">Lyceum Theater</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-014.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-014.webp" loading="lazy" alt="Footloose flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://ci.ovationtix.com/36168/production/1206128" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">When Ren and his mother move from Chicago to a small farming town, the arrival of a new kid sets off a chain of events against the town's ban on dancing and a preacher's iron grip on its youth.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-014.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-014.webp" loading="lazy" alt="Footloose flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://ci.ovationtix.com/36168/production/1206128" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">When Ren and his mother move from Chicago to a small farming town, the arrival of a new kid sets off a chain of events against the town's ban on dancing and a preacher's iron grip on its youth.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2024</span>
-          <div class="credit-main">
-            <div class="credit-title">An Inspector Calls</div>
-            <div class="credit-role">as Gerald Croft</div>
-            <div class="credit-venue">American Coast Theater Company</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">An Inspector Calls</div><div class="credit-role">as Gerald Croft</div><div class="credit-venue">American Coast Theater Company</div></div>
           <span class="credit-type">Drama</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-013.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-013.webp" loading="lazy" alt="An Inspector Calls flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://ci.ovationtix.com/36168/production/1188511" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">A gripping thriller, boldly reimagined. When a mysterious Inspector arrives at the prosperous Birling family home, their celebratory dinner is shattered by his investigation into the death of a young woman.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-013.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-013.webp" loading="lazy" alt="An Inspector Calls flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://ci.ovationtix.com/36168/production/1188511" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">A gripping thriller, boldly reimagined. When a mysterious Inspector arrives at the prosperous Birling family home, their celebratory dinner is shattered by his investigation into the death of a young woman.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2023</span>
-          <div class="credit-main">
-            <div class="credit-title">A Midsummer Night's Dream</div>
-            <div class="credit-role">as Oberon</div>
-            <div class="credit-venue">Laguna Playhouse</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">A Midsummer Night's Dream</div><div class="credit-role">as Oberon</div><div class="credit-venue">Laguna Playhouse</div></div>
           <span class="credit-type">Classic</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-012.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-012.webp" loading="lazy" alt="A Midsummer Night's Dream flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://purchase.lagunaplayhouse.com/overview/8651" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Kings, queens, fairies, lovers, and sprites collide in an enchanted forest one midsummer night. One of Shakespeare's most popular comedies takes us on a beguiling odyssey full of mistaken identities and magic spells.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-012.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-012.webp" loading="lazy" alt="A Midsummer Night's Dream flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://purchase.lagunaplayhouse.com/overview/8651" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Kings, queens, fairies, lovers, and sprites collide in an enchanted forest one midsummer night. One of Shakespeare's most popular comedies takes us on a beguiling odyssey full of mistaken identities and magic spells.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2023</span>
-          <div class="credit-main">
-            <div class="credit-title">The Shape of Things</div>
-            <div class="credit-role">as Adam</div>
-            <div class="credit-venue">No Square Theatre</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">The Shape of Things</div><div class="credit-role">as Adam</div><div class="credit-venue">No Square Theatre</div></div>
           <span class="credit-type">Drama</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-011.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-011.webp" loading="lazy" alt="The Shape of Things flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/nosquare/1804" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Neil LaBute's award-winning play about relationships, art, and friendship where nothing is quite what it seems. Adam, a geeky young student, drifts into an ever-changing romance with art major Evelyn.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-011.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-011.webp" loading="lazy" alt="The Shape of Things flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/nosquare/1804" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Neil LaBute's award-winning play about relationships, art, and friendship where nothing is quite what it seems. Adam, a geeky young student, drifts into an ever-changing romance with art major Evelyn.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2023</span>
-          <div class="credit-main">
-            <div class="credit-title">The Lightning Thief: The Percy Jackson Musical</div>
-            <div class="credit-role">as Percy Jackson</div>
-            <div class="credit-venue">Laguna Playhouse</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">The Lightning Thief: The Percy Jackson Musical</div><div class="credit-role">as Percy Jackson</div><div class="credit-venue">Laguna Playhouse</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-010.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-010.webp" loading="lazy" alt="The Lightning Thief flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://purchase.lagunaplayhouse.com/overview/8289" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">An action-packed mythical adventure. As the half-blood son of a Greek god, Percy Jackson has newly-discovered powers he can't control, a destiny he doesn't want, and a mythology textbook's worth of monsters on his trail.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-010.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-010.webp" loading="lazy" alt="The Lightning Thief flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://purchase.lagunaplayhouse.com/overview/8289" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">An action-packed mythical adventure. As the half-blood son of a Greek god, Percy Jackson has newly-discovered powers he can't control, a destiny he doesn't want, and a mythology textbook's worth of monsters on his trail.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
@@ -1302,90 +1194,40 @@
             <div class="credit-venue">Moss Arrow Productions · Sundance Submission</div>
           </div>
           <span class="credit-type">Film</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-009.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-009.webp" loading="lazy" alt="Richard's Roast flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://collab.sundance.org/catalog/Richard-s-Roast-2023-02-14-100243" target="_blank" rel="noopener">Sundance Entry</a>
-              <p class="credit-synopsis">A short film about a writer who comes up with a caffeine-induced idea to secure a date with the girl of his dreams. Submitted to the Sundance Film Festival.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-009.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-009.webp" loading="lazy" alt="Richard's Roast flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://collab.sundance.org/catalog/Richard-s-Roast-2023-02-14-100243" target="_blank" rel="noopener">Sundance Entry</a><p class="credit-synopsis">A short film about a writer who comes up with a caffeine-induced idea to secure a date with the girl of his dreams. Submitted to the Sundance Film Festival.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2022</span>
-          <div class="credit-main">
-            <div class="credit-title">Sweeney Todd</div>
-            <div class="credit-role">as Tobias Ragg</div>
-            <div class="credit-venue">Irvine Valley College Performing Arts Center</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Sweeney Todd</div><div class="credit-role">as Tobias Ragg</div><div class="credit-venue">Irvine Valley College Performing Arts Center</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-008.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-008.webp" loading="lazy" alt="Sweeney Todd flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/IVC-Branded/6607" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Stephen Sondheim's and Hugh Wheeler's thrilling, theatrical masterpiece. An infamous tale of an unjustly exiled barber returning to London seeking vengeance — and inspiring carnage.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-008.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-008.webp" loading="lazy" alt="Sweeney Todd flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/IVC-Branded/6607" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Stephen Sondheim's and Hugh Wheeler's thrilling, theatrical masterpiece. An infamous tale of an unjustly exiled barber returning to London seeking vengeance — and inspiring carnage.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2022</span>
-          <div class="credit-main">
-            <div class="credit-title">Into The Woods</div>
-            <div class="credit-role">as Jack</div>
-            <div class="credit-venue">No Square Theatre</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Into The Woods</div><div class="credit-role">as Jack</div><div class="credit-venue">No Square Theatre</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-006.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-006.webp" loading="lazy" alt="Into The Woods flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/nosquare/1804" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">James Lapine and Stephen Sondheim take everyone's favorite storybook characters and bring them together for a timeless, relevant piece — a rare modern classic.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-006.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-006.webp" loading="lazy" alt="Into The Woods flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/nosquare/1804" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">James Lapine and Stephen Sondheim take everyone's favorite storybook characters and bring them together for a timeless, relevant piece — a rare modern classic.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2022</span>
-          <div class="credit-main">
-            <div class="credit-title">Much Ado About Nothing</div>
-            <div class="credit-role">as Benedick</div>
-            <div class="credit-venue">Irvine Valley College Performing Arts Center</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Much Ado About Nothing</div><div class="credit-role">as Benedick</div><div class="credit-venue">Irvine Valley College Performing Arts Center</div></div>
           <span class="credit-type">Classic</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-005.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-005.webp" loading="lazy" alt="Much Ado About Nothing flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/IVC-Branded/6607/event/1266837" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Shakespeare's classic romantic comedy pits two of his wittiest characters against each other in a battle of love and language.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-005.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-005.webp" loading="lazy" alt="Much Ado About Nothing flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/IVC-Branded/6607/event/1266837" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Shakespeare's classic romantic comedy pits two of his wittiest characters against each other in a battle of love and language.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2022</span>
-          <div class="credit-main">
-            <div class="credit-title">Footloose</div>
-            <div class="credit-role">as Willard Hewitt</div>
-            <div class="credit-venue">No Square Theatre</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Footloose</div><div class="credit-role">as Willard Hewitt</div><div class="credit-venue">No Square Theatre</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-007.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-007.webp" loading="lazy" alt="Footloose flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/nosquare/1804" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">When Ren and his mother move from Chicago to a small farming town, Willard is his loyal, good-natured friend who eventually joins the fight to bring dancing back to their town.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-007.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-007.webp" loading="lazy" alt="Footloose flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/nosquare/1804" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">When Ren and his mother move from Chicago to a small farming town, Willard is his loyal, good-natured friend who eventually joins the fight to bring dancing back to their town.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2022</span>
-          <div class="credit-main">
-            <div class="credit-title">Oliver!</div>
-            <div class="credit-role">as Artful Dodger</div>
-            <div class="credit-venue">Irvine Valley College Performing Arts Center</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Oliver!</div><div class="credit-role">as Artful Dodger</div><div class="credit-venue">Irvine Valley College Performing Arts Center</div></div>
           <span class="credit-type">Musical</span>
           <div class="credit-expand"><div class="credit-expand-inner">
             <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-004.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-004.webp" loading="lazy" alt="Oliver! flyer"></a>
@@ -1398,53 +1240,23 @@
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2021</span>
-          <div class="credit-main">
-            <div class="credit-title">Fame The Musical</div>
-            <div class="credit-role">as Schlomo Metzenbaum</div>
-            <div class="credit-venue">Irvine Valley College Performing Arts Center</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Fame The Musical</div><div class="credit-role">as Schlomo Metzenbaum</div><div class="credit-venue">Irvine Valley College Performing Arts Center</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-003.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-003.webp" loading="lazy" alt="Fame The Musical flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/IVC-Branded/6607/event/1242611" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Conceived by David De Silva, this high-octane musical follows the final class of New York City's High School for the Performing Arts from 1980 to 1984, depicting their struggles and triumphs with razor-sharp focus.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-003.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-003.webp" loading="lazy" alt="Fame The Musical flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://www.tix.com/ticket-sales/IVC-Branded/6607/event/1242611" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Conceived by David De Silva, this high-octane musical follows the final class of New York City's High School for the Performing Arts from 1980 to 1984, depicting their struggles and triumphs with razor-sharp focus.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2020</span>
-          <div class="credit-main">
-            <div class="credit-title">Beauty and the Beast</div>
-            <div class="credit-role">as Beast</div>
-            <div class="credit-venue">Laguna Beach Artists' Theatre</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Beauty and the Beast</div><div class="credit-role">as Beast</div><div class="credit-venue">Laguna Beach Artists' Theatre</div></div>
           <span class="credit-type">Musical</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-002.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-002.webp" loading="lazy" alt="Beauty and the Beast flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://lbhs.booktix.com/view/75/02068c8d9ccf813b" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Disney's Broadway classic, nominated for nine Tony Awards including Best Musical. A young prince trapped under an enchantress's spell must learn to love and be loved before time runs out.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-002.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-002.webp" loading="lazy" alt="Beauty and the Beast flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://lbhs.booktix.com/view/75/02068c8d9ccf813b" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Disney's Broadway classic, nominated for nine Tony Awards including Best Musical. A young prince trapped under an enchantress's spell must learn to love and be loved before time runs out.</p></div></div></div>
         </div>
 
         <div class="credit-row fade-in" tabindex="0" role="button" aria-expanded="false">
           <span class="credit-year">2020</span>
-          <div class="credit-main">
-            <div class="credit-title">Our Town</div>
-            <div class="credit-role">as Mr. Charles Webb</div>
-            <div class="credit-venue">Laguna Beach Artists' Theatre</div>
-          </div>
+          <div class="credit-main"><div class="credit-title">Our Town</div><div class="credit-role">as Mr. Charles Webb</div><div class="credit-venue">Laguna Beach Artists' Theatre</div></div>
           <span class="credit-type">Drama</span>
-          <div class="credit-expand"><div class="credit-expand-inner">
-            <a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-001.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-001.webp" loading="lazy" alt="Our Town flyer"></a>
-            <div class="credit-expand-body">
-              <a class="credit-tickets disabled" href="https://lbhs.booktix.com/view/68/7162ae0cf5fb1bea" target="_blank" rel="noopener">Tickets</a>
-              <p class="credit-synopsis">Thornton Wilder's Pulitzer Prize-winning play, described by Edward Albee as the greatest American play ever written. A metatheatrical portrait of everyday life in the fictional town of Grover's Corners.</p>
-            </div>
-          </div></div>
+          <div class="credit-expand"><div class="credit-expand-inner"><a href="#" class="flyer-trigger" data-src="assets/images/flyers/dane-hobrecht-flyer-001.webp"><img class="credit-flyer" src="assets/images/flyers/dane-hobrecht-flyer-001.webp" loading="lazy" alt="Our Town flyer"></a><div class="credit-expand-body"><a class="credit-tickets disabled" href="https://lbhs.booktix.com/view/68/7162ae0cf5fb1bea" target="_blank" rel="noopener">Tickets</a><p class="credit-synopsis">Thornton Wilder's Pulitzer Prize-winning play, described by Edward Albee as the greatest American play ever written. A metatheatrical portrait of everyday life in the fictional town of Grover's Corners.</p></div></div></div>
         </div>
 
       </div>
@@ -1452,14 +1264,9 @@
       <button class="credits-toggle" id="credits-toggle">
         <span class="credits-toggle-icon">↓</span> Show more
       </button>
-
-      <div class="resume-actions fade-in">
-        <a class="btn-ghost" href="https://resumes.actorsaccess.com/danehobrecht" target="_blank" rel="noopener">Actors Access Profile ↗</a>
-      </div>
     </div>
   </section>
 
-  <!-- ─── Press ─────────────────────────────────────────────────── -->
   <section id="press" aria-labelledby="press-title">
     <div class="section">
       <p class="section-label fade-in">Critical Reception</p>
@@ -1494,24 +1301,21 @@
         </div>
 
         <div class="press-card fade-in">
-          <img class="press-logo press-logo-lg" src="assets/images/logos/dane-hobrecht-logo-004.svg" alt="OC Theatre Guild">
-          <div class="press-quotes">
+          <img class="press-logo press-logo-lg" src="assets/images/logos/dane-hobrecht-logo-004.svg" alt="OC Theatre Guild"><div class="press-quotes">
             <p class="press-quote">&ldquo;Outstanding&hellip;&rdquo;</p>
           </div>
           <a class="press-link" href="https://www.octheatreguild.org/post/octg-theatre-awards-unveils-list-of-nominees" target="_blank" rel="noopener" aria-label="View OC Theatre Guild nominees (opens in new tab)">View nominees ↗</a>
         </div>
 
         <div class="press-card fade-in">
-          <img class="press-logo press-logo-lg" src="assets/images/logos/dane-hobrecht-logo-005.svg" alt="Laguna Beach Independent">
-          <div class="press-quotes">
+          <img class="press-logo press-logo-lg" src="assets/images/logos/dane-hobrecht-logo-005.svg" alt="Laguna Beach Independent"><div class="press-quotes">
             <p class="press-quote">&ldquo;Laguna&rsquo;s own&hellip; Dane Hobrecht&rdquo;</p>
           </div>
           <a class="press-link" href="https://www.lagunabeachindy.com/no-square-snags-four-oc-theatre-guild-nominations" target="_blank" rel="noopener" aria-label="Read Laguna Beach Independent article (opens in new tab)">Read full article ↗</a>
         </div>
 
         <div class="press-card fade-in">
-          <img class="press-logo press-logo-lg" src="assets/images/logos/dane-hobrecht-logo-006.svg" alt="Irvine Valley College">
-          <div class="press-quotes">
+          <img class="press-logo press-logo-lg" src="assets/images/logos/dane-hobrecht-logo-006.svg" alt="Irvine Valley College"><div class="press-quotes">
             <p class="press-quote">&ldquo;Extremely proud&hellip;&rdquo;</p>
           </div>
           <a class="press-link" href="https://www.facebook.com/IVCDrama/posts/pfbid02SCmdxv1MNSRQjFD6Zr1iUwLQofVFoLqVnbJjSkVyn47eBKTEywGRqSaBQw97mtsJl" target="_blank" rel="noopener" aria-label="View Irvine Valley College post (opens in new tab)">View post ↗</a>
@@ -1521,41 +1325,33 @@
     </div>
   </section>
 
-  <!-- ─── Reel ──────────────────────────────────────────────────── -->
   <section id="reel" aria-labelledby="reel-title">
     <div class="section">
       <p class="section-label fade-in">Watch</p>
       <h2 class="section-title fade-in" id="reel-title">Reel</h2>
 
       <div class="reel-grid fade-in">
-        <div class="reel-item">
-          <iframe title="DANE HOBRECHT — DEMO REEL"
+        <div class="reel-item"><iframe title="DANE HOBRECHT — DEMO REEL"
             src="https://www.youtube-nocookie.com/embed/sR7ZUTLnxvI?color=white&rel=0"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
+            allowfullscreen></iframe></div>
         <div class="reel-stack">
-          <div class="reel-item">
-            <iframe title="Dane Hobrecht X NAYAD™ | Voyager 84oz Tritan Jug"
+          <div class="reel-item"><iframe title="Dane Hobrecht X NAYAD™ | Voyager 84oz Tritan Jug"
               src="https://www.youtube-nocookie.com/embed/X-n15ZK4vVA?color=white&rel=0"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <div class="reel-item">
-            <iframe title="Elecom V Custom Gaming Keyboard"
+              allowfullscreen></iframe></div>
+          <div class="reel-item"><iframe title="Elecom V Custom Gaming Keyboard"
               src="https://www.youtube-nocookie.com/embed/bJgCA8cXhHo?color=white&rel=0"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
+              allowfullscreen></iframe></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Biography ────────────────────────────────────────────── -->
   <section id="biography" aria-labelledby="biography-title">
     <div class="section">
       <p class="section-label fade-in">About</p>
@@ -1570,18 +1366,9 @@
               loading="lazy">
           </a>
           <div class="bio-stats">
-            <div class="stat">
-              <div class="stat-number">16+</div>
-              <div class="stat-label">Productions</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Theaters</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">4</div>
-              <div class="stat-label">Nominations</div>
-            </div>
+            <div class="stat"><div class="stat-number">16+</div><div class="stat-label">Productions</div></div>
+            <div class="stat"><div class="stat-number">5+</div><div class="stat-label">Theaters</div></div>
+            <div class="stat"><div class="stat-number">4</div><div class="stat-label">Nominations</div></div>
           </div>
         </div>
 
@@ -1600,7 +1387,6 @@
     </div>
   </section>
 
-  <!-- ─── Contact ───────────────────────────────────────────────── -->
   <section id="contact" aria-labelledby="contact-title">
     <div class="section">
       <p class="section-label fade-in">Reach Out</p>
@@ -1671,23 +1457,16 @@
     </div>
   </section>
 
-  <!-- ─── Footer ────────────────────────────────────────────────── -->
   <footer>
     <span class="footer-name">DANE HOBRECHT</span>
     <div class="footer-socials">
       <a href="https://resumes.actorsaccess.com/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Actors Access profile (opens in new tab)">Actors Access</a>
-      <div class="sep"></div>
-      <a href="https://www.backstage.com/u/danehobrecht/" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Backstage profile (opens in new tab)">Backstage</a>
-      <div class="sep"></div>
-      <a href="https://www.broadwayworld.com/people/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Broadway World profile (opens in new tab)">Broadway World</a>
-      <div class="sep"></div>
-      <a href="https://database.castingfrontier.com/p/701503/8mct0yo9pps0tfw3pb8piexa4e9e7l2" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Casting Frontier profile (opens in new tab)">Casting Frontier</a>
-      <div class="sep"></div>
-      <a href="https://app.castingnetworks.com/talent/public-profile/0ed556cc-9cef-11ed-a79e-97b603b9ef80" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Casting Networks profile (opens in new tab)">Casting Networks</a>
-      <div class="sep"></div>
-      <a href="https://www.imdb.me/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's IMDb profile (opens in new tab)">IMDb</a>
-      <div class="sep"></div>
-      <a href="https://www.youtube.com/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's YouTube channel (opens in new tab)">YouTube</a>
+      <div class="sep"></div><a href="https://www.backstage.com/u/danehobrecht/" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Backstage profile (opens in new tab)">Backstage</a>
+      <div class="sep"></div><a href="https://www.broadwayworld.com/people/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Broadway World profile (opens in new tab)">Broadway World</a>
+      <div class="sep"></div><a href="https://database.castingfrontier.com/p/701503/8mct0yo9pps0tfw3pb8piexa4e9e7l2" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Casting Frontier profile (opens in new tab)">Casting Frontier</a>
+      <div class="sep"></div><a href="https://app.castingnetworks.com/talent/public-profile/0ed556cc-9cef-11ed-a79e-97b603b9ef80" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's Casting Networks profile (opens in new tab)">Casting Networks</a>
+      <div class="sep"></div><a href="https://www.imdb.me/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's IMDb profile (opens in new tab)">IMDb</a>
+      <div class="sep"></div><a href="https://www.youtube.com/danehobrecht" target="_blank" rel="noopener" aria-label="View Dane Hobrecht's YouTube channel (opens in new tab)">YouTube</a>
     </div>
     <div class="footer-links">
       <a href="https://github.com/danehobrecht/www.danehobrecht.com" target="_blank" rel="noopener">Source</a>
@@ -1695,156 +1474,153 @@
     </div>
   </footer>
 
-  <!-- ─── Lightbox ────────────────────────────────────────────── -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Show flyer" aria-hidden="true"><img id="lightbox-img" src="" alt=""></div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Contact form — inline confirmation
-    const contactForm = document.getElementById('contact-form');
-    const formConfirmation = document.getElementById('form-confirmation');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async e => {
-        e.preventDefault();
-        const data = new FormData(contactForm);
-        try {
-          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-          const json = await res.json();
-          if (json.success) {
-            contactForm.style.transition = 'opacity 0.4s ease';
-            contactForm.style.opacity = '0';
-            contactForm.style.pointerEvents = 'none';
-            setTimeout(() => {
-              contactForm.style.display = 'none';
-              formConfirmation.classList.add('visible');
-            }, 400);
-          }
-        } catch {
-          // silent fail — form still submits normally if fetch errors
-          contactForm.submit();
-        }
-      });
-    }
-
-    // Hero video: fade in over fallback once ready, then fade out fallback
-    const heroVideo = document.querySelector('#hero video');
-    const heroFallback = document.getElementById('hero-fallback');
-    if (heroVideo) {
-      heroVideo.addEventListener('canplay', () => {
-        heroVideo.classList.add('loaded');
-        if (heroFallback) heroFallback.classList.add('hidden');
-      }, { once: true });
-    }
-
-    // Credits collapse — show first 8, hide rest
-    const creditRows = document.querySelectorAll('.credit-row');
-    const creditsToggle = document.getElementById('credits-toggle');
-    const VISIBLE_COUNT = 8;
-    creditRows.forEach((row, i) => {
-      if (i >= VISIBLE_COUNT) row.classList.add('credits-hidden');
-    });
-    creditsToggle.addEventListener('click', () => {
-      const isExpanded = creditsToggle.classList.contains('expanded');
-      creditRows.forEach((row, i) => {
-        if (i >= VISIBLE_COUNT) row.classList.toggle('credits-hidden', isExpanded);
-      });
-      creditsToggle.classList.toggle('expanded');
-      creditsToggle.childNodes[2].textContent = creditsToggle.classList.contains('expanded') ? ' Show less' : ' Show more';
-    });
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.flyer-trigger').forEach(trigger => {
-      trigger.addEventListener('click', e => {
-        e.preventDefault();
-        e.stopPropagation();
-        lightboxImg.src = trigger.dataset.src;
-        lightboxImg.alt = trigger.querySelector('img').alt;
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        lightbox.classList.remove('open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+  <script>
+// Contact form — inline confirmation
+const contactForm = document.getElementById('contact-form');
+const formConfirmation = document.getElementById('form-confirmation');
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const json = await res.json();
+      if (json.success) {
+        contactForm.style.transition = 'opacity 0.4s ease';
+        contactForm.style.opacity = '0';
+        contactForm.style.pointerEvents = 'none';
+        setTimeout(() => {
+          contactForm.style.display = 'none';
+          formConfirmation.classList.add('visible');
+        }, 400);
       }
-    });
-
-    // Resume CTA: visible immediately, hides the instant any scrolling starts
-    const resumeCta = document.getElementById('hero-resume-cta');
-    function updateCta() {
-      if (!resumeCta) return;
-      resumeCta.classList.toggle('visible', window.scrollY < 1);
+    } catch {
+        contactForm.submit();
     }
-    updateCta();
-    window.addEventListener('scroll', updateCta, { passive: true });
+  });
+}
 
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      const isOpen = !mobileMenu.classList.contains('open');
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+// Hero video: fade in over fallback once ready, then fade out fallback
+const heroVideo = document.querySelector('#hero video');
+const heroFallback = document.getElementById('hero-fallback');
+if (heroVideo) {
+  heroVideo.addEventListener('canplay', () => {
+    heroVideo.classList.add('loaded');
+    if (heroFallback) heroFallback.classList.add('hidden');
+  }, { once: true });
+}
+
+// Credits collapse — show first 8, hide rest
+const creditRows = document.querySelectorAll('.credit-row');
+const creditsToggle = document.getElementById('credits-toggle');
+const VISIBLE_COUNT = 8;
+creditRows.forEach((row, i) => {
+  if (i >= VISIBLE_COUNT) row.classList.add('credits-hidden');
+});
+creditsToggle.addEventListener('click', () => {
+  const isExpanded = creditsToggle.classList.contains('expanded');
+  creditRows.forEach((row, i) => {
+    if (i >= VISIBLE_COUNT) row.classList.toggle('credits-hidden', isExpanded);
+  });
+  creditsToggle.classList.toggle('expanded');
+  creditsToggle.childNodes[2].textContent = creditsToggle.classList.contains('expanded') ? ' Show less' : ' Show more';
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+document.querySelectorAll('.flyer-trigger').forEach(trigger => {
+  trigger.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    lightboxImg.src = trigger.dataset.src;
+    lightboxImg.alt = trigger.querySelector('img').alt;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+});
+lightbox.addEventListener('click', () => {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+
+// Resume CTA: visible immediately, hides the instant any scrolling starts
+const resumeCta = document.getElementById('hero-resume-cta');
+function updateCta() {
+  if (!resumeCta) return;
+  resumeCta.classList.toggle('visible', window.scrollY < 1);
+}
+updateCta();
+window.addEventListener('scroll', updateCta, { passive: true });
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const isOpen = !mobileMenu.classList.contains('open');
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Nav: name fades in at same point CTA fades out; background appears after 60px
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled-name', window.scrollY > 1);
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Credit row expand/collapse
+document.querySelectorAll('.credit-row').forEach(row => {
+  row.addEventListener('click', () => {
+    const isOpen = row.classList.contains('open');
+    document.querySelectorAll('.credit-row.open').forEach(r => {
+      r.classList.remove('open');
+      r.setAttribute('aria-expanded', 'false');
     });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+    if (!isOpen) {
+      row.classList.add('open');
+      row.setAttribute('aria-expanded', 'true');
+    }
+  });
+  row.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+  });
+});
 
-    // Nav: name fades in at same point CTA fades out; background appears after 60px
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled-name', window.scrollY > 1);
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+// Scroll-triggered fade-in
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
 
-    // Credit row expand/collapse
-    document.querySelectorAll('.credit-row').forEach(row => {
-      row.addEventListener('click', () => {
-        const isOpen = row.classList.contains('open');
-        document.querySelectorAll('.credit-row.open').forEach(r => {
-          r.classList.remove('open');
-          r.setAttribute('aria-expanded', 'false');
-        });
-        if (!isOpen) {
-          row.classList.add('open');
-          row.setAttribute('aria-expanded', 'true');
-        }
-      });
-      row.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
-      });
-    });
-
-    // Scroll-triggered fade-in
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.fade-in').forEach((el, i) => {
-      el.style.transitionDelay = `${(i % 4) * 0.06}s`;
-      observer.observe(el);
-    });
+document.querySelectorAll('.fade-in').forEach((el, i) => {
+  el.style.transitionDelay = `${(i % 4) * 0.06}s`;
+  observer.observe(el);
+});
   </script>
-
 </body>
 </html>
