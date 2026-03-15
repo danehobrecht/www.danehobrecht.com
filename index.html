@@ -775,6 +775,39 @@
 
     .form-note a { color: var(--silver); text-decoration: underline; text-underline-offset: 2px; }
 
+    .form-confirmation {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.4rem 1.2rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .form-confirmation.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .form-confirmation-title {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .form-confirmation-body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--light);
+      line-height: 1.6;
+    }
+
     /* ─── Footer ─────────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
@@ -1578,7 +1611,7 @@
           </p>
           <div class="contact-detail">
             <span class="contact-detail-label">Email</span>
-            <a class="contact-detail-value" href="mailto:contact@danehobrecht.com">contact@danehobrecht.com</a>
+            <a class="contact-detail-value" href="/cdn-cgi/l/email-protection#4d2e2223392c2e390d292c232825222f3f282e2539632e2220"><span class="__cf_email__" data-cfemail="3d5e5253495c5e497d595c535855525f4f585e5549135e5250">[email&#160;protected]</span></a>
           </div>
           <div class="contact-detail">
             <span class="contact-detail-label">Phone</span>
@@ -1601,10 +1634,9 @@
           </div>
         </div>
 
-        <form class="contact-form fade-in" method="POST" action="https://api.web3forms.com/submit">
+        <form class="contact-form fade-in" id="contact-form" method="POST" action="https://api.web3forms.com/submit">
           <input type="hidden" name="access_key" value="c43e618c-0f19-4cde-bb13-ad3819692100">
           <input type="hidden" name="subject" value="New Form Submission">
-          <input type="hidden" name="redirect" value="https://www.danehobrecht.com">
           <input type="checkbox" name="botcheck" style="display:none">
 
           <div class="field-group">
@@ -1628,6 +1660,11 @@
 
           <p class="form-note">By submitting, you agree to the <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms privacy policy</a>.</p>
         </form>
+
+        <div class="form-confirmation" id="form-confirmation" aria-live="polite">
+          <span class="form-confirmation-title">Message sent</span>
+          <p class="form-confirmation-body">Thank you. I'll be in touch soon.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1659,7 +1696,33 @@
   <!-- ─── Lightbox ────────────────────────────────────────────── -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Show flyer" aria-hidden="true"><img id="lightbox-img" src="" alt=""></div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Contact form — inline confirmation
+    const contactForm = document.getElementById('contact-form');
+    const formConfirmation = document.getElementById('form-confirmation');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const data = new FormData(contactForm);
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+          const json = await res.json();
+          if (json.success) {
+            contactForm.style.transition = 'opacity 0.4s ease';
+            contactForm.style.opacity = '0';
+            contactForm.style.pointerEvents = 'none';
+            setTimeout(() => {
+              contactForm.style.display = 'none';
+              formConfirmation.classList.add('visible');
+            }, 400);
+          }
+        } catch {
+          // silent fail — form still submits normally if fetch errors
+          contactForm.submit();
+        }
+      });
+    }
+
     // Hero video: fade in over fallback once ready, then fade out fallback
     const heroVideo = document.querySelector('#hero video');
     const heroFallback = document.getElementById('hero-fallback');
@@ -1780,7 +1843,6 @@
       observer.observe(el);
     });
   </script>
-  <!-- Register Service Worker -->
-  <script src="r-sw.js"></script>
+
 </body>
 </html>
