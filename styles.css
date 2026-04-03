@@ -42,6 +42,7 @@ img, iframe { animation: render 1.6s ease-in-out infinite; }
 video {
 	width: 100vw;
 	height: 100vh;
+	height: 100dvh;
 	opacity: 0.64;
 	display: block;
 	object-fit: cover;
@@ -74,6 +75,7 @@ video {
 	width: auto;
 	margin: auto;
 	height: 100vh;
+	height: 100dvh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -180,6 +182,7 @@ video {
 		max-width: 21.66em;
 		display: inline-block;
 		vertical-align: middle;
+		scroll-snap-stop: always;
 		scroll-snap-align: start;
 		& img {
 			float: left;
