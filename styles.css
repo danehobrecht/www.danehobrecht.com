@@ -521,11 +521,11 @@ video {
 }
 
 /* Resolutions */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 	#resume .module { max-width: calc((100% - 32px) / 3); }
 }
 
-@media screen and (min-width: 321px) and (max-width: 1023px) {
+@media screen and (min-width: 321px) and (max-width: 1024px) {
 	#resume .module { scroll-snap-align: center; }
 }
 
