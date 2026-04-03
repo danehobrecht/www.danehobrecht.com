@@ -104,7 +104,7 @@ video {
 }
 
 #resume {
-	padding-top: 16px;
+	margin-top: 16px;
 	position: relative;
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -115,13 +115,10 @@ video {
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 	&::-webkit-scrollbar { display: none; }
-	/* TODO: Fix on Chrome
-	margin-top: 16px;
 	scroll-margin-top: 16px;
 	-ms-scroll-margin-top: 16px;
 	-moz-scroll-margin-top: 16px;
 	-webkit-scroll-margin-top: 16px;
-	*/
 
 	#pdf-icon {
 		left: 12px;
@@ -524,10 +521,15 @@ video {
 }
 
 /* Resolutions */
+@media screen and (min-width: 768px) {
+	#resume .module { max-width: calc((100% - 32px) / 3); }
+}
+
 @media screen and (min-width: 321px) and (max-width: 767px) {
 	header { height: 96px; }
 	#name { & a { font-size: 2.24em; } }
 	#navigation { & a { font-size: 1.24em; } }
+	#resume .module { scroll-snap-align: center; }
 	.module { & img { max-width: 500px; } }
 }
 
