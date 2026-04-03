@@ -47,6 +47,11 @@ video {
 	object-fit: cover;
 }
 
+:focus-visible {
+	outline-offset: 4px;
+	outline: 2px solid #ffffff;
+}
+
 /* Classes and IDs */
 * {
 	border: 0;
@@ -106,8 +111,8 @@ video {
 #resume {
 	margin-top: 16px;
 	position: relative;
-	overflow-x: scroll;
-	overflow-y: hidden;
+		overflow-x: scroll;
+	overflow-y: clip;
 	white-space: nowrap;
 	border-radius: 16px;
 	scrollbar-width: none; 
@@ -153,7 +158,6 @@ video {
 		margin-left: -48px;
 		align-items: center;
 		border-radius: 16px;
-		pointer-events: none;
 		top: calc(100% - 52px);  /* Simulate `bottom` (doesn't work with `sticky`) */
 		left: calc(50% - 24px);
 		justify-content: center;
