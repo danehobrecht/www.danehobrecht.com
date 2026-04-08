@@ -7,6 +7,8 @@ var resume = document.getElementById('resume');
 if (resume) {
 	/* Reset carousel to first module on load */
 	resume.scrollLeft = 0;
+	window.addEventListener('load', function () { resume.scrollLeft = 0; });
+	window.addEventListener('pageshow', function () { resume.scrollLeft = 0; });
 	resume.setAttribute('tabindex', '0');
 
 	/* Hide outline when focused via click or page load, restore on tab */
