@@ -187,6 +187,7 @@ video {
 			height: auto;
 			transition: 0.24s;
 			border-radius: 16px;
+			aspect-ratio: 1000 / 1295;
 		}
 		& input {
 			/* Hide */
