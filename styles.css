@@ -264,18 +264,22 @@ video {
 			font-family: Arial, sans-serif;
 		}
 		/* Tickets button */
-		& a {
+		& a, & button {
 			width: auto;
+			border: none;
+			cursor: pointer;
 			color: #000000ff;
 			font-weight: 700;
-			transition: 0.32s;
 			font-size: 1.16em;
-			position: relative;
+			transition: 0.32s;
+			user-select: none;
 			border-radius: 8px;
+			position: relative;
 			pointer-events: none;
 			display: inline-block;
 			align-self: flex-start;
 			margin: 16px 0px 16px 0px;
+			-webkit-user-select: none;
 			background-color: #ffffffff;
 			padding: 12px 16px 12px 16px;
 			font-family: Arial, sans-serif;
@@ -295,7 +299,6 @@ video {
 		& .disabled {
 			opacity: 0.24;
 			cursor: not-allowed;
-			pointer-events: none;
 			& img { animation: none; }
 		}
 	}
